@@ -3864,21 +3864,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
   width: 18px;
   height: 10px;
 }
-.cs-success-msg {
-  grid-column: 1 / -1;
-  display: none;
-  padding: 18px 22px;
-  border: 1px solid var(--cs-gold);
-  color: var(--cs-gold-2);
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-align: center;
-}
-.cs-form.sent .cs-success-msg { display: block; }
-.cs-form.sent .cs-field,
-.cs-form.sent .cs-captcha,
-.cs-form.sent .cs-send-row { display: none; }
+
 
 /* Footer */
 .cs-footer {
@@ -4189,7 +4175,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
           </button>
         </div>
 
-        <div class="cs-success-msg" role="status">Thank you — your request has been sent. We will contact you shortly.</div>
+   
       </form>
     </div>
 
@@ -4310,7 +4296,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
     const label = sendBtn.querySelector('span');
     if (label) label.textContent = 'Sending…';
     setTimeout(() => {
-      form.classList.add('sent');
+      // form.classList.add('sent');
     }, 600);
   });
 
