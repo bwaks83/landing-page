@@ -2099,8 +2099,8 @@ html{
       </div>
       <h2 class="services-title standard-title" id="services-title">Our services</h2>
       <p class="services-subtitle">
-        We combine Italian craftsmanship, remote-controlled technology and full-service support
-        to create memorable environments for luxury brands and premium properties.
+      <span>We combine Italian craftsmanship with remote-controlled technology</span>
+      <span>to create memorable experiences for luxury brands and premium properties.</span>
       </p>
     </header>
 
@@ -2219,14 +2219,17 @@ html{
   }
 
   .services-header{
-    text-align:center;
-    max-width:840px;
-    margin:0 auto 70px;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+  margin-bottom:48px;
   }
 
   .services-eyebrow{
     font-family:'Montserrat', sans-serif;
-    font-size:12px;
+    font-size:16px;
     letter-spacing:.44em;
     color:#c9a24a;
     text-transform:uppercase;
@@ -2268,15 +2271,30 @@ html{
     text-shadow:0 0 26px rgba(244,241,234,.14);
   }
 
-  .services-subtitle{
-    max-width:760px;
-    margin:0 auto;
-    font-family:'Montserrat', sans-serif;
-    font-weight:300;
-    font-size:15px;
-    line-height:1.65;
-    color:rgba(244,241,234,.78);
-  }
+#services .services-subtitle{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100vw !important;
+  max-width:none !important;
+  margin-left:50% !important;
+  transform:translateX(-50%) !important;
+  font-family:'Montserrat', sans-serif !important;
+  font-weight:300 !important;
+  font-size:18px !important;
+  line-height:1.45 !important;
+  color:rgba(244,241,234,.78) !important;
+  text-align:center !important;
+}
+
+#services .services-subtitle span{
+  display:block !important;
+  width:max-content !important;
+  max-width:100% !important;
+  white-space:nowrap !important;
+  text-align:center !important;
+}
 
   .services-layout{
     display:grid;
@@ -2590,6 +2608,87 @@ html{
     }
   }
 
+#services .service-img-1,
+#services .service-img-2,
+#services .service-img-3{
+  background-image: var(--service-image) !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+
+#services .service-img-1{
+  --service-image: url('images/service1.jpg');
+}
+
+#services .service-img-2{
+  --service-image: url('images/service2.jpg');
+}
+
+#services .service-img-3{
+  --service-image: url('images/service3.jpg');
+}
+
+/* Garante que overlays escuros não cubram as imagens */
+#services .service-image::before,
+#services .service-image::after,
+#services .service-card-image::before,
+#services .service-card-image::after,
+#services .service-img::before,
+#services .service-img::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+}
+
+#services .service-flower,
+#services .service-card-flower,
+#services .service-card-decoration,
+#services .botanical-line,
+#services .service-botanical,
+#services .service-leaf,
+#services .service-leaves{
+  display:none !important;
+}
+
+/* Force images on service cards 02 and 03 to fill the right side completely */
+#services .service-panel--wide{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+#services .service-panel--wide .service-panel__content{
+  position:relative !important;
+  z-index:2 !important;
+  flex:0 0 43% !important;
+  max-width:43% !important;
+}
+
+#services .service-panel--wide .service-panel__image--angled{
+  position:absolute !important;
+  top:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  width:62% !important;
+  height:100% !important;
+  flex:none !important;
+  margin-left:0 !important;
+  overflow:hidden !important;
+
+  /* mantém o corte diagonal da esquerda, mas encosta no canto direito */
+  clip-path:polygon(12% 0, 100% 0, 100% 100%, 0 100%) !important;
+}
+
+#services .service-panel--wide .service-panel__image--angled .service-img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+}
+
+
   @media (prefers-reduced-motion: reduce){
     .service-img{
       transition:none;
@@ -2610,13 +2709,10 @@ html{
   max-width:1165px !important;
 }
 
-#services .services-header{
-  max-width:588px !important;
-  margin-bottom:49px !important;
-}
+
 
 #services .services-eyebrow{
-  font-size:8.5px !important;
+  font-size:12px !important;
   margin-bottom:10px !important;
 }
 
@@ -2633,14 +2729,9 @@ html{
 
 #services .services-title{
   margin-bottom:15px !important;
-  font-size:clamp(24px, 2.94vw, 41px) !important;
+  font-size:clamp(36px, 3.4vw, 54px) !important;
 }
 
-#services .services-subtitle{
-  max-width:532px !important;
-  font-size:10.5px !important;
-  line-height:1.62 !important;
-}
 
 #services .services-layout{
   gap:20px !important;
@@ -2714,7 +2805,7 @@ html{
 }
 
 #services .service-description{
-  font-size:9.8px !important;
+  font-size:13px !important;
   line-height:1.62 !important;
   max-width:28ch !important;
 }
@@ -2743,9 +2834,7 @@ html{
     padding:58px 16px 76px !important;
   }
 
-  #services .services-header{
-    margin-bottom:38px !important;
-  }
+ 
 
   #services .services-layout,
   #services .services-stack{
@@ -2770,7 +2859,7 @@ html{
   }
 
   #services .service-description{
-    font-size:12px !important;
+    font-size:16px !important;
   }
 }
 </style>
