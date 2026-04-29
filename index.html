@@ -1859,6 +1859,761 @@ img{
 }
 </style>
 
+
+<style>
+/* ===== MOBILE HERO + CLIENT LOGO PATCH =====
+   Preserves desktop layout and only corrects mobile readability. */
+@media (max-width: 640px){
+  #hero{
+    min-height:730px;
+    height:100svh;
+  }
+
+  .hero-content{
+    top:52%;
+    padding-left:22px !important;
+    padding-right:22px !important;
+  }
+
+  .hero-eyebrow{
+    font-size:11px !important;
+    letter-spacing:.36em !important;
+    margin-bottom:32px !important;
+  }
+
+  .hero-title{
+    width:100% !important;
+    max-width:360px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    font-size:clamp(42px, 12.2vw, 50px) !important;
+    line-height:.96 !important;
+    letter-spacing:.20em !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+    text-align:center !important;
+  }
+
+  /* Force the brand name to break only between SCENT and COMPANY,
+     avoiding the broken “SCENT CO / MPANY” layout on mobile. */
+  .hero-title .gap{
+    display:block !important;
+    width:100% !important;
+    height:8px !important;
+    font-size:0 !important;
+    line-height:0 !important;
+  }
+
+  .hero-positioning{
+    max-width:340px !important;
+    margin-top:44px !important;
+    font-size:14px !important;
+    line-height:1.72 !important;
+  }
+
+  .hero-cta-row{
+    margin-top:48px !important;
+    gap:16px !important;
+  }
+
+  .hero-cta-row a{
+    max-width:330px !important;
+    min-height:48px !important;
+    font-size:10px !important;
+    letter-spacing:.18em !important;
+  }
+
+  #clients{
+    padding-top:96px !important;
+    padding-bottom:92px !important;
+  }
+
+  .clients-header{
+    margin-bottom:74px !important;
+  }
+
+  .clients-row{
+    gap:155px !important;
+    padding-right:155px !important;
+  }
+
+  .clients-row img{
+    height:56px !important;
+    width:auto !important;
+    max-width:none !important;
+    transform:scale(2.45) !important;
+    transform-origin:center !important;
+  }
+
+  img[src*="moncler"]{ transform:scale(2.85) !important; }
+  img[src*="Prada"]{ transform:scale(2.75) !important; }
+  img[src*="Zuma"]{ transform:scale(2.85) !important; }
+  img[src*="FourSeasons"]{ transform:scale(2.7) !important; }
+  img[src*="MrC"]{ transform:scale(2.8) !important; }
+  img[src*="Poliform"]{ transform:scale(2.8) !important; }
+  img[src*="GoldenGoose"]{ transform:scale(2.7) !important; }
+  img[src*="Armani"]{ transform:scale(2.65) !important; }
+  img[src*="DG"]{ transform:scale(2.75) !important; }
+
+  .clients-track{
+    animation-duration:42s !important;
+  }
+}
+
+@media (max-width: 380px){
+  .hero-title{
+    max-width:330px !important;
+    font-size:clamp(38px, 11.2vw, 44px) !important;
+    letter-spacing:.17em !important;
+  }
+
+  .clients-row{
+    gap:140px !important;
+    padding-right:140px !important;
+  }
+
+  .clients-row img{
+    height:52px !important;
+    transform:scale(2.35) !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE HERO TITLE FINAL FIX =====
+   Uses a clean two-line mobile wordmark instead of the desktop letter-by-letter spans.
+   Desktop remains untouched. */
+@media (max-width: 640px){
+  #hero{
+    min-height:720px !important;
+    height:100svh !important;
+  }
+
+  .hero-content{
+    top:51% !important;
+    transform:translate(-50%, -50%) !important;
+  }
+
+  .hero-eyebrow{
+    margin-bottom:28px !important;
+  }
+
+  .hero-title{
+    display:block !important;
+    max-width:100% !important;
+    width:100% !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    font-size:0 !important;
+    line-height:0 !important;
+    letter-spacing:0 !important;
+    white-space:normal !important;
+  }
+
+  .hero-title span,
+  .hero-title .gap{
+    display:none !important;
+    animation:none !important;
+  }
+
+  .hero-title::before{
+    content:"SCENT\A COMPANY";
+    display:block;
+    white-space:pre-line;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size:clamp(40px, 11.4vw, 47px);
+    line-height:1.08;
+    letter-spacing:.20em;
+    color:#f4f1ea;
+    text-align:center;
+    text-indent:.20em;
+    text-shadow:0 10px 28px rgba(0,0,0,.42);
+  }
+
+  .hero-positioning{
+    margin-top:48px !important;
+    max-width:340px !important;
+  }
+
+  .hero-cta-row{
+    margin-top:48px !important;
+  }
+}
+
+@media (max-width: 380px){
+  .hero-title::before{
+    font-size:clamp(37px, 10.8vw, 42px);
+    letter-spacing:.18em;
+    text-indent:.18em;
+    line-height:1.1;
+  }
+
+  .hero-positioning{
+    margin-top:42px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE CLIENTS SECOND ROW PATCH =====
+   Enlarges only the second logo marquee on mobile.
+   Desktop and first-row logo sizing remain untouched. */
+@media (max-width: 768px){
+  #clients .clients-track--reverse .clients-row{
+    gap:128px !important;
+    padding-right:128px !important;
+  }
+
+  #clients .clients-track--reverse .clients-row img{
+    height:60px !important;
+    transform:scale(3.05) !important;
+    transform-origin:center !important;
+  }
+
+  #clients .clients-track--reverse img[src*="Eden"]{ transform:scale(3.15) !important; }
+  #clients .clients-track--reverse img[src*="Luxury"]{ transform:scale(3.15) !important; }
+  #clients .clients-track--reverse img[src*="Shawood"]{ transform:scale(3.15) !important; }
+  #clients .clients-track--reverse img[src*="Louis"]{ transform:scale(3.35) !important; }
+  #clients .clients-track--reverse img[src*="Sagewood"]{ transform:scale(3.2) !important; }
+  #clients .clients-track--reverse img[src*="Kiton"]{ transform:scale(3.8) !important; }
+  #clients .clients-track--reverse img[src*="Anima"]{ transform:scale(3.25) !important; }
+  #clients .clients-track--reverse img[src*="Amex"]{ transform:scale(3.25) !important; }
+  #clients .clients-track--reverse img[src*="Laperla"]{ transform:scale(3.45) !important; }
+
+  #clients .clients-marquee + .clients-marquee{
+    margin-top:34px !important;
+  }
+}
+
+@media (max-width: 420px){
+  #clients .clients-track--reverse .clients-row{
+    gap:136px !important;
+    padding-right:136px !important;
+  }
+
+  #clients .clients-track--reverse .clients-row img{
+    height:62px !important;
+  }
+}
+</style>
+
+
+<style>
+/* Title line control: desktop remains natural, mobile becomes a clean 3-line lockup */
+#why-scent-company .why-title-line{
+  display:inline;
+}
+
+/* ===== MOBILE WHY SECTION REFINEMENT ===== */
+@media (max-width: 640px){
+  #why-scent-company.why-orbit-section{
+    padding:60px 14px 64px !important;
+  }
+
+  #why-scent-company .why-orbit-header{
+    margin-bottom:22px !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-eyebrow{
+    font-size:9px !important;
+    letter-spacing:.32em !important;
+    margin-bottom:15px !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-eyebrow::after{
+    width:126px !important;
+    margin-top:12px !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-title{
+    max-width:310px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    font-size:clamp(22px, 6.15vw, 29px) !important;
+    line-height:1.06 !important;
+    letter-spacing:.055em !important;
+  }
+
+  /* Remove the central orbital object on mobile so it does not float disconnected above the cards */
+  #why-scent-company .why-orbit-center{
+    display:none !important;
+  }
+
+  #why-scent-company .why-orbit-layout{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    padding-top:0 !important;
+    gap:11px !important;
+    min-height:0 !important;
+  }
+
+  #why-scent-company .why-orbit-item{
+    width:100% !important;
+    min-height:0 !important;
+    padding:14px 16px 16px !important;
+    gap:9px !important;
+    border-radius:9px !important;
+    background:linear-gradient(180deg, rgba(15,15,20,.62), rgba(5,5,8,.82)) !important;
+  }
+
+  #why-scent-company .why-orbit-number{
+    width:48px !important;
+    height:48px !important;
+    font-size:23px !important;
+    box-shadow:
+      inset 0 0 0 5px rgba(0,0,0,.64),
+      inset 0 0 0 7px rgba(201,162,74,.30),
+      0 0 16px rgba(201,162,74,.10) !important;
+  }
+
+  #why-scent-company .why-orbit-number span{
+    transform:translateY(-2px) !important;
+  }
+
+  #why-scent-company .why-orbit-copy h3{
+    font-size:17px !important;
+    line-height:1.08 !important;
+    margin-bottom:8px !important;
+    max-width:100% !important;
+  }
+
+  #why-scent-company .why-orbit-rule{
+    width:30px !important;
+    height:1px !important;
+    margin-bottom:12px !important;
+  }
+
+  #why-scent-company .why-orbit-copy p{
+    font-size:11.5px !important;
+    line-height:1.5 !important;
+    max-width:33ch !important;
+  }
+}
+
+@media (max-width: 380px){
+  #why-scent-company .why-orbit-header .conversion-title{
+    font-size:22px !important;
+    max-width:285px !important;
+  }
+
+  #why-scent-company .why-orbit-item{
+    padding:13px 15px 15px !important;
+  }
+
+  #why-scent-company .why-orbit-copy h3{
+    font-size:16.5px !important;
+  }
+}
+</style>
+
+
+
+<style>
+/* ===== MOBILE WHY FINAL CENTERING PATCH ===== */
+@media (max-width: 640px){
+  #why-scent-company .why-orbit-header .conversion-title{
+    max-width:360px !important;
+    font-size:clamp(21px, 5.8vw, 25px) !important;
+    line-height:1.08 !important;
+    letter-spacing:.045em !important;
+  }
+
+  #why-scent-company .why-title-line{
+    display:block !important;
+    white-space:nowrap !important;
+  }
+
+  #why-scent-company .why-orbit-layout{
+    justify-items:center !important;
+  }
+
+  #why-scent-company .why-orbit-item{
+    width:min(100%, 342px) !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding:14px 14px 15px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+  }
+
+  #why-scent-company .why-orbit-copy{
+    width:100% !important;
+    text-align:center !important;
+  }
+
+  #why-scent-company .why-orbit-copy h3{
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+    max-width:100% !important;
+  }
+
+  #why-scent-company .why-orbit-rule{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  #why-scent-company .why-orbit-copy p{
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+    max-width:31ch !important;
+  }
+}
+
+@media (max-width: 380px){
+  #why-scent-company .why-orbit-header .conversion-title{
+    font-size:20px !important;
+    max-width:330px !important;
+  }
+
+  #why-scent-company .why-orbit-item{
+    width:min(100%, 328px) !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE INDUSTRIES REFINEMENT PATCH ===== */
+@media (max-width: 640px){
+  .setores{
+    padding:54px 16px 70px !important;
+  }
+
+  .setores__header{
+    margin-bottom:38px !important;
+    max-width:100% !important;
+  }
+
+  .setores .eyebrow{
+    font-size:10px !important;
+    letter-spacing:.34em !important;
+    margin-bottom:14px !important;
+  }
+
+  .setores .title{
+    font-size:clamp(24px, 6.4vw, 29px) !important;
+    line-height:1.05 !important;
+    letter-spacing:.075em !important;
+    white-space:nowrap !important;
+    margin-bottom:18px !important;
+  }
+
+  .setores .subtitle{
+    max-width:270px !important;
+    margin:0 auto 14px !important;
+    font-size:12px !important;
+    line-height:1.45 !important;
+    letter-spacing:.035em !important;
+    text-transform:none !important;
+  }
+
+  .setores .divider{
+    width:132px !important;
+    gap:10px !important;
+  }
+
+  .setores-cards{
+    max-width:286px !important;
+    gap:30px !important;
+    margin:0 auto !important;
+  }
+
+  .setor-card{
+    width:100% !important;
+    padding:12px 12px 24px !important;
+    border-radius:5px !important;
+  }
+
+  .setor-card__media{
+    aspect-ratio:4 / 3 !important;
+    border-radius:4px !important;
+  }
+
+  .setor-medallion{
+    width:44px !important;
+    height:44px !important;
+    margin-top:-22px !important;
+    box-shadow:0 4px 14px rgba(0,0,0,.55), inset 0 0 0 3px #0b0c11 !important;
+  }
+
+  .setor-medallion svg{
+    width:17px !important;
+    height:17px !important;
+  }
+
+  .setor-card__body{
+    padding:18px 10px 0 !important;
+  }
+
+  .setor-card__title{
+    font-size:18px !important;
+    letter-spacing:.13em !important;
+    margin-bottom:10px !important;
+  }
+
+  .setor-card__mini-div{
+    width:36px !important;
+    margin-bottom:12px !important;
+  }
+
+  .setor-card__desc{
+    font-size:12px !important;
+    line-height:1.55 !important;
+    max-width:24ch !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE INDUSTRIES DIVIDER ORDER PATCH ===== */
+@media (max-width: 640px){
+  #industries .setores__header{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+  }
+
+  #industries .setores__header .eyebrow{
+    order:1 !important;
+    margin-bottom:10px !important;
+  }
+
+  #industries .setores__header .divider{
+    order:2 !important;
+    margin:0 auto 18px !important;
+  }
+
+  #industries .setores__header .title{
+    order:3 !important;
+    margin-bottom:14px !important;
+  }
+
+  #industries .setores__header .subtitle{
+    order:4 !important;
+    margin-bottom:0 !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE SECTION TOP STANDARDIZATION + WHY DIVIDER DIAMOND PATCH ===== */
+@media (max-width: 640px){
+  /* Standardize the small top labels using the Industries size as reference */
+  #clients .network-eyebrow,
+  #why-scent-company .conversion-eyebrow,
+  #industries .eyebrow,
+  #services .services-eyebrow{
+    font-size:10px !important;
+    letter-spacing:.34em !important;
+    line-height:1.15 !important;
+  }
+
+  /* Rebuild the Why Scent Company top rhythm to match the other mobile sections:
+     label → line + diamond → title */
+  #why-scent-company .why-orbit-header{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-eyebrow{
+    order:1 !important;
+    position:relative !important;
+    display:inline-block !important;
+    margin:0 0 34px !important;
+    padding-left:.34em !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-eyebrow::after{
+    content:"" !important;
+    position:absolute !important;
+    left:50% !important;
+    bottom:-18px !important;
+    top:auto !important;
+    transform:translateX(-50%) !important;
+    display:block !important;
+    width:132px !important;
+    height:1px !important;
+    margin:0 !important;
+    background:linear-gradient(90deg, transparent, rgba(201,162,74,.55), transparent) !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-eyebrow::before{
+    content:"" !important;
+    position:absolute !important;
+    left:50% !important;
+    bottom:-21px !important;
+    width:7px !important;
+    height:7px !important;
+    transform:translateX(-50%) rotate(45deg) !important;
+    background:#c9a24a !important;
+    box-shadow:0 0 10px rgba(200,168,118,.6) !important;
+    z-index:2 !important;
+  }
+
+  #why-scent-company .why-orbit-header .conversion-title{
+    order:2 !important;
+    margin-top:0 !important;
+  }
+}
+
+
+@media (max-width:720px){
+
+  #services .service-number-line{
+    display:none !important;
+    width:0 !important;
+    min-width:0 !important;
+    max-width:0 !important;
+    height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+  }
+
+  #services .service-number-row,
+  #services .service-panel--wide .service-number-row{
+    gap:0 !important;
+    margin:0 !important;
+    min-width:auto !important;
+  }
+
+  #services .service-panel__content,
+  #services .service-panel__content--featured,
+  #services .service-panel--wide .service-panel__content{
+    display:grid !important;
+    grid-template-columns:auto 1fr !important;
+    column-gap:8px !important;
+    align-items:baseline !important;
+  }
+
+    #services .service-number-row,
+  #services .service-panel--wide .service-number-row{
+    display:flex !important;
+    align-items:baseline !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    line-height:1 !important;
+    align-self:baseline !important;
+  }
+
+  #services .service-number{
+    display:inline-block !important;
+    line-height:1 !important;
+    transform:translateY(-1px) !important;
+  }
+
+
+  #services .service-title-card,
+  #services .service-panel--wide .service-title-card{
+    margin:0 !important;
+    padding:0 !important;
+    line-height:1 !important;
+    text-align:left !important;
+    justify-self:start !important;
+    align-self:baseline !important;
+    white-space:nowrap !important;
+    transform:translateY(1.2px) !important;
+  }
+
+}
+
+/* ===== MOBILE CONTACT FORM COMPACT PATCH ===== */
+@media (max-width: 640px){
+
+  #contact-section-wrap .cs-contact-top{
+    padding:64px 18px 52px !important;
+    gap:32px !important;
+    min-height:auto !important;
+  }
+
+  #contact-section-wrap .cs-heading-wrap{
+    padding-left:0 !important;
+  }
+
+  #contact-section-wrap .cs-kicker{
+    font-size:14px !important;
+    line-height:1.35 !important;
+    letter-spacing:.20em !important;
+    margin-bottom:8px !important;
+  }
+
+  #contact-section-wrap .cs-title{
+    font-size:clamp(31px, 8.4vw, 38px) !important;
+    line-height:1.02 !important;
+    letter-spacing:.045em !important;
+  }
+
+  #contact-section-wrap .cs-title-divider{
+    margin-top:22px !important;
+  }
+
+  #contact-section-wrap .cs-form-note{
+    font-size:12px !important;
+    line-height:1.55 !important;
+    margin:0 0 4px !important;
+  }
+
+  #contact-section-wrap .cs-form{
+    grid-template-columns:1fr !important;
+    gap:17px !important;
+  }
+
+  #contact-section-wrap .cs-field label{
+    font-size:9.5px !important;
+    letter-spacing:.20em !important;
+    margin-bottom:8px !important;
+  }
+
+  #contact-section-wrap .cs-field input,
+  #contact-section-wrap .cs-field select{
+    height:42px !important;
+    font-size:12.5px !important;
+    padding:0 12px !important;
+  }
+
+  #contact-section-wrap .cs-field textarea{
+    min-height:96px !important;
+    font-size:12.5px !important;
+    line-height:1.45 !important;
+    padding:12px !important;
+  }
+
+  #contact-section-wrap .cs-field textarea::placeholder{
+    font-size:12.5px !important;
+    line-height:1.45 !important;
+  }
+
+  #contact-section-wrap .cs-send-row{
+    margin-top:10px !important;
+  }
+
+  #contact-section-wrap .cs-btn-send{
+    min-height:44px !important;
+    padding:13px 22px !important;
+    font-size:10.5px !important;
+    letter-spacing:.22em !important;
+  }
+
+}
+
+
+</style>
+
 </head>
 <body>
 
@@ -2034,7 +2789,11 @@ img{
   <div class="conversion-container why-orbit-container">
     <header class="conversion-header why-orbit-header">
       <p class="conversion-eyebrow">Why Scent Company</p>
-      <h2 class="conversion-title" id="why-title">A premium scent experience, managed end to end.</h2>
+      <h2 class="conversion-title" id="why-title">
+        <span class="why-title-line">A premium scent</span>
+        <span class="why-title-line">experience, managed</span>
+        <span class="why-title-line">end to end.</span>
+      </h2>
     </header>
 
     <div class="why-orbit-layout" aria-label="Scent Company value pillars">
@@ -2260,7 +3019,7 @@ img{
             <span class="service-diamond" aria-hidden="true"></span>
 
             <p class="service-description">
-              Installation, refills, maintenance and adjustments handled through one clear monthly service.
+              Refills, on-going maintenance and adjustments handled through one monthly fee.
             </p>
           </div>
 
@@ -2318,7 +3077,7 @@ img{
 
   .services-eyebrow{
     font-family:'Montserrat', sans-serif;
-    font-size:16px;
+    font-size:10px;
     letter-spacing:.44em;
     color:#c9a24a;
     text-transform:uppercase;
@@ -2801,7 +3560,7 @@ img{
 
 
 #services .services-eyebrow{
-  font-size:12px !important;
+  font-size:10px !important;
   margin-bottom:10px !important;
 }
 
@@ -2949,6 +3708,330 @@ img{
 
   #services .service-description{
     font-size:16px !important;
+  }
+}
+</style>
+
+<style>
+/* ===== MOBILE SERVICES FINAL PATCH — Scent Company ===== */
+@media (max-width:720px){
+  #services.services-section{
+    padding:56px 12px 72px !important;
+  }
+
+  #services .services-container{
+    max-width:100% !important;
+  }
+
+  #services .services-header{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    margin-bottom:34px !important;
+  }
+
+  /* Mobile: use “Scenting Solutions” as the visible section title */
+
+  @media (max-width: 768px){
+
+  #services .services-eyebrow{
+    order:1 !important;
+    display:block !important;
+
+    font-family:'Playfair Display', serif !important;
+    font-weight:700 !important;
+   
+    line-height:1.05 !important;
+    letter-spacing:.08em !important;
+
+    color:#f4f1ea !important;
+    text-transform:uppercase !important;
+    text-align:center !important;
+
+    margin:0 0 16px !important;
+    padding-left:.08em !important;
+  }
+
+
+  #services .services-divider{
+    order:2 !important;
+    width:132px !important;
+    gap:10px !important;
+    margin:0 auto 16px !important;
+  }
+
+  #services .services-title{
+    display:none !important;
+  }
+
+  #services .services-subtitle{
+    order:3 !important;
+    display:block !important;
+    width:auto !important;
+    max-width:270px !important;
+    margin:0 auto !important;
+    transform:none !important;
+    font-size:12px !important;
+    line-height:1.45 !important;
+    letter-spacing:.035em !important;
+    color:rgba(244,241,234,.78) !important;
+    text-align:center !important;
+  }
+
+  #services .services-subtitle span{
+    display:inline !important;
+    width:auto !important;
+    max-width:none !important;
+    white-space:normal !important;
+  }
+
+  #services .services-layout{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    max-width:364px !important;
+    margin:0 auto !important;
+    gap:26px !important;
+  }
+
+  #services .services-stack{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+  }
+
+  #services .service-panel,
+  #services .service-panel--featured,
+  #services .service-panel--wide{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    min-height:auto !important;
+    border-radius:14px !important;
+    overflow:hidden !important;
+    background:#020202 !important;
+    border:1px solid rgba(201,162,74,.42) !important;
+    box-shadow:0 20px 58px rgba(0,0,0,.58) !important;
+  }
+
+  #services .service-panel__image,
+  #services .service-panel__image--featured,
+  #services .service-panel__image--angled,
+  #services .service-panel--wide .service-panel__image--angled{
+    position:relative !important;
+    top:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+    left:auto !important;
+    width:100% !important;
+    height:auto !important;
+    flex:0 0 190px !important;
+    max-width:none !important;
+    margin:0 !important;
+    clip-path:none !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(201,162,74,.30) !important;
+  }
+
+  #services .service-panel__image--featured{
+    flex-basis:194px !important;
+  }
+
+  #services .service-panel--wide .service-panel__image--angled{
+    order:1 !important;
+  }
+
+  #services .service-panel--wide .service-panel__content,
+  #services .service-panel__content,
+  #services .service-panel__content--featured{
+    order:2 !important;
+    display:grid !important;
+    grid-template-columns:auto minmax(0, 1fr) !important;
+    column-gap:10px !important;
+    row-gap:14px !important;
+    align-items:center !important;
+    flex:none !important;
+    max-width:none !important;
+    width:100% !important;
+    padding:26px 24px 30px !important;
+  }
+
+  #services .service-number-row,
+  #services .service-panel--wide .service-number-row{
+    grid-column:1 !important;
+    display:flex !important;
+    align-items:center !important;
+    gap:8px !important;
+    margin:0 !important;
+    min-width:max-content !important;
+  }
+
+  #services .service-number{
+    font-size:clamp(25px, 7vw, 31px) !important;
+    line-height:1 !important;
+  }
+
+  #services .service-number-line{
+    width:38px !important;
+    height:1px !important;
+    transform:none !important;
+    background:linear-gradient(90deg, rgba(201,162,74,.95), rgba(201,162,74,.25)) !important;
+  }
+
+  #services .service-title-card,
+  #services .service-panel--wide .service-title-card{
+    grid-column:2 !important;
+    align-self:center !important;
+    margin:0 !important;
+    max-width:none !important;
+    font-size:clamp(19px, 5.2vw, 22px) !important;
+    line-height:1 !important;
+    letter-spacing:-.025em !important;
+    white-space:nowrap !important;
+  }
+
+  #services .service-diamond{
+    display:none !important;
+  }
+
+  #services .service-description{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    max-width:39ch !important;
+    margin:2px 0 0 !important;
+    font-size:13px !important;
+    line-height:1.65 !important;
+    letter-spacing:0 !important;
+    color:rgba(244,241,234,.78) !important;
+  }
+}
+
+@media (max-width:380px){
+  #services .services-layout{
+    max-width:352px !important;
+  }
+
+  #services .service-panel--wide .service-panel__content,
+  #services .service-panel__content,
+  #services .service-panel__content--featured{
+    padding-left:22px !important;
+    padding-right:22px !important;
+    column-gap:8px !important;
+  }
+
+  #services .service-number-line{
+    width:30px !important;
+  }
+
+  #services .service-title-card,
+  #services .service-panel--wide .service-title-card{
+    font-size:clamp(18px, 5vw, 20px) !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE SERVICES REFINEMENT — title aligned + cards -30% ===== */
+@media (max-width:720px){
+  #services .services-eyebrow{
+    font-family:'Playfair Display', serif !important;
+    font-weight:400 !important;
+    font-size:clamp(12px, 7.8vw, 14px) !important;
+    line-height:1.05 !important;
+    letter-spacing:.10em !important;
+    color:#c9a24a !important;
+    text-transform:uppercase !important;
+    text-align:center !important;
+
+    width:100% !important;
+    max-width:none !important;
+    white-space:nowrap !important;
+
+    padding-left:.10em !important;
+    margin:0 auto 18px !important;
+    text-shadow:0 0 26px rgba(244,241,234,.14) !important;
+  }
+
+  #services .services-subtitle{
+    font-size:12px !important;
+    line-height:1.55 !important;
+    max-width:285px !important;
+  }
+
+  #services .services-layout{
+    max-width:255px !important; /* 30% smaller than the previous 364px mobile card width */
+    gap:18px !important;
+  }
+
+  #services .services-stack{
+    gap:18px !important;
+  }
+
+  #services .service-panel,
+  #services .service-panel--featured,
+  #services .service-panel--wide{
+    border-radius:10px !important;
+  }
+
+  #services .service-panel__image,
+  #services .service-panel__image--featured,
+  #services .service-panel__image--angled,
+  #services .service-panel--wide .service-panel__image--angled{
+    flex-basis:133px !important;
+  }
+
+  #services .service-panel__image--featured{
+    flex-basis:136px !important;
+  }
+
+  #services .service-panel--wide .service-panel__content,
+  #services .service-panel__content,
+  #services .service-panel__content--featured{
+    grid-template-columns:auto minmax(0, 1fr) !important;
+    column-gap:7px !important;
+    row-gap:10px !important;
+    padding:18px 17px 21px !important;
+  }
+
+  #services .service-number-row,
+  #services .service-panel--wide .service-number-row{
+    gap:6px !important;
+  }
+
+  #services .service-number{
+    font-size:clamp(18px, 5.6vw, 22px) !important;
+  }
+
+  #services .service-number-line{
+    width:27px !important;
+  }
+
+  #services .service-title-card,
+  #services .service-panel--wide .service-title-card{
+    font-size:clamp(14px, 4.1vw, 16px) !important;
+    line-height:1.05 !important;
+    white-space:nowrap !important;
+  }
+
+  #services .service-description{
+    max-width:32ch !important;
+    font-size:11px !important;
+    line-height:1.6 !important;
+  }
+}
+
+@media (max-width:380px){
+  #services .services-layout{
+    max-width:246px !important;
+  }
+
+  #services .service-title-card,
+  #services .service-panel--wide .service-title-card{
+    font-size:clamp(13px, 4vw, 15px) !important;
+  }
+
+  #services .service-number-line{
+    width:24px !important;
   }
 }
 </style>
@@ -4172,7 +5255,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
       </svg>
 
       <div class="cs-heading-wrap">
-        <p class="cs-kicker">Start your olfactory branding project with a</p>
+        <p class="cs-kicker">Start your project with a</p>
         <h2 class="cs-title" id="cs-contact-heading">
           <span class="standard-title">Complimentary</span>
           <em>Tryout</em>
@@ -4189,7 +5272,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
         <input type="hidden" name="_next" value="https://scentcompanyusa.com/thank-you.html">
         <input type="text" class="cs-honeypot" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-        <p class="cs-form-note">Tell us where the scent experience will be installed. A specialist will review your request and contact you with the best next step.</p>
+        <p class="cs-form-note">Tell us about your scenting project. A specialist will review your request and contact you with the best next step.</p>
 
         <div class="cs-field" data-field="firstName">
           <label for="cs-firstName">First Name *</label>
@@ -4301,7 +5384,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
               <path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5.001A2.5 2.5 0 0 1 4.98 3.5zM3 9h4v12H3V9zm7.5 0H14v1.71h.05c.5-.9 1.72-1.86 3.54-1.86 3.79 0 4.49 2.5 4.49 5.74V21h-4v-5.3c0-1.26-.02-2.89-1.76-2.89-1.76 0-2.03 1.38-2.03 2.8V21h-4V9z"/>
             </svg>
           </a>
-          <a href="https://www.instagram.com/" aria-label="Instagram">
+          <a href="https://www.instagram.com/scentcompanyusa/" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
               <rect x="3" y="3" width="18" height="18" rx="5"/>
               <circle cx="12" cy="12" r="4"/>
@@ -4312,11 +5395,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
       </div>
 
       <div class="cs-legal">
-        <span>© 2026 Scent Company. All Rights Reserved.</span>
-        <span class="cs-dot"></span>
-        <a href="#">Privacy Policy</a>
-        <span class="cs-dot"></span>
-        <a href="#">Terms &amp; Conditions</a>
+        <span>© 2026 Scent Company US LLC</span>
       </div>
     </footer>
   </section>
@@ -4392,6 +5471,168 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
   refreshButton();
 })();
 </script>
+
+<style>
+/* ===== MOBILE GLOBAL NETWORK FINAL PATCH — Scent Company ===== */
+@media (max-width: 768px){
+  #global-network-wrap{
+    padding:0 !important;
+    overflow:hidden !important;
+  }
+
+  #global-network-wrap .gn-section{
+    width:100% !important;
+    max-width:none !important;
+    padding:0 0 56px !important;
+    overflow:hidden !important;
+  }
+
+  /* Remove mobile-only decorative/header/footer elements */
+  #global-network-wrap .gn-eyebrow,
+  #global-network-wrap .gn-corner,
+  #global-network-wrap .gn-map-meta,
+  #global-network-wrap .gn-footer-strip{
+    display:none !important;
+  }
+
+  #global-network-wrap .gn-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:42px !important;
+    width:100% !important;
+    margin:0 !important;
+  }
+
+  /* Full-width map with no inner spacing */
+  #global-network-wrap .gn-map-card{
+    width:100vw !important;
+    max-width:none !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 calc(50% - 50vw) !important;
+    padding:0 !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    border-radius:0 !important;
+    background:#050403 !important;
+    box-shadow:none !important;
+  }
+
+  #global-network-wrap .gn-map-card::before{
+    display:none !important;
+  }
+
+  #global-network-wrap .gn-map-placeholder{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:1200 / 675 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:#050403 !important;
+  }
+
+  #global-network-wrap .gn-map-image{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    display:block !important;
+  }
+
+  /* Content alignment */
+  #global-network-wrap .gn-content{
+    width:100% !important;
+    padding:0 20px !important;
+    align-items:center !important;
+    text-align:center !important;
+  }
+
+  #global-network-wrap .gn-title{
+    width:100% !important;
+    margin:0 auto 18px !important;
+    text-align:center !important;
+    font-size:clamp(40px, 11vw, 54px) !important;
+    line-height:.96 !important;
+    letter-spacing:.08em !important;
+  }
+
+  #global-network-wrap .gn-divider{
+    width:min(248px, 72vw) !important;
+    max-width:none !important;
+    margin:0 auto 34px !important;
+  }
+
+  #global-network-wrap .gn-regions{
+    width:100% !important;
+    max-width:320px !important;
+    margin:0 auto !important;
+    gap:28px !important;
+    text-align:left !important;
+  }
+
+  #global-network-wrap .gn-region{
+    grid-template-columns:56px minmax(0, 1fr) !important;
+    gap:22px !important;
+  }
+}
+
+@media (max-width: 420px){
+  #global-network-wrap .gn-content{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  #global-network-wrap .gn-regions{
+    max-width:300px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== MOBILE GLOBAL NETWORK MAP SCALE PATCH =====
+   Enlarges the actual map artwork on mobile, cropping the embedded black margins in world.jpg. */
+@media (max-width: 768px){
+  #global-network-wrap .gn-map-card{
+    background:#050403 !important;
+    border-top:1px solid rgba(212,166,74,.28) !important;
+    border-bottom:1px solid rgba(212,166,74,.28) !important;
+  }
+
+  #global-network-wrap .gn-map-placeholder{
+    position:relative !important;
+    width:100vw !important;
+    max-width:none !important;
+    aspect-ratio:1.78 / 1 !important;
+    overflow:hidden !important;
+    background:#050403 !important;
+  }
+
+  #global-network-wrap .gn-map-image{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    transform:scale(1.48) !important;
+    transform-origin:center center !important;
+    opacity:.96 !important;
+  }
+}
+
+@media (max-width: 420px){
+  #global-network-wrap .gn-map-placeholder{
+    aspect-ratio:1.72 / 1 !important;
+  }
+
+  #global-network-wrap .gn-map-image{
+    transform:scale(1.56) !important;
+  }
+}
+</style>
 
 <a href="#contact-section-wrap" class="sc-btn-primary sc-mobile-cta">Request a Tryout</a>
 
