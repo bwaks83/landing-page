@@ -10,6 +10,8 @@
   <meta property="og:description" content="Italian-crafted fragrances, remote-controlled diffusion systems and full-service scent management for premium spaces." />
   <meta property="og:type" content="website" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
 <!-- Google tag (gtag.js) -->
@@ -1780,6 +1782,83 @@ html{
 
 </style>
 
+
+<style>
+/* ===== PERFORMANCE PATCH — non-destructive optimizations ===== */
+
+/* Skip offscreen rendering for heavier sections while preserving layout space. */
+#clients,
+#why-scent-company,
+#industries,
+#services,
+#global-network-wrap,
+#contact-section-wrap{
+  content-visibility:auto;
+  contain-intrinsic-size:1px 900px;
+}
+
+/* Keep media from causing layout shifts when dimensions are present. */
+img{
+  max-width:100%;
+}
+
+/* Mobile: keep the same layout, but remove the heaviest decorative effects. */
+@media (max-width: 768px){
+  .hero-smoke,
+  .hero-particles,
+  .ripples{
+    display:none !important;
+  }
+
+  #hero{
+    background:
+      radial-gradient(ellipse at center, #0b0b11 0%, #07070a 100%);
+  }
+
+  .clients-track{
+    animation-duration:48s !important;
+  }
+
+  .why-orbit-ring--outer,
+  .why-orbit-ring--middle,
+  .why-orbit-ring--inner{
+    animation:none !important;
+  }
+}
+
+/* Reduce expensive hover transitions on touch devices. */
+@media (hover: none){
+  .setor-card:hover,
+  .service-panel:hover,
+  .service-card:hover,
+  .sc-btn-primary:hover,
+  .sc-btn-secondary:hover{
+    transform:none !important;
+    box-shadow:inherit;
+  }
+
+  .setor-card:hover .setor-card__img,
+  .setor-card:hover .setor-card__img img,
+  .service-panel:hover .service-img,
+  .service-card:hover .service-img{
+    transform:none !important;
+    filter:inherit;
+  }
+}
+
+/* Respect reduced-motion users and avoid unnecessary compositor work. */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.001ms !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -1796,7 +1875,7 @@ html{
 
 
   <section id="hero">
-    <video class="hero-smoke" autoplay muted loop playsinline>
+    <video class="hero-smoke" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
       <source src="images/smoke.mp4" type="video/mp4">
     </video>
 
@@ -1888,27 +1967,27 @@ html{
     <div class="clients-track">
 
       <div class="clients-row">
-        <img src="logos/GoldenGoose.svg" alt="Golden Goose" />
-        <img src="logos/moncler.svg" alt="Moncler" />
-        <img src="logos/MrC.svg" alt="Mr C" />
-        <img src="logos/Poliform.svg" alt="Poliform" />
-        <img src="logos/Prada.svg" alt="Prada" />
-        <img src="logos/Zuma.svg" alt="Zuma" />
-        <img src="logos/Armani.svg" alt="Armani" />
-        <img src="logos/DG.svg" alt="Dolce &amp; Gabbana" />
-        <img src="logos/FourSeasons.svg" alt="Four Seasons" />
+        <img src="logos/GoldenGoose.svg" alt="Golden Goose" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/moncler.svg" alt="Moncler" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/MrC.svg" alt="Mr C" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Poliform.svg" alt="Poliform" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Prada.svg" alt="Prada" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Zuma.svg" alt="Zuma" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Armani.svg" alt="Armani" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/DG.svg" alt="Dolce &amp; Gabbana" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/FourSeasons.svg" alt="Four Seasons" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
 
       <div class="clients-row" aria-hidden="true">
-        <img src="logos/GoldenGoose.svg" alt="" />
-        <img src="logos/moncler.svg" alt="" />
-        <img src="logos/MrC.svg" alt="" />
-        <img src="logos/Poliform.svg" alt="" />
-        <img src="logos/Prada.svg" alt="" />
-        <img src="logos/Zuma.svg" alt="" />
-        <img src="logos/Armani.svg" alt="" />
-        <img src="logos/DG.svg" alt="" />
-        <img src="logos/FourSeasons.svg" alt="" />
+        <img src="logos/GoldenGoose.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/moncler.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/MrC.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Poliform.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Prada.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Zuma.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Armani.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/DG.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/FourSeasons.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
 
     </div>
@@ -1918,27 +1997,27 @@ html{
     <div class="clients-track clients-track--reverse">
 
       <div class="clients-row">
-        <img src="logos/Eden.svg" alt="" />
-        <img src="logos/Luxury.svg" alt="" />
-        <img src="logos/Shawood.svg" alt="" />
-        <img src="logos/Louis.svg" alt="" />
-        <img src="logos/Sagewood.svg" alt="" />
-        <img src="logos/Kiton.svg" alt="" />
-        <img src="logos/Anima.svg" alt="" />
-        <img src="logos/Amex.svg" alt="" />
-        <img src="logos/Laperla.svg" alt="" />
+        <img src="logos/Eden.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Luxury.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Shawood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Louis.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Sagewood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Kiton.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Anima.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Amex.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Laperla.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
 
       <div class="clients-row">
-        <img src="logos/Eden.svg" alt="" />
-        <img src="logos/Luxury.svg" alt="" />
-        <img src="logos/Shawood.svg" alt="" />
-        <img src="logos/Louis.svg" alt="" />
-        <img src="logos/Sagewood.svg" alt="" />
-        <img src="logos/Kiton.svg" alt="" />
-        <img src="logos/Anima.svg" alt="" />
-        <img src="logos/Amex.svg" alt="" />
-        <img src="logos/Laperla.svg" alt="" />
+        <img src="logos/Eden.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Luxury.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Shawood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Louis.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Sagewood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Kiton.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Anima.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Amex.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Laperla.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
 
     </div>
@@ -2041,7 +2120,7 @@ html{
       <article class="setor-card">
         <div class="setor-card__media">
           <div class="setor-card__img">
-            <img src="images/retail.jpg" alt="Luxury retail interior" />
+            <img src="images/retail.jpg" alt="Luxury retail interior" loading="lazy" decoding="async" fetchpriority="low" width="900" height="675" />
             
           </div>
         </div>
@@ -2058,7 +2137,7 @@ html{
       <article class="setor-card">
         <div class="setor-card__media">
           <div class="setor-card__img">
-            <img src="images/hotels.jpg" alt="Luxury hotel lobby interior" />
+            <img src="images/hotels.jpg" alt="Luxury hotel lobby interior" loading="lazy" decoding="async" fetchpriority="low" width="900" height="675" />
             
           </div>
         </div>
@@ -2075,7 +2154,7 @@ html{
       <article class="setor-card">
         <div class="setor-card__media">
           <div class="setor-card__img">
-            <img src="images/high-rise.jpg" alt="Luxury high-rise residential lobby" />
+            <img src="images/high-rise.jpg" alt="Luxury high-rise residential lobby" loading="lazy" decoding="async" fetchpriority="low" width="900" height="675" />
             
           </div>
         </div>
@@ -2908,7 +2987,7 @@ html{
     <div class="gn-map-card">
       
       <div class="gn-map-placeholder" role="img" aria-label="World map image">
-        <img src="images/world.jpg" alt="World map showing Scent Company global network" class="gn-map-image" />
+        <img src="images/world.jpg" alt="World map showing Scent Company global network" class="gn-map-image" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="675" />
       </div>
 
       <div class="gn-map-meta">
