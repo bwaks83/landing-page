@@ -87,7 +87,7 @@
   bottom:-14px;
   width:3px;
   height:3px;
-  background:rgba(244,241,234,.92);
+  background:rgba(230, 192, 104, 0.92);
   border-radius:50%;
   opacity:0;
   will-change:transform,opacity;
@@ -2558,6 +2558,13 @@ img{
     letter-spacing:.045em !important;
   }
 
+  #contact-section-wrap .cs-tryout-support{
+    max-width:320px !important;
+    margin-top:14px !important;
+    font-size:11.5px !important;
+    line-height:1.55 !important;
+  }
+
   #contact-section-wrap .cs-title-divider{
     margin-top:22px !important;
   }
@@ -2614,6 +2621,705 @@ img{
 
 </style>
 
+
+<style>
+/* ===== HERO COPY UPDATE — static left-aligned lockup ===== */
+#hero .hero-smoke{
+  display:none !important;
+}
+
+#hero .hero-particles{
+  display:block !important;
+  z-index:1 !important;
+}
+
+#hero .hero-overlay{
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.42) 42%, rgba(7,7,10,.18) 100%),
+    radial-gradient(780px 420px at 24% 52%, rgba(201,162,74,.11), transparent 64%) !important;
+}
+
+#hero .hero-content{
+  left:0 !important;
+  right:0 !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  width:100% !important;
+  max-width:1280px !important;
+  margin:0 auto !important;
+  padding:0 clamp(28px, 7vw, 96px) !important;
+  text-align:left !important;
+}
+
+#hero .hero-subhead{
+  margin:0 0 26px !important;
+  font-family:'Montserrat', sans-serif !important;
+  font-size:clamp(11px, 1vw, 13px) !important;
+  font-weight:500 !important;
+  letter-spacing:.34em !important;
+  text-transform:uppercase !important;
+  color:#c9a24a !important;
+  opacity:1 !important;
+  transform:none !important;
+  animation:none !important;
+}
+
+#hero .hero-title{
+  display:block !important;
+  width:auto !important;
+  max-width:980px !important;
+  margin:0 !important;
+  padding:0 !important;
+  text-align:left !important;
+  white-space:normal !important;
+  color:#f4f1ea !important;
+  font-family:'Playfair Display', serif !important;
+  font-weight:700 !important;
+  font-size:inherit !important;
+  line-height:1 !important;
+  letter-spacing:0 !important;
+  text-shadow:0 16px 36px rgba(0,0,0,.42) !important;
+}
+
+#hero .hero-title::before{
+  content:none !important;
+  display:none !important;
+}
+
+#hero .hero-title span,
+#hero .hero-title .gap{
+  opacity:1 !important;
+  display:block !important;
+  transform:none !important;
+  filter:none !important;
+  animation:none !important;
+  will-change:auto !important;
+}
+
+#hero .hero-title-main{
+  font-family:'Playfair Display', serif !important;
+  font-weight:700 !important;
+  font-size:clamp(54px, 7.6vw, 104px) !important;
+  line-height:.96 !important;
+  letter-spacing:.015em !important;
+  color:#f4f1ea !important;
+}
+
+#hero .hero-title-support{
+  margin-top:20px !important;
+  font-family:'Montserrat', sans-serif !important;
+  font-weight:300 !important;
+  font-size:clamp(17px, 1.75vw, 25px) !important;
+  line-height:1.45 !important;
+  letter-spacing:.08em !important;
+  color:rgba(244,241,234,.82) !important;
+  text-transform:none !important;
+  max-width:760px !important;
+}
+
+#hero .hero-tagline,
+#hero .hero-positioning,
+#hero .hero-trust,
+#hero .hero-eyebrow{
+  display:none !important;
+}
+
+#hero .hero-cta-row{
+  justify-content:flex-start !important;
+  margin-top:50px !important;
+  opacity:1 !important;
+  transform:none !important;
+  animation:none !important;
+}
+
+#hero .hero-origin{
+  opacity:1 !important;
+  animation:none !important;
+}
+
+@media (max-width: 768px){
+  #hero .hero-content{
+    top:52% !important;
+    padding:0 26px !important;
+  }
+
+  #hero .hero-subhead{
+    margin-bottom:22px !important;
+    font-size:10px !important;
+    letter-spacing:.28em !important;
+  }
+
+  #hero .hero-title{
+    max-width:100% !important;
+  }
+
+  #hero .hero-title-main{
+    font-size:clamp(44px, 13.2vw, 66px) !important;
+    line-height:1.02 !important;
+  }
+
+  #hero .hero-title-support{
+    margin-top:18px !important;
+    font-size:clamp(15px, 4.25vw, 19px) !important;
+    line-height:1.48 !important;
+    letter-spacing:.04em !important;
+    max-width:330px !important;
+  }
+
+  #hero .hero-cta-row{
+    align-items:flex-start !important;
+    margin-top:42px !important;
+  }
+
+  #hero .hero-cta-row a{
+    width:100% !important;
+    max-width:330px !important;
+  }
+}
+</style>
+
+
+
+<style>
+/* ===== HERO PARTICLES RESTORE PATCH =====
+   Keeps the subtle moving background particles while the smoke video and old title animation remain removed. */
+#hero .hero-smoke{
+  display:none !important;
+}
+
+#hero .hero-particles{
+  display:block !important;
+  z-index:1 !important;
+}
+
+@media (max-width: 768px){
+  #hero .hero-particles{
+    display:block !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== BUSINESS IMPACT SECTION ===== */
+.impact-metrics-section{
+  position:relative;
+  background:
+    radial-gradient(900px 420px at 50% 0%, rgba(201,162,74,.10), transparent 62%),
+    linear-gradient(180deg, #050507 0%, #000 54%, #060609 100%);
+  padding:108px 24px 116px;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.impact-metrics-section::before,
+.impact-metrics-section::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  border:1px solid rgba(201,162,74,.10);
+  filter:blur(.2px);
+  pointer-events:none;
+  z-index:0;
+}
+
+.impact-metrics-section::before{
+  top:-180px;
+  left:-120px;
+}
+
+.impact-metrics-section::after{
+  bottom:-240px;
+  right:-120px;
+}
+
+.impact-metrics-wrap{
+  position:relative;
+  z-index:2;
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.impact-metrics-header{
+  max-width:900px;
+  margin:0 auto 56px;
+  text-align:center;
+}
+
+.impact-metrics-eyebrow{
+  font-family:'Montserrat', sans-serif;
+  font-size:11px;
+  letter-spacing:.38em;
+  text-transform:uppercase;
+  color:#c9a24a;
+  margin:0 0 18px;
+  padding-left:.38em;
+}
+
+.impact-metrics-title{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(24px, 4.2vw, 44px);
+  line-height:1.04;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:#f4f1ea;
+  margin:0 0 22px;
+}
+
+.impact-metrics-subtitle{
+  max-width:860px;
+  margin:0 auto;
+  font-family:'Montserrat', sans-serif;
+  font-weight:300;
+  font-size:15px;
+  line-height:1.8;
+  color:rgba(244,241,234,.74);
+}
+
+.impact-metrics-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+}
+
+.impact-metric-card{
+  position:relative;
+  min-height:360px;
+  padding:34px 30px 30px;
+  border-radius:14px;
+  border:1px solid rgba(201,162,74,.22);
+  background:linear-gradient(180deg, rgba(18,18,24,.82), rgba(6,6,10,.92));
+  box-shadow:0 18px 46px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.03);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  isolation:isolate;
+  animation:impactCardFloat 7.2s ease-in-out infinite;
+  will-change:transform;
+  transition:border-color .45s ease, box-shadow .45s ease, background-color .45s ease;
+}
+
+.impact-metric-card:nth-child(1){ animation-delay:-.4s; }
+.impact-metric-card:nth-child(2){ animation-delay:-2.2s; }
+.impact-metric-card:nth-child(3){ animation-delay:-1.1s; }
+
+.impact-metric-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:radial-gradient(120% 90% at 50% 0%, rgba(201,162,74,.10), transparent 58%);
+  pointer-events:none;
+  transition:opacity .45s ease, background .45s ease;
+}
+
+.impact-metric-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    radial-gradient(120% 95% at 50% 0%, rgba(201,162,74,.16), transparent 62%),
+    linear-gradient(180deg, rgba(201,162,74,.045), rgba(255,255,255,.018));
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .45s ease;
+}
+
+.impact-metric-card:hover{
+  border-color:rgba(201,162,74,.36);
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.38),
+    0 0 0 1px rgba(201,162,74,.08),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.impact-metric-card:hover::before{
+  background:radial-gradient(120% 90% at 50% 0%, rgba(201,162,74,.14), transparent 60%);
+}
+
+.impact-metric-card:hover::after{
+  opacity:1;
+}
+
+@keyframes impactCardFloat{
+  0%, 100%{
+    transform:translate3d(0, 0, 0);
+  }
+  50%{
+    transform:translate3d(0, -10px, 0);
+  }
+}
+
+.impact-metric-kicker{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  gap:10px;
+  margin-bottom:20px;
+  font-family:'Montserrat', sans-serif;
+  font-size:10px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:rgba(247, 201, 95, 0.68);
+}
+
+.impact-metric-kicker::before{
+  content:"";
+  width:24px;
+  height:1px;
+  background:rgba(201,162,74,.55);
+}
+
+.impact-metric-value{
+  position:relative;
+  z-index:1;
+  font-family:'Playfair Display', serif;
+  font-size:clamp(36px, 6.5vw, 70px);
+  line-height:.95;
+  letter-spacing:-.03em;
+  color:#f4f1ea;
+  margin:0 0 22px;
+}
+
+.impact-metric-value span{
+  color:#c9a24a;
+}
+
+.impact-metric-name{
+  position:relative;
+  z-index:1;
+  font-family:'Playfair Display', serif;
+  font-size:clamp(20px, 2vw, 24px);
+  line-height:1.12;
+  color:rgba(247, 201, 95, 0.68);
+  margin:0 0 14px;
+}
+
+.impact-metric-rule{
+  position:relative;
+  z-index:1;
+  width:46px;
+  height:1px;
+  background:linear-gradient(90deg, #c9a24a, rgba(201,162,74,.10));
+  margin:0 0 18px;
+}
+
+.impact-metric-copy{
+  position:relative;
+  z-index:1;
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  font-weight:300;
+  font-size:14px;
+  line-height:1.76;
+  color:rgba(244,241,234,.72);
+}
+
+.impact-metrics-note{
+  max-width:920px;
+  margin:28px auto 0;
+  text-align:center;
+  font-family:'Montserrat', sans-serif;
+  font-size:12px;
+  line-height:1.7;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(244,241,234,.46);
+}
+
+@media (max-width: 980px){
+  .impact-metrics-grid{
+    grid-template-columns:1fr;
+    max-width:680px;
+    margin:0 auto;
+  }
+
+  .impact-metric-card{
+    min-height:auto;
+  }
+}
+
+@media (max-width: 640px){
+  .impact-metrics-section{
+    padding:68px 18px 76px;
+  }
+
+  .impact-metrics-header{
+    margin-bottom:34px;
+  }
+
+  .impact-metrics-eyebrow{
+    font-size:10px;
+    letter-spacing:.34em;
+    margin-bottom:14px;
+  }
+
+  .impact-metrics-title{
+    font-size:clamp(25px, 7vw, 32px);
+    line-height:1.08;
+    letter-spacing:.07em;
+    margin-bottom:16px;
+  }
+
+  .impact-metrics-subtitle{
+    font-size:13px;
+    line-height:1.7;
+    max-width:330px;
+  }
+
+  .impact-metrics-grid{
+    gap:16px;
+    max-width:340px;
+  }
+
+  .impact-metric-card{
+    padding:24px 20px 22px;
+    border-radius:12px;
+  }
+
+  .impact-metric-kicker{
+    margin-bottom:16px;
+    font-size:9px;
+  }
+
+  .impact-metric-value{
+    font-size:52px;
+    margin-bottom:16px;
+  }
+
+  .impact-metric-name{
+    font-size:21px;
+    margin-bottom:10px;
+  }
+
+  .impact-metric-rule{
+    width:38px;
+    margin-bottom:14px;
+  }
+
+  .impact-metric-copy{
+    font-size:12.5px;
+    line-height:1.62;
+  }
+
+  .impact-metrics-note{
+    max-width:330px;
+    margin-top:20px;
+    font-size:10px;
+    letter-spacing:.07em;
+  }
+}
+</style>
+
+
+<style>
+/* ===== FAQ SECTION — Scent Company ===== */
+.sc-faq-section{
+  position:relative;
+  background:
+    radial-gradient(860px 420px at 50% 0%, rgba(201,163,74,.08), transparent 64%),
+    linear-gradient(180deg, #050505 0%, #000 100%);
+  padding:96px 24px 104px;
+  color:#f4f1ea;
+  overflow:hidden;
+  isolation:isolate;
+  border-top:1px solid rgba(201,163,74,.16);
+}
+
+.sc-faq-section::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:min(820px, 82vw);
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg, transparent, rgba(201,163,74,.55), transparent);
+  pointer-events:none;
+}
+
+.sc-faq-wrap{
+  position:relative;
+  z-index:2;
+  max-width:980px;
+  margin:0 auto;
+}
+
+.sc-faq-header{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 46px;
+}
+
+.sc-faq-eyebrow{
+  margin:0 0 18px;
+  font-family:'Montserrat', sans-serif;
+  font-size:11px;
+  letter-spacing:.38em;
+  text-transform:uppercase;
+  color:#c9a34a;
+  padding-left:.38em;
+}
+
+.sc-faq-title{
+  margin:0 0 18px;
+  font-family:'Playfair Display', serif;
+  font-size:clamp(34px, 4.2vw, 58px);
+  line-height:1.04;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:#f4f1ea;
+}
+
+.sc-faq-subtitle{
+  max-width:680px;
+  margin:0 auto;
+  font-family:'Montserrat', sans-serif;
+  font-weight:300;
+  font-size:14px;
+  line-height:1.8;
+  color:rgba(244,241,234,.68);
+}
+
+.sc-faq-list{
+  display:grid;
+  gap:14px;
+}
+
+.sc-faq-item{
+  position:relative;
+  border:1px solid rgba(201,163,74,.22);
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(18,18,24,.72), rgba(6,6,10,.88));
+  box-shadow:0 18px 46px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.025);
+  overflow:hidden;
+  transition:border-color .26s ease, background .26s ease, box-shadow .26s ease;
+}
+
+.sc-faq-item:hover,
+.sc-faq-item[open]{
+  border-color:rgba(201,163,74,.42);
+  background:linear-gradient(180deg, rgba(24,22,24,.80), rgba(9,8,10,.92));
+  box-shadow:0 22px 54px rgba(0,0,0,.32), 0 0 0 1px rgba(201,163,74,.06), inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.sc-faq-question{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:24px 28px;
+  cursor:pointer;
+  list-style:none;
+  font-family:'Playfair Display', serif;
+  font-size:clamp(18px, 1.6vw, 22px);
+  line-height:1.25;
+  color:#fff;
+  letter-spacing:.015em;
+}
+
+.sc-faq-question::-webkit-details-marker{
+  display:none;
+}
+
+.sc-faq-question::after{
+  content:"+";
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(201,163,74,.38);
+  color:#c9a34a;
+  font-family:'Montserrat', sans-serif;
+  font-size:22px;
+  font-weight:300;
+  line-height:1;
+  transition:transform .26s ease, border-color .26s ease, background .26s ease, color .26s ease;
+}
+
+.sc-faq-item[open] .sc-faq-question::after{
+  content:"–";
+  transform:rotate(180deg);
+  border-color:rgba(231,197,119,.55);
+  background:rgba(201,163,74,.08);
+  color:#e7c577;
+}
+
+.sc-faq-answer{
+  padding:0 28px 26px;
+  font-family:'Montserrat', sans-serif;
+  font-weight:300;
+  font-size:14px;
+  line-height:1.82;
+  color:rgba(244,241,234,.72);
+}
+
+.sc-faq-answer p{
+  max-width:820px;
+  margin:0;
+  padding-top:2px;
+}
+
+@media (max-width: 640px){
+  .sc-faq-section{
+    padding:70px 18px 78px;
+  }
+
+  .sc-faq-header{
+    margin-bottom:34px;
+  }
+
+  .sc-faq-eyebrow{
+    font-size:10px;
+    letter-spacing:.34em;
+    margin-bottom:14px;
+  }
+
+  .sc-faq-title{
+    font-size:clamp(28px, 8vw, 38px);
+    letter-spacing:.08em;
+    margin-bottom:14px;
+  }
+
+  .sc-faq-subtitle{
+    font-size:13px;
+    line-height:1.7;
+    max-width:330px;
+  }
+
+  .sc-faq-list{
+    gap:11px;
+  }
+
+  .sc-faq-question{
+    padding:19px 18px;
+    gap:16px;
+    font-size:18px;
+  }
+
+  .sc-faq-question::after{
+    width:30px;
+    height:30px;
+    font-size:20px;
+  }
+
+  .sc-faq-answer{
+    padding:0 18px 21px;
+    font-size:12.5px;
+    line-height:1.68;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -2630,71 +3336,53 @@ img{
 
 
   <section id="hero">
-    <video class="hero-smoke" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-      <source src="images/smoke.mp4" type="video/mp4">
-    </video>
 
-<div class="hero-particles" aria-hidden="true">
-  <span class="particle" style="left:4%;--dur:13s;--delay:-2s;--drift:18px"></span>
-  <span class="particle" style="left:8%;--dur:16s;--delay:-7s;--drift:28px"></span>
-  <span class="particle" style="left:11%;--dur:18s;--delay:-4s;--drift:-14px"></span>
-  <span class="particle" style="left:15%;--dur:14s;--delay:-10s;--drift:22px"></span>
-  <span class="particle" style="left:19%;--dur:20s;--delay:-6s;--drift:-24px"></span>
-  <span class="particle" style="left:23%;--dur:15s;--delay:-12s;--drift:16px"></span>
-  <span class="particle" style="left:27%;--dur:17s;--delay:-3s;--drift:30px"></span>
-  <span class="particle" style="left:31%;--dur:19s;--delay:-14s;--drift:-18px"></span>
-  <span class="particle" style="left:35%;--dur:14s;--delay:-5s;--drift:20px"></span>
-  <span class="particle" style="left:39%;--dur:21s;--delay:-11s;--drift:-30px"></span>
-  <span class="particle" style="left:43%;--dur:16s;--delay:-8s;--drift:14px"></span>
-  <span class="particle" style="left:47%;--dur:18s;--delay:-1s;--drift:26px"></span>
-  <span class="particle" style="left:50%;--dur:13s;--delay:-9s;--drift:-12px"></span>
-  <span class="particle" style="left:54%;--dur:17s;--delay:-13s;--drift:-22px"></span>
-  <span class="particle" style="left:58%;--dur:15s;--delay:-4s;--drift:24px"></span>
-  <span class="particle" style="left:61%;--dur:22s;--delay:-15s;--drift:-16px"></span>
-  <span class="particle" style="left:65%;--dur:14s;--delay:-6s;--drift:18px"></span>
-  <span class="particle" style="left:69%;--dur:19s;--delay:-2s;--drift:-28px"></span>
-  <span class="particle" style="left:72%;--dur:16s;--delay:-10s;--drift:21px"></span>
-  <span class="particle" style="left:75%;--dur:20s;--delay:-7s;--drift:-20px"></span>
-  <span class="particle" style="left:79%;--dur:13s;--delay:-11s;--drift:12px"></span>
-  <span class="particle" style="left:82%;--dur:18s;--delay:-5s;--drift:30px"></span>
-  <span class="particle" style="left:85%;--dur:15s;--delay:-14s;--drift:-15px"></span>
-  <span class="particle" style="left:88%;--dur:17s;--delay:-3s;--drift:19px"></span>
-  <span class="particle" style="left:91%;--dur:21s;--delay:-12s;--drift:-25px"></span>
-  <span class="particle" style="left:94%;--dur:14s;--delay:-8s;--drift:17px"></span>
-  <span class="particle" style="left:97%;--dur:18s;--delay:-16s;--drift:-10px"></span>
-  <span class="particle" style="left:99%;--dur:16s;--delay:-9s;--drift:14px"></span>
-</div>
-
+    <div class="hero-particles" aria-hidden="true">
+      <span class="particle" style="left:4%;--dur:13s;--delay:-2s;--drift:18px"></span>
+      <span class="particle" style="left:8%;--dur:16s;--delay:-7s;--drift:28px"></span>
+      <span class="particle" style="left:11%;--dur:18s;--delay:-4s;--drift:-14px"></span>
+      <span class="particle" style="left:15%;--dur:14s;--delay:-10s;--drift:22px"></span>
+      <span class="particle" style="left:19%;--dur:20s;--delay:-6s;--drift:-24px"></span>
+      <span class="particle" style="left:23%;--dur:15s;--delay:-12s;--drift:16px"></span>
+      <span class="particle" style="left:27%;--dur:17s;--delay:-3s;--drift:30px"></span>
+      <span class="particle" style="left:31%;--dur:19s;--delay:-14s;--drift:-18px"></span>
+      <span class="particle" style="left:35%;--dur:14s;--delay:-5s;--drift:20px"></span>
+      <span class="particle" style="left:39%;--dur:21s;--delay:-11s;--drift:-30px"></span>
+      <span class="particle" style="left:43%;--dur:16s;--delay:-8s;--drift:14px"></span>
+      <span class="particle" style="left:47%;--dur:18s;--delay:-1s;--drift:26px"></span>
+      <span class="particle" style="left:50%;--dur:13s;--delay:-9s;--drift:-12px"></span>
+      <span class="particle" style="left:54%;--dur:17s;--delay:-13s;--drift:-22px"></span>
+      <span class="particle" style="left:58%;--dur:15s;--delay:-4s;--drift:24px"></span>
+      <span class="particle" style="left:61%;--dur:22s;--delay:-15s;--drift:-16px"></span>
+      <span class="particle" style="left:65%;--dur:14s;--delay:-6s;--drift:18px"></span>
+      <span class="particle" style="left:69%;--dur:19s;--delay:-2s;--drift:-28px"></span>
+      <span class="particle" style="left:72%;--dur:16s;--delay:-10s;--drift:21px"></span>
+      <span class="particle" style="left:75%;--dur:20s;--delay:-7s;--drift:-20px"></span>
+      <span class="particle" style="left:79%;--dur:13s;--delay:-11s;--drift:12px"></span>
+      <span class="particle" style="left:82%;--dur:18s;--delay:-5s;--drift:30px"></span>
+      <span class="particle" style="left:85%;--dur:15s;--delay:-14s;--drift:-15px"></span>
+      <span class="particle" style="left:88%;--dur:17s;--delay:-3s;--drift:19px"></span>
+      <span class="particle" style="left:91%;--dur:21s;--delay:-12s;--drift:-25px"></span>
+      <span class="particle" style="left:94%;--dur:14s;--delay:-8s;--drift:17px"></span>
+      <span class="particle" style="left:97%;--dur:18s;--delay:-16s;--drift:-10px"></span>
+      <span class="particle" style="left:99%;--dur:16s;--delay:-9s;--drift:14px"></span>
+    </div>
 
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">Luxury scent marketing</p>
-      <h1 class="hero-title" aria-label="Scent Company">
-        <span>S</span>
-        <span>C</span>
-        <span>E</span>
-        <span>N</span>
-        <span>T</span>
-        <span class="gap">&nbsp;</span>
-        <span>C</span>
-        <span>O</span>
-        <span>M</span>
-        <span>P</span>
-        <span>A</span>
-        <span>N</span>
-        <span>Y</span>
+      <p class="hero-subhead">Scent Company USA</p>
+
+      <h1 class="hero-title" aria-label="Full-Service Scent Management For luxury hotels, retail and high-rise">
+        <span class="hero-title-main">Full-Service</span>
+        <span class="hero-title-main">Scent Management</span>
+        <span class="hero-title-support">For luxury hotels, retail and high-rise</span>
       </h1>
 
-      <p class="hero-tagline"></p>
-      <p class="hero-positioning">
-        Full-service scent management for luxury hotels, retail and high-rise buildings.
-      </p>
       <div class="hero-cta-row" aria-label="Primary actions">
         <a href="#contact-section-wrap" class="sc-btn-primary">Request a Complimentary Tryout</a>
         <a href="#services" class="sc-btn-secondary">Explore Services</a>
       </div>
-      <p class="hero-trust"></p>
     </div>
 
     <p class="hero-origin">designed in Italy</p>
@@ -2790,9 +3478,8 @@ img{
     <header class="conversion-header why-orbit-header">
       <p class="conversion-eyebrow">Why Scent Company</p>
       <h2 class="conversion-title" id="why-title">
-        <span class="why-title-line">A premium scent</span>
-        <span class="why-title-line">experience, managed</span>
-        <span class="why-title-line">end to end.</span>
+        <span class="why-title-line">A premium scent experience,</span>
+        <span class="why-title-line">managed end-to-end.</span>
       </h2>
     </header>
 
@@ -2844,6 +3531,45 @@ img{
         </div>
       </article>
     </div>
+  </div>
+</section>
+
+
+<section class="impact-metrics-section" id="business-impact" aria-labelledby="impact-title">
+  <div class="impact-metrics-wrap">
+    <header class="impact-metrics-header">
+      <p class="impact-metrics-eyebrow">Business Impact</p>
+      <h2 class="impact-metrics-title" id="impact-title">When scent elevates experience, business follows.</h2>
+      <p class="impact-metrics-subtitle">A carefully designed ambient scent does more than enrich atmosphere. It can extend dwell time, enhance perceived value and support measurable commercial performance across premium environments.</p>
+    </header>
+
+    <div class="impact-metrics-grid">
+      <article class="impact-metric-card">
+        <div class="impact-metric-kicker">In-store behavior</div>
+        <div class="impact-metric-value">Up to 22%</div>
+        <h3 class="impact-metric-name">Time spent in store</h3>
+        <div class="impact-metric-rule" aria-hidden="true"></div>
+        <p class="impact-metric-copy">A more immersive atmosphere can encourage visitors to stay longer, creating more moments for discovery, engagement and brand connection.</p>
+      </article>
+
+      <article class="impact-metric-card">
+        <div class="impact-metric-kicker">Commercial value</div>
+        <div class="impact-metric-value">Up to 15%</div>
+        <h3 class="impact-metric-name">Customer expenditure</h3>
+        <div class="impact-metric-rule" aria-hidden="true"></div>
+        <p class="impact-metric-copy">When the environment feels more elevated and memorable, customers may perceive greater value — often reflected in stronger average spend.</p>
+      </article>
+
+      <article class="impact-metric-card">
+        <div class="impact-metric-kicker">Overall performance</div>
+        <div class="impact-metric-value">Up to 5%</div>
+        <h3 class="impact-metric-name">Total sales</h3>
+        <div class="impact-metric-rule" aria-hidden="true"></div>
+        <p class="impact-metric-copy">Aligned with the brand experience, ambient scent can contribute to a more effective customer journey — with impact that may extend to total sales.</p>
+      </article>
+    </div>
+
+    <p class="impact-metrics-note">Results vary by environment, fragrance strategy and customer profile.</p>
   </div>
 </section>
 
@@ -4833,6 +5559,16 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
   font-style: normal;
   display: block;
 }
+.cs-tryout-support {
+  max-width: 470px;
+  margin: 18px 0 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: .04em;
+  color: rgba(244,241,234,.72);
+}
 .cs-title-divider {
   display: flex;
   align-items: center;
@@ -5260,6 +5996,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
           <span class="standard-title">Complimentary</span>
           <em>Tryout</em>
         </h2>
+        <p class="cs-tryout-support">Consultation + olfactory sample + technical project for your space — at no cost.</p>
         <div class="cs-title-divider" aria-hidden="true">
           <span class="cs-line"></span>
           <span class="cs-diamond"></span>
@@ -5280,11 +6017,6 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
           <span class="cs-error-msg">Required</span>
         </div>
 
-        <div class="cs-field" data-field="lastName">
-          <label for="cs-lastName">Last Name *</label>
-          <input id="cs-lastName" name="lastName" type="text" autocomplete="family-name" required />
-          <span class="cs-error-msg">Required</span>
-        </div>
 
         <div class="cs-field" data-field="company">
           <label for="cs-company">Company / Property *</label>
@@ -5292,11 +6024,6 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
           <span class="cs-error-msg">Required</span>
         </div>
 
-        <div class="cs-field" data-field="phone">
-          <label for="cs-phone">Phone *</label>
-          <input id="cs-phone" name="phone" type="tel" autocomplete="tel" required />
-          <span class="cs-error-msg">Please enter a phone number</span>
-        </div>
 
         <div class="cs-field cs-full" data-field="email">
           <label for="cs-email">Business Email *</label>
@@ -5319,17 +6046,6 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
           <span class="cs-error-msg">Please select a business type</span>
         </div>
 
-        <div class="cs-field cs-full" data-field="locations">
-          <label for="cs-locations">Number of Locations</label>
-          <select id="cs-locations" name="locations">
-            <option value="">Select one</option>
-            <option value="Single location">Single location</option>
-            <option value="2–5 locations">2–5 locations</option>
-            <option value="6–15 locations">6–15 locations</option>
-            <option value="16+ locations">16+ locations</option>
-          </select>
-          <span class="cs-error-msg">Required</span>
-        </div>
 
         <div class="cs-field cs-full" data-field="message">
           <label for="cs-message">Message / Project Details</label>
@@ -5350,6 +6066,68 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
    
       </form>
     </div>
+
+
+    <section class="sc-faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="sc-faq-wrap">
+        <header class="sc-faq-header">
+          <p class="sc-faq-eyebrow">FAQ — Scent Company</p>
+          <h2 class="sc-faq-title" id="faq-title">Frequently Asked Questions</h2>
+          <p class="sc-faq-subtitle">Key information about our service model, installation process, maintenance, fragrance changes and professional scent diffusion systems.</p>
+        </header>
+
+        <div class="sc-faq-list">
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">Is there a minimum contract period?</summary>
+            <div class="sc-faq-answer">
+              <p>There is no minimum contract period. The service can be canceled at any time, at no aditional cost.</p>
+            </div>
+          </details>
+
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">Who is responsible for the installation?</summary>
+            <div class="sc-faq-answer">
+              <p>Our team takes care of the full installation process. We analyze the areas to be scented, recommend the most efficient diffusion system, and install the equipment in a non-invasive way, always respecting the design and structure of the space.</p>
+            </div>
+          </details>
+
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">How does maintenance work?</summary>
+            <div class="sc-faq-answer">
+              <p>Our service is all-inclusive. Maintenance, perfume refills, system adjustments, and ongoing support are handled by Scent Company, so your team does not need to manage technical issues or operational details.</p>
+            </div>
+          </details>
+
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">Can I change the fragrance?</summary>
+            <div class="sc-faq-answer">
+              <p>Yes. Fragrance changes are part of the service experience. We can help you select a new scent according to your brand identity, seasonality, customer experience goals, or the atmosphere you want to create.</p>
+            </div>
+          </details>
+
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">Does the system work with my existing HVAC structure?</summary>
+            <div class="sc-faq-answer">
+              <p>Yes, when the space allows it. Our professional diffusion systems can be connected to existing air conditioning ducts to distribute the fragrance evenly throughout the environment. We also offer mobile diffusion systems for spaces where HVAC integration is not the best option.</p>
+            </div>
+          </details>
+
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">What makes Scent Company different from regular air fresheners?</summary>
+            <div class="sc-faq-answer">
+              <p>Scent Company creates professional olfactory branding solutions, not generic air freshening. Our fragrances are developed in Italy using high-quality raw materials, and our systems are designed to deliver a consistent, elegant, and controlled scent experience.</p>
+            </div>
+          </details>
+
+          <details class="sc-faq-item">
+            <summary class="sc-faq-question">What is included in the monthly service?</summary>
+            <div class="sc-faq-answer">
+              <p>The service includes the scent diffusion system, fragrance supply, refills, maintenance, system support, and adjustments. It is designed as a full-service solution with no operational burden for the client.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
 
     <footer class="cs-footer">
       <div class="cs-footer-grid">
@@ -5406,9 +6184,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
 (function(){
   const form = document.getElementById('cs-contactForm');
   const firstName = document.getElementById('cs-firstName');
-  const lastName = document.getElementById('cs-lastName');
   const company = document.getElementById('cs-company');
-  const phone = document.getElementById('cs-phone');
   const email = document.getElementById('cs-email');
   const segment = document.getElementById('cs-segment');
   const sendBtn = document.getElementById('cs-sendBtn');
@@ -5430,22 +6206,19 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
 
   function isFormValid() {
     const fnOk = firstName.value.trim().length > 0;
-    const lnOk = lastName.value.trim().length > 0;
     const companyOk = company.value.trim().length > 0;
-    const phoneOk = phone.value.trim().length >= 7;
     const emailOk = emailRe.test(email.value.trim());
     const segmentOk = segment.value.trim().length > 0;
-    return fnOk && lnOk && companyOk && phoneOk && emailOk && segmentOk;
+    return fnOk && companyOk && emailOk && segmentOk;
   }
 
   function refreshButton() {
     sendBtn.disabled = !isFormValid();
   }
 
-  [firstName, lastName, company, phone, email, segment].forEach((el) => {
+  [firstName, company, email, segment].forEach((el) => {
     el.addEventListener('input', () => {
       if (el === email) validateField(el, (v) => emailRe.test(v));
-      else if (el === phone) validateField(el, (v) => v.length >= 7);
       else validateField(el, (v) => v.length > 0);
       refreshButton();
     });
