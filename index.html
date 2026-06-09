@@ -3413,7 +3413,7 @@ img{
       </div>
     </div>
 
-    <p class="hero-origin">designed in Italy</p>
+    <p class="hero-origin"></p>
   </section>
 
 <section id="clients">
@@ -6435,7 +6435,166 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
 }
 </style>
 
-<a href="#contact-section-wrap" class="sc-btn-primary sc-mobile-cta">Request a Tryout</a>
+
+<style>
+/* ===== MOBILE UX + WIDTH FINAL PATCH =====
+   1) Removes the fixed mobile CTA that interfered with scrolling/navigation.
+   2) Rebuilds mobile logo sizing without transform scaling, which was creating
+      visible anti-aliased white fringes around thin SVG logo lines.
+   3) Expands Industries and Services cards to use the available screen width. */
+@media (max-width: 768px){
+  .sc-mobile-cta{
+    display:none !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
+  body{
+    padding-bottom:0 !important;
+  }
+
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:120px !important;
+    padding-right:120px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img,
+  #clients img[src*="moncler"],
+  #clients img[src*="Prada"],
+  #clients img[src*="Zuma"],
+  #clients img[src*="FourSeasons"],
+  #clients img[src*="MrC"],
+  #clients img[src*="Poliform"],
+  #clients img[src*="GoldenGoose"],
+  #clients img[src*="Armani"],
+  #clients img[src*="DG"],
+  #clients .clients-track--reverse img[src*="Eden"],
+  #clients .clients-track--reverse img[src*="Luxury"],
+  #clients .clients-track--reverse img[src*="Shawood"],
+  #clients .clients-track--reverse img[src*="Louis"],
+  #clients .clients-track--reverse img[src*="Sagewood"],
+  #clients .clients-track--reverse img[src*="Kiton"],
+  #clients .clients-track--reverse img[src*="Anima"],
+  #clients .clients-track--reverse img[src*="Amex"],
+  #clients .clients-track--reverse img[src*="Laperla"]{
+    height:132px !important;
+    width:auto !important;
+    max-width:none !important;
+    transform:none !important;
+    filter:none !important;
+    opacity:1 !important;
+    border:0 !important;
+    outline:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+    backface-visibility:hidden !important;
+  }
+}
+
+@media (max-width: 640px){
+  #industries.setores{
+    padding-left:12px !important;
+    padding-right:12px !important;
+  }
+
+  #industries .setores__header{
+    width:100% !important;
+    max-width:none !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+
+  #industries .setores-cards{
+    width:100% !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    gap:22px !important;
+  }
+
+  #industries .setor-card,
+  #industries .setor-card-link{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #industries .setor-card{
+    padding:14px 14px 26px !important;
+  }
+
+  #industries .setor-card__body{
+    width:100% !important;
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  #industries .setor-card__desc{
+    max-width:34ch !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  #services.services-section{
+    padding-left:12px !important;
+    padding-right:12px !important;
+  }
+
+  #services .services-container,
+  #services .services-header,
+  #services .services-layout,
+  #services .services-stack{
+    width:100% !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  #services .services-layout,
+  #services .services-stack{
+    gap:22px !important;
+  }
+
+  #services .service-panel,
+  #services .service-panel--featured,
+  #services .service-panel--wide{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #services .service-panel__image,
+  #services .service-panel__image--featured,
+  #services .service-panel__image--angled,
+  #services .service-panel--wide .service-panel__image--angled{
+    flex-basis:190px !important;
+  }
+
+  #services .service-panel--wide .service-panel__content,
+  #services .service-panel__content,
+  #services .service-panel__content--featured{
+    padding-left:22px !important;
+    padding-right:22px !important;
+  }
+
+  #services .service-description{
+    max-width:38ch !important;
+  }
+}
+
+@media (max-width: 420px){
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:104px !important;
+    padding-right:104px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img{
+    height:118px !important;
+  }
+}
+</style>
 
 </body>
 </html>
