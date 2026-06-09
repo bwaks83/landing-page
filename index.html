@@ -3348,6 +3348,70 @@ img{
 }
 </style>
 
+
+<style>
+/* ===== MOBILE CLIENTS STATIC IMAGE PATCH =====
+   Desktop keeps the original animated logo marquees.
+   Mobile replaces the animation with a single static image: images/clients-mobile.jpg */
+.clients-mobile-image{
+  display:none;
+}
+
+@media (max-width: 768px){
+  #clients{
+    content-visibility:visible !important;
+    contain:none !important;
+    contain-intrinsic-size:auto !important;
+    padding-top:72px !important;
+    padding-bottom:72px !important;
+    overflow:hidden !important;
+  }
+
+  #clients .clients-header{
+    margin-bottom:36px !important;
+  }
+
+  #clients .clients-marquee{
+    display:none !important;
+  }
+
+  #clients .clients-track,
+  #clients .clients-row{
+    animation:none !important;
+    transform:none !important;
+  }
+
+  #clients .clients-mobile-image{
+    display:block !important;
+    width:100% !important;
+    max-width:675px !important;
+    margin:0 auto !important;
+    padding:0 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  #clients .clients-mobile-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:675 / 1200 !important;
+    object-fit:contain !important;
+    border:0 !important;
+    outline:0 !important;
+    box-shadow:none !important;
+    filter:none !important;
+    transform:none !important;
+    opacity:1 !important;
+  }
+}
+
+@media (min-width: 769px){
+  #clients .clients-mobile-image{
+    display:none !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -3432,6 +3496,17 @@ img{
         <span class="network-heading-white">across retail, hospitality and wellness.</span>
       </h2>
     </div>
+  </div>
+
+  <div class="clients-mobile-image">
+    <img
+      src="images/clients-mobile.jpg"
+      alt="Scent Company trusted clients"
+      width="675"
+      height="1200"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
 
   <div class="clients-marquee">
