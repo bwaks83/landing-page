@@ -6837,5 +6837,71 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
 }
 </style>
 
+
+<style>
+/* ===== FINAL MOBILE CLIENTS STATIC OVERRIDE =====
+   Keeps desktop marquee unchanged.
+   On mobile, hides every legacy logo marquee and shows only clients-mobile.jpg. */
+@media (max-width: 768px){
+  #clients{
+    content-visibility:visible !important;
+    contain:none !important;
+    contain-intrinsic-size:auto !important;
+    overflow:hidden !important;
+  }
+
+  #clients .clients-mobile-image{
+    display:block !important;
+    width:100% !important;
+    max-width:675px !important;
+    margin:0 auto !important;
+    padding:0 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  #clients .clients-mobile-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:675 / 1200 !important;
+    object-fit:contain !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+
+  #clients .clients-marquee,
+  #clients .clients-track,
+  #clients .clients-row{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+    height:0 !important;
+    min-height:0 !important;
+    max-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    animation:none !important;
+    transform:none !important;
+    pointer-events:none !important;
+  }
+
+  #clients .clients-marquee *,
+  #clients .clients-track *,
+  #clients .clients-row *{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+  }
+}
+
+@media (min-width: 769px){
+  #clients .clients-mobile-image{
+    display:none !important;
+  }
+}
+</style>
+
 </body>
 </html>
