@@ -3409,6 +3409,103 @@ img{
 }
 </style>
 
+
+<style>
+/* ===== DESKTOP CLIENT LOGOS REFERENCE RESTORE =====
+   Matches the reference file for desktop client logo animation only.
+   Mobile rules remain untouched. */
+@media (min-width:769px){
+  #clients{
+    padding:90px 0 70px !important;
+    overflow:hidden !important;
+    background:#000 !important;
+  }
+
+  #clients .clients-header{
+    text-align:center !important;
+    margin-bottom:90px !important;
+    padding:0 20px !important;
+  }
+
+  #clients .clients-marquee::before,
+  #clients .clients-marquee::after{
+    width:160px !important;
+  }
+
+  #clients .clients-track{
+    display:flex !important;
+    width:max-content !important;
+    animation:scroll 55s linear infinite !important;
+  }
+
+  #clients .clients-row{
+    display:flex !important;
+    align-items:center !important;
+    gap:220px !important;
+    padding-right:180px !important;
+  }
+
+  #clients .clients-row img{
+    height:84px !important;
+    width:auto !important;
+    max-width:none !important;
+    flex-shrink:0 !important;
+    display:block !important;
+    transform:scale(3.1) !important;
+    transform-origin:center !important;
+    opacity:1 !important;
+    filter:none !important;
+    transition:opacity .35s ease, transform .35s ease, filter .35s ease !important;
+  }
+
+  #clients .clients-row img:hover{
+    opacity:1 !important;
+    transform:scale(2.75) translateY(-2px) !important;
+    filter:none !important;
+  }
+
+  #clients img[src*="moncler"]{
+    transform:scale(3.6) !important;
+  }
+
+  #clients img[src*="Prada"]{
+    transform:scale(3.3) !important;
+  }
+
+  #clients img[src*="Zuma"]{
+    transform:scale(3.4) !important;
+  }
+
+  #clients img[src*="FourSeasons"]{
+    transform:scale(3.2) !important;
+  }
+
+  #clients img[src*="MrC"]{
+    transform:scale(3.4) !important;
+  }
+
+  #clients img[src*="moncler"]:hover{
+    transform:scale(3.2) translateY(-2px) !important;
+  }
+
+  #clients img[src*="Prada"]:hover{
+    transform:scale(3.0) translateY(-2px) !important;
+  }
+
+  #clients img[src*="Zuma"]:hover{
+    transform:scale(3.1) translateY(-2px) !important;
+  }
+
+  #clients img[src*="FourSeasons"]:hover{
+    transform:scale(2.9) translateY(-2px) !important;
+  }
+
+  #clients img[src*="MrC"]:hover{
+    transform:scale(3.1) translateY(-2px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -3702,7 +3799,7 @@ img{
 
     <div class="setores-cards">
 
-      <article class="setor-card">
+      <a class="setor-card setor-card-link" href="https://www.scentcompanyusa.com/retail.html" aria-label="Learn more about Retail scenting">
         <div class="setor-card__media">
           <div class="setor-card__img">
             <img src="images/retail.jpg" alt="Luxury retail interior" loading="lazy" decoding="async" fetchpriority="low" width="900" height="675" />
@@ -3717,7 +3814,7 @@ img{
           <div class="setor-card__mini-div" aria-hidden="true"></div>
           <p class="setor-card__desc">Create a recognizable in-store atmosphere that reinforces brand identity and increases perceived value.</p>
         </div>
-      </article>
+      </a>
 
       <article class="setor-card">
         <div class="setor-card__media">
@@ -6697,30 +6794,6 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
   align-items:center !important;
 }
 
-#clients .clients-row img{
-  flex:0 0 auto !important;
-  display:block !important;
-  width:auto !important;
-  max-width:none !important;
-  opacity:1 !important;
-  border:0 !important;
-  outline:0 !important;
-  box-shadow:none !important;
-  background:transparent !important;
-  transform:none !important;
-  backface-visibility:hidden !important;
-  -webkit-backface-visibility:hidden !important;
-  transform-style:preserve-3d !important;
-  -webkit-transform-style:preserve-3d !important;
-  image-rendering:auto !important;
-  /* Forces SVG/logo pixels into a single gold tone, removing white antialias edges. */
-  filter:brightness(0) saturate(100%) invert(69%) sepia(47%) saturate(531%) hue-rotate(2deg) brightness(93%) contrast(91%) !important;
-}
-
-#clients .clients-row img:hover{
-  transform:none !important;
-  filter:brightness(0) saturate(100%) invert(69%) sepia(47%) saturate(531%) hue-rotate(2deg) brightness(93%) contrast(91%) !important;
-}
 
 @keyframes clientScrollStable{
   from{ transform:translate3d(0,0,0); }
