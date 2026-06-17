@@ -12,6 +12,13 @@
 
   <link rel="preload" as="image" href="images/hotel-poster.jpg">
 
+  <!-- Hospitality Spaces hover background preloads -->
+  <link rel="preload" as="image" href="images/hospitality-lobby.webp" type="image/webp" media="(hover: hover)">
+  <link rel="preload" as="image" href="images/hospitality-suites-corridors.webp" type="image/webp" media="(hover: hover)">
+  <link rel="preload" as="image" href="images/hospitality-spa-wellness.webp" type="image/webp" media="(hover: hover)">
+  <link rel="preload" as="image" href="images/hospitality-restaurants-lounges.webp" type="image/webp" media="(hover: hover)">
+  <link rel="preload" as="image" href="images/hospitality-events-meetings.webp" type="image/webp" media="(hover: hover)">
+
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/favicon.png">
 
@@ -1957,6 +1964,82 @@
 }
 </style>
 
+
+<style>
+/* ===== HOSPITALITY SPACES SECTION BACKGROUND HOVER PATCH =====
+   Adds a temporary full-section background image when hovering each Hospitality Spaces card.
+   Default state remains the current black background. */
+#spaces{
+  isolation:isolate !important;
+  background:
+    radial-gradient(900px 460px at 50% 0%, rgba(201,162,74,.07), transparent 62%),
+    linear-gradient(180deg, #000 0%, #07070a 100%) !important;
+}
+
+#spaces .spaces-hover-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  opacity:0;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transform:scale(1.025);
+  transition:
+    opacity .42s ease,
+    transform 1.1s ease,
+    background-image .01s linear;
+  pointer-events:none;
+}
+
+#spaces .spaces-hover-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(760px 360px at 50% 38%, rgba(201,162,74,.14), transparent 62%),
+    linear-gradient(180deg, rgba(0,0,0,.67), rgba(0,0,0,.88)),
+    rgba(0,0,0,.18);
+  pointer-events:none;
+}
+
+#spaces.has-space-bg .spaces-hover-bg{
+  opacity:1;
+  transform:scale(1);
+}
+
+#spaces .section-container{
+  position:relative;
+  z-index:2;
+}
+
+#spaces .space-card{
+  background:linear-gradient(180deg, rgba(16,16,22,.82), rgba(7,7,11,.94)) !important;
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+}
+
+#spaces.has-space-bg .space-card:not(:hover){
+  background:linear-gradient(180deg, rgba(10,10,14,.76), rgba(0,0,0,.88)) !important;
+  border-color:rgba(201,162,74,.18) !important;
+}
+
+#spaces.has-space-bg .space-card:hover{
+  background:linear-gradient(180deg, rgba(18,18,24,.88), rgba(3,3,5,.96)) !important;
+}
+
+@media (max-width:768px){
+  #spaces .spaces-hover-bg{
+    display:none;
+  }
+
+  #spaces.has-space-bg .space-card:not(:hover),
+  #spaces.has-space-bg .space-card:hover{
+    background:linear-gradient(180deg, rgba(16,16,22,.76), rgba(7,7,11,.9)) !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <nav class="sc-nav" aria-label="Primary navigation">
@@ -3171,6 +3254,7 @@
     <!-- ===== /OUR SERVICES SECTION ===== -->
 
     <section class="section" id="spaces">
+      <div class="spaces-hover-bg" aria-hidden="true"></div>
       <div class="section-container">
         <header class="section-header">
           <p class="eyebrow">Hospitality Spaces</p>
@@ -3179,11 +3263,11 @@
           <p class="section-subtitle">From arrival to relaxation, scent helps create a consistent emotional atmosphere across the most important hospitality environments.</p>
         </header>
         <div class="spaces-grid">
-          <article class="space-card"><div class="space-icon">01</div><h3>Hotel Lobby</h3><p>Create a refined first impression that sets the tone for the entire stay.</p></article>
-          <article class="space-card"><div class="space-icon">02</div><h3>Suites &amp; Corridors</h3><p>Extend the property’s identity into quieter, more private guest moments.</p></article>
-          <article class="space-card"><div class="space-icon">03</div><h3>Spa &amp; Wellness Areas</h3><p>Support relaxation, calm and emotional reset through a carefully balanced fragrance experience.</p></article>
-          <article class="space-card"><div class="space-icon">04</div><h3>Restaurants &amp; Lounges</h3><p>Add atmosphere without overpowering food, beverage or social interaction.</p></article>
-          <article class="space-card"><div class="space-icon">05</div><h3>Event &amp; Meeting Spaces</h3><p>Make private events, weddings and corporate gatherings feel more elevated and memorable.</p></article>
+          <article class="space-card" data-space-bg="images/hospitality-lobby.webp"><div class="space-icon">01</div><h3>Hotel Lobby</h3><p>Create a refined first impression that sets the tone for the entire stay.</p></article>
+          <article class="space-card" data-space-bg="images/hospitality-suites-corridors.webp"><div class="space-icon">02</div><h3>Suites &amp; Corridors</h3><p>Extend the property’s identity into quieter, more private guest moments.</p></article>
+          <article class="space-card" data-space-bg="images/hospitality-spa-wellness.webp"><div class="space-icon">03</div><h3>Spa &amp; Wellness Areas</h3><p>Support relaxation, calm and emotional reset through a carefully balanced fragrance experience.</p></article>
+          <article class="space-card" data-space-bg="images/hospitality-restaurants-lounges.webp"><div class="space-icon">04</div><h3>Restaurants &amp; Lounges</h3><p>Add atmosphere without overpowering food, beverage or social interaction.</p></article>
+          <article class="space-card" data-space-bg="images/hospitality-events-meetings.webp"><div class="space-icon">05</div><h3>Event &amp; Meeting Spaces</h3><p>Make private events, weddings and corporate gatherings feel more elevated and memorable.</p></article>
         </div>
       </div>
     </section>
@@ -3736,6 +3820,32 @@
     }
   }
 </style>
+
+
+<script>
+  (function(){
+    const spacesSection = document.getElementById('spaces');
+    if(!spacesSection) return;
+
+    const bgLayer = spacesSection.querySelector('.spaces-hover-bg');
+    const cards = spacesSection.querySelectorAll('.space-card[data-space-bg]');
+    if(!bgLayer || !cards.length) return;
+
+    cards.forEach(function(card){
+      card.addEventListener('mouseenter', function(){
+        const imagePath = card.getAttribute('data-space-bg');
+        if(!imagePath) return;
+
+        bgLayer.style.backgroundImage = 'url("' + imagePath + '")';
+        spacesSection.classList.add('has-space-bg');
+      });
+
+      card.addEventListener('mouseleave', function(){
+        spacesSection.classList.remove('has-space-bg');
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
