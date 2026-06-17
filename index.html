@@ -4,14 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luxury Scent Marketing & Olfactory Branding in Miami | Scent Company</title>
-  <meta name="description" content="Luxury scent marketing and olfactory branding for hotels, retail stores and residences. Create refined sensory experiences with Scent Company USA." />
+  <meta name="description" content="Italian-crafted scent branding solutions for luxury hotels, retail stores, restaurants and residential buildings. Remote-controlled diffusers and full-service monthly subscription." />
   <meta name="keywords" content="luxury scent marketing Miami, olfactory branding, scent branding for hotels, scent branding for retail stores, signature scent, commercial scent diffuser service, HVAC scent diffusion system" />
   <meta property="og:title" content="Luxury Scent Marketing & Olfactory Branding in Miami | Scent Company" />
   <meta property="og:description" content="Italian-crafted fragrances, remote-controlled diffusion systems and full-service scent management for premium spaces." />
   <meta property="og:type" content="website" />
-
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -645,11 +642,8 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
       box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 1px rgba(200,168,118,.12);
     }
 
-    .setor-card-link,
-    .setor-card-link:visited,
-    .setor-card-link:hover,
-    .setor-card-link:active,
-    .setor-card-link *{
+
+    .setor-card-link{
       color:inherit;
       text-decoration:none;
     }
@@ -2137,10 +2131,7 @@ img{
 
 
 <style>
-/* Title line control: desktop remains natural, mobile becomes a clean 3-line lockup */
-#why-scent-company .why-title-line{
-  display:inline;
-}
+
 
 /* ===== MOBILE WHY SECTION REFINEMENT ===== */
 @media (max-width: 640px){
@@ -2218,11 +2209,11 @@ img{
   #why-scent-company .why-orbit-rule{
     width:30px !important;
     height:1px !important;
-    margin-bottom:12px !important;
+    margin-bottom:20px !important;
   }
 
   #why-scent-company .why-orbit-copy p{
-    font-size:11.5px !important;
+    font-size:13px !important;
     line-height:1.5 !important;
     max-width:33ch !important;
   }
@@ -2251,7 +2242,7 @@ img{
 @media (max-width: 640px){
   #why-scent-company .why-orbit-header .conversion-title{
     max-width:360px !important;
-    font-size:clamp(21px, 5.8vw, 25px) !important;
+    font-size:clamp(20px, 5.8vw, 20px) !important;
     line-height:1.08 !important;
     letter-spacing:.045em !important;
   }
@@ -2400,7 +2391,7 @@ img{
   }
 
   .setor-card__desc{
-    font-size:12px !important;
+    font-size:15px !important;
     line-height:1.55 !important;
     max-width:24ch !important;
   }
@@ -2743,12 +2734,12 @@ img{
   margin-top:20px !important;
   font-family:'Montserrat', sans-serif !important;
   font-weight:300 !important;
-  font-size:clamp(17px, 1.75vw, 25px) !important;
+  font-size:clamp(17px, 1.75vw, 20px) !important;
   line-height:1.45 !important;
   letter-spacing:.08em !important;
   color:rgba(244,241,234,.82) !important;
   text-transform:none !important;
-  max-width:760px !important;
+  max-width:900px !important;
 }
 
 #hero .hero-tagline,
@@ -3094,7 +3085,7 @@ img{
   }
 
   .impact-metrics-title{
-    font-size:clamp(25px, 7vw, 32px);
+    font-size:clamp(25px, 7vw, 25px);
     line-height:1.08;
     letter-spacing:.07em;
     margin-bottom:16px;
@@ -3354,6 +3345,167 @@ img{
 }
 </style>
 
+
+<style>
+/* ===== MOBILE CLIENTS STATIC IMAGE PATCH =====
+   Desktop keeps the original animated logo marquees.
+   Mobile replaces the animation with a single static image: images/clients-mobile.jpg */
+.clients-mobile-image{
+  display:none;
+}
+
+@media (max-width: 768px){
+  #clients{
+    content-visibility:visible !important;
+    contain:none !important;
+    contain-intrinsic-size:auto !important;
+    padding-top:72px !important;
+    padding-bottom:72px !important;
+    overflow:hidden !important;
+  }
+
+  #clients .clients-header{
+    margin-bottom:36px !important;
+  }
+
+  #clients .clients-marquee{
+    display:none !important;
+  }
+
+  #clients .clients-track,
+  #clients .clients-row{
+    animation:none !important;
+    transform:none !important;
+  }
+
+  #clients .clients-mobile-image{
+    display:block !important;
+    width:100% !important;
+    max-width:675px !important;
+    margin:0 auto !important;
+    padding:0 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  #clients .clients-mobile-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:675 / 1200 !important;
+    object-fit:contain !important;
+    border:0 !important;
+    outline:0 !important;
+    box-shadow:none !important;
+    filter:none !important;
+    transform:none !important;
+    opacity:1 !important;
+  }
+}
+
+@media (min-width: 769px){
+  #clients .clients-mobile-image{
+    display:none !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== DESKTOP CLIENT LOGOS REFERENCE RESTORE =====
+   Matches the reference file for desktop client logo animation only.
+   Mobile rules remain untouched. */
+@media (min-width:769px){
+  #clients{
+    padding:90px 0 70px !important;
+    overflow:hidden !important;
+    background:#000 !important;
+  }
+
+  #clients .clients-header{
+    text-align:center !important;
+    margin-bottom:90px !important;
+    padding:0 20px !important;
+  }
+
+  #clients .clients-marquee::before,
+  #clients .clients-marquee::after{
+    width:160px !important;
+  }
+
+  #clients .clients-track{
+    display:flex !important;
+    width:max-content !important;
+    animation:scroll 55s linear infinite !important;
+  }
+
+  #clients .clients-row{
+    display:flex !important;
+    align-items:center !important;
+    gap:220px !important;
+    padding-right:180px !important;
+  }
+
+  #clients .clients-row img{
+    height:84px !important;
+    width:auto !important;
+    max-width:none !important;
+    flex-shrink:0 !important;
+    display:block !important;
+    transform:scale(3.1) !important;
+    transform-origin:center !important;
+    opacity:1 !important;
+    filter:none !important;
+    transition:opacity .35s ease, transform .35s ease, filter .35s ease !important;
+  }
+
+  #clients .clients-row img:hover{
+    opacity:1 !important;
+    transform:scale(2.75) translateY(-2px) !important;
+    filter:none !important;
+  }
+
+  #clients img[src*="moncler"]{
+    transform:scale(3.6) !important;
+  }
+
+  #clients img[src*="Prada"]{
+    transform:scale(3.3) !important;
+  }
+
+  #clients img[src*="Zuma"]{
+    transform:scale(3.4) !important;
+  }
+
+  #clients img[src*="FourSeasons"]{
+    transform:scale(3.2) !important;
+  }
+
+  #clients img[src*="MrC"]{
+    transform:scale(3.4) !important;
+  }
+
+  #clients img[src*="moncler"]:hover{
+    transform:scale(3.2) translateY(-2px) !important;
+  }
+
+  #clients img[src*="Prada"]:hover{
+    transform:scale(3.0) translateY(-2px) !important;
+  }
+
+  #clients img[src*="Zuma"]:hover{
+    transform:scale(3.1) translateY(-2px) !important;
+  }
+
+  #clients img[src*="FourSeasons"]:hover{
+    transform:scale(2.9) translateY(-2px) !important;
+  }
+
+  #clients img[src*="MrC"]:hover{
+    transform:scale(3.1) translateY(-2px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -3364,7 +3516,6 @@ img{
       <a href="#why-scent-company">Why us</a>
       <a href="#industries">Industries</a>
       <a href="#services">Services</a>
-      <a href="#global-network-wrap">Global Network</a>
       <a href="#contact-section-wrap" class="sc-btn-primary">Request a Tryout</a>
     </div>
   </nav>
@@ -3411,7 +3562,7 @@ img{
       <h1 class="hero-title" aria-label="Full-Service Scent Management For luxury hotels, retail and high-rise">
         <span class="hero-title-main">Full-Service</span>
         <span class="hero-title-main">Scent Management</span>
-        <span class="hero-title-support">For luxury hotels, retail and high-rise</span>
+        <span class="hero-title-support">Create a refined, memorable atmosphere with a discreet HVAC-based scenting system designed for luxury hotels, retail and high-rise.</span>
       </h1>
 
       <div class="hero-cta-row" aria-label="Primary actions">
@@ -3420,7 +3571,7 @@ img{
       </div>
     </div>
 
-    <p class="hero-origin">designed in Italy</p>
+    <p class="hero-origin"></p>
   </section>
 
 <section id="clients">
@@ -3441,31 +3592,42 @@ img{
     </div>
   </div>
 
+  <div class="clients-mobile-image">
+    <img
+      src="images/clients-mobile.jpg"
+      alt="Scent Company trusted clients"
+      width="675"
+      height="1200"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
   <div class="clients-marquee">
     <div class="clients-track">
 
       <div class="clients-row">
-        <img src="logos/GoldenGoose.svg" alt="Golden Goose" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/moncler.svg" alt="Moncler" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/MrC.svg" alt="Mr C" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Poliform.svg" alt="Poliform" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Prada.svg" alt="Prada" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Zuma.svg" alt="Zuma" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Armani.svg" alt="Armani" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/DG.svg" alt="Dolce &amp; Gabbana" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/FourSeasons.svg" alt="Four Seasons" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/GoldenGoose.svg" alt="Golden Goose" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/moncler.svg" alt="Moncler" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/MrC.svg" alt="Mr C" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Poliform.svg" alt="Poliform" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Prada.svg" alt="Prada" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Zuma.svg" alt="Zuma" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Armani.svg" alt="Armani" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/DG.svg" alt="Dolce &amp; Gabbana" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/FourSeasons.svg" alt="Four Seasons" loading="eager" decoding="async" fetchpriority="high" />
       </div>
 
       <div class="clients-row" aria-hidden="true">
-        <img src="logos/GoldenGoose.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/moncler.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/MrC.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Poliform.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Prada.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Zuma.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Armani.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/DG.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/FourSeasons.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/GoldenGoose.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/moncler.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/MrC.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Poliform.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Prada.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Zuma.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Armani.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/DG.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/FourSeasons.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
       </div>
 
     </div>
@@ -3475,27 +3637,27 @@ img{
     <div class="clients-track clients-track--reverse">
 
       <div class="clients-row">
-        <img src="logos/Eden.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Luxury.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Shawood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Louis.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Sagewood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Kiton.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Anima.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Amex.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Laperla.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Eden.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Luxury.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Shawood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Louis.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Sagewood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Kiton.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Anima.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Amex.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Laperla.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
       </div>
 
       <div class="clients-row">
-        <img src="logos/Eden.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Luxury.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Shawood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Louis.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Sagewood.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Kiton.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Anima.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Amex.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-        <img src="logos/Laperla.svg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <img src="logos/Eden.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Luxury.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Shawood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Louis.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Sagewood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Kiton.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Anima.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Amex.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Laperla.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
       </div>
 
     </div>
@@ -3654,7 +3816,7 @@ img{
         </div>
       </a>
 
-      <a class="setor-card setor-card-link" href="https://www.scentcompanyusa.com/hospitality.html" aria-label="Learn more about Hotels scenting">
+      <article class="setor-card">
         <div class="setor-card__media">
           <div class="setor-card__img">
             <img src="images/hotels.webp" alt="Luxury hotel lobby interior" loading="lazy" decoding="async" fetchpriority="low" width="900" height="675" />
@@ -3669,9 +3831,9 @@ img{
           <div class="setor-card__mini-div" aria-hidden="true"></div>
           <p class="setor-card__desc">Design a signature arrival experience for lobbies, spas, restaurants and guest-facing areas.</p>
         </div>
-      </a>
+      </article>
 
-      <a class="setor-card setor-card-link" href="https://www.scentcompanyusa.com/high-rise.html" aria-label="Learn more about High Rise scenting">
+      <a class="setor-card setor-card-link" href="https://scentcompanyusa.com/high-rise.html" aria-label="Learn more about High Rise scenting">
         <div class="setor-card__media">
           <div class="setor-card__img">
             <img src="images/high-rise.webp" alt="Luxury high-rise residential lobby" loading="lazy" decoding="async" fetchpriority="low" width="900" height="675" />
@@ -4529,10 +4691,10 @@ img{
     order:3 !important;
     display:block !important;
     width:auto !important;
-    max-width:270px !important;
+    max-width:350px !important;
     margin:0 auto !important;
     transform:none !important;
-    font-size:12px !important;
+    font-size:15px !important;
     line-height:1.45 !important;
     letter-spacing:.035em !important;
     color:rgba(244,241,234,.78) !important;
@@ -4713,11 +4875,6 @@ img{
     text-shadow:0 0 26px rgba(244,241,234,.14) !important;
   }
 
-  #services .services-subtitle{
-    font-size:12px !important;
-    line-height:1.55 !important;
-    max-width:285px !important;
-  }
 
   #services .services-layout{
     max-width:255px !important; /* 30% smaller than the previous 364px mobile card width */
@@ -4776,7 +4933,7 @@ img{
 
   #services .service-description{
     max-width:32ch !important;
-    font-size:11px !important;
+    font-size:13px !important;
     line-height:1.6 !important;
   }
 }
@@ -4905,7 +5062,7 @@ img{
           </div>
           <div>
             <h3>Asia</h3>
-            <p>China, Japan, Taiwan, Vietnam and Hong Kong</p>
+            <p>China, Japan, Taiwan, South Korea, Vietnam and Hong Kong</p>
           </div>
         </div>
 
@@ -6442,7 +6599,374 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
 }
 </style>
 
-<a href="#contact-section-wrap" class="sc-btn-primary sc-mobile-cta">Request a Tryout</a>
+
+<style>
+/* ===== MOBILE UX + WIDTH FINAL PATCH =====
+   1) Removes the fixed mobile CTA that interfered with scrolling/navigation.
+   2) Rebuilds mobile logo sizing without transform scaling, which was creating
+      visible anti-aliased white fringes around thin SVG logo lines.
+   3) Expands Industries and Services cards to use the available screen width. */
+@media (max-width: 768px){
+  .sc-mobile-cta{
+    display:none !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
+  body{
+    padding-bottom:0 !important;
+  }
+
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:120px !important;
+    padding-right:120px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img,
+  #clients img[src*="moncler"],
+  #clients img[src*="Prada"],
+  #clients img[src*="Zuma"],
+  #clients img[src*="FourSeasons"],
+  #clients img[src*="MrC"],
+  #clients img[src*="Poliform"],
+  #clients img[src*="GoldenGoose"],
+  #clients img[src*="Armani"],
+  #clients img[src*="DG"],
+  #clients .clients-track--reverse img[src*="Eden"],
+  #clients .clients-track--reverse img[src*="Luxury"],
+  #clients .clients-track--reverse img[src*="Shawood"],
+  #clients .clients-track--reverse img[src*="Louis"],
+  #clients .clients-track--reverse img[src*="Sagewood"],
+  #clients .clients-track--reverse img[src*="Kiton"],
+  #clients .clients-track--reverse img[src*="Anima"],
+  #clients .clients-track--reverse img[src*="Amex"],
+  #clients .clients-track--reverse img[src*="Laperla"]{
+    height:132px !important;
+    width:auto !important;
+    max-width:none !important;
+    transform:none !important;
+    filter:none !important;
+    opacity:1 !important;
+    border:0 !important;
+    outline:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+    backface-visibility:hidden !important;
+  }
+}
+
+@media (max-width: 640px){
+  #industries.setores{
+    padding-left:12px !important;
+    padding-right:12px !important;
+  }
+
+  #industries .setores__header{
+    width:100% !important;
+    max-width:none !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+
+  #industries .setores-cards{
+    width:100% !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    gap:22px !important;
+  }
+
+  #industries .setor-card,
+  #industries .setor-card-link{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #industries .setor-card{
+    padding:14px 14px 26px !important;
+  }
+
+  #industries .setor-card__body{
+    width:100% !important;
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  #industries .setor-card__desc{
+    max-width:34ch !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  #services.services-section{
+    padding-left:12px !important;
+    padding-right:12px !important;
+  }
+
+  #services .services-container,
+  #services .services-header,
+  #services .services-layout,
+  #services .services-stack{
+    width:100% !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  #services .services-layout,
+  #services .services-stack{
+    gap:22px !important;
+  }
+
+  #services .service-panel,
+  #services .service-panel--featured,
+  #services .service-panel--wide{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #services .service-panel__image,
+  #services .service-panel__image--featured,
+  #services .service-panel__image--angled,
+  #services .service-panel--wide .service-panel__image--angled{
+    flex-basis:190px !important;
+  }
+
+  #services .service-panel--wide .service-panel__content,
+  #services .service-panel__content,
+  #services .service-panel__content--featured{
+    padding-left:22px !important;
+    padding-right:22px !important;
+  }
+
+  #services .service-description{
+    max-width:38ch !important;
+  }
+}
+
+@media (max-width: 420px){
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:104px !important;
+    padding-right:104px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img{
+    height:118px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== CLIENT LOGO MARQUEE FINAL FIX =====
+   Fixes mobile logo rendering artifacts, oversized visibility, and intermittent blank rows. */
+#clients{
+  content-visibility:visible !important;
+  contain:none !important;
+}
+
+#clients .clients-marquee,
+#clients .clients-track,
+#clients .clients-row{
+  content-visibility:visible !important;
+  contain:none !important;
+}
+
+#clients .clients-track{
+  display:flex !important;
+  width:max-content !important;
+  min-width:max-content !important;
+  will-change:transform !important;
+  transform:translate3d(0,0,0);
+  backface-visibility:hidden;
+}
+
+#clients .clients-track--reverse{
+  transform:translate3d(-50%,0,0);
+}
+
+#clients .clients-row{
+  flex:0 0 auto !important;
+  align-items:center !important;
+}
+
+
+@keyframes clientScrollStable{
+  from{ transform:translate3d(0,0,0); }
+  to{ transform:translate3d(-50%,0,0); }
+}
+
+@keyframes clientScrollStableReverse{
+  from{ transform:translate3d(-50%,0,0); }
+  to{ transform:translate3d(0,0,0); }
+}
+
+#clients .clients-track{
+  animation:clientScrollStable 86s linear infinite !important;
+}
+
+#clients .clients-track.clients-track--reverse{
+  animation:clientScrollStableReverse 76s linear infinite !important;
+}
+
+@media (max-width: 768px){
+  #clients{
+    overflow:hidden !important;
+    padding-top:62px !important;
+    padding-bottom:130px !important;
+  }
+
+  #clients::before{
+    opacity:.045 !important;
+  }
+
+  #clients .clients-marquee{
+    overflow:hidden !important;
+    min-height:330px !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+
+  #clients .clients-marquee + .clients-marquee{
+    margin-top:18px !important;
+  }
+
+  #clients .clients-marquee::before,
+  #clients .clients-marquee::after{
+    width:42px !important;
+    z-index:4 !important;
+  }
+
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:330px !important;
+    padding-right:330px !important;
+    min-height:330px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img,
+  #clients img[src*="GoldenGoose"],
+  #clients img[src*="moncler"],
+  #clients img[src*="Prada"],
+  #clients img[src*="Zuma"],
+  #clients img[src*="FourSeasons"],
+  #clients img[src*="MrC"],
+  #clients img[src*="Poliform"],
+  #clients img[src*="Armani"],
+  #clients img[src*="DG"],
+  #clients .clients-track--reverse img[src*="Eden"],
+  #clients .clients-track--reverse img[src*="Luxury"],
+  #clients .clients-track--reverse img[src*="Shawood"],
+  #clients .clients-track--reverse img[src*="Louis"],
+  #clients .clients-track--reverse img[src*="Sagewood"],
+  #clients .clients-track--reverse img[src*="Kiton"],
+  #clients .clients-track--reverse img[src*="Anima"],
+  #clients .clients-track--reverse img[src*="Amex"],
+  #clients .clients-track--reverse img[src*="Laperla"]{
+    height:300px !important;
+    width:auto !important;
+    max-width:none !important;
+    transform:none !important;
+  }
+}
+
+@media (max-width: 420px){
+  #clients .clients-marquee{
+    min-height:285px !important;
+  }
+
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:285px !important;
+    padding-right:285px !important;
+    min-height:285px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img{
+    height:265px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  #clients .clients-track,
+  #clients .clients-track.clients-track--reverse{
+    animation:none !important;
+    transform:translate3d(0,0,0) !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== FINAL MOBILE CLIENTS STATIC OVERRIDE =====
+   Keeps desktop marquee unchanged.
+   On mobile, hides every legacy logo marquee and shows only clients-mobile.jpg. */
+@media (max-width: 768px){
+  #clients{
+    content-visibility:visible !important;
+    contain:none !important;
+    contain-intrinsic-size:auto !important;
+    overflow:hidden !important;
+  }
+
+  #clients .clients-mobile-image{
+    display:block !important;
+    width:100% !important;
+    max-width:675px !important;
+    margin:0 auto !important;
+    padding:0 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  #clients .clients-mobile-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:675 / 1200 !important;
+    object-fit:contain !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+
+  #clients .clients-marquee,
+  #clients .clients-track,
+  #clients .clients-row{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+    height:0 !important;
+    min-height:0 !important;
+    max-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    animation:none !important;
+    transform:none !important;
+    pointer-events:none !important;
+  }
+
+  #clients .clients-marquee *,
+  #clients .clients-track *,
+  #clients .clients-row *{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+  }
+}
+
+@media (min-width: 769px){
+  #clients .clients-mobile-image{
+    display:none !important;
+  }
+}
+</style>
 
 </body>
 </html>
