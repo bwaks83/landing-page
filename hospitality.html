@@ -2040,13 +2040,641 @@
 }
 </style>
 
+
+<style>
+/* ===== CLIENTS / SOCIAL PROOF SECTION COPIED FROM MAIN PAGE ===== */
+
+#clients{
+  position:relative;
+  padding:72px 0 110px;
+  background:#000;
+  overflow:hidden;
+}
+
+  #clients::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.92) 0%,
+      rgba(0,0,0,.82) 18%,
+      rgba(0,0,0,.78) 50%,
+      rgba(0,0,0,.84) 82%,
+      rgba(0,0,0,.92) 100%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.18) 55%,
+      rgba(0,0,0,.42) 100%
+    ),
+    url('images/gold-tile.jpg');
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:900px auto;
+  opacity:.14;
+  pointer-events:none;
+  z-index:1;
+
+    -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,1) 18%,
+    rgba(0,0,0,1) 82%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,1) 18%,
+    rgba(0,0,0,1) 82%,
+    transparent 100%
+  );
+}
+
+  #clients > *{
+    position:relative;
+    z-index:2;
+  }
+
+.clients-header{
+  text-align:center;
+  margin-bottom:90px;
+  padding:0 48px;
+}
+
+  .network-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .network-eyebrow {
+    font-family:'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.42em;
+    color: #c9a24c;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+    font-weight: 400;
+    padding-left: 0.42em;
+  }
+
+  .network-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 44px;
+  }
+
+  .network-divider-line {
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c9a24c, transparent);
+  }
+
+  .network-divider-diamond {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: #c9a24c;
+    transform: rotate(45deg);
+  }
+
+  .network-heading {
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: clamp(28px, 3.2vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+
+  .network-heading-gold,
+  .network-heading-white {
+    display: block;
+  }
+
+  .network-heading-gold {
+    color: #e9c879;
+    margin-bottom: 3px;
+  }
+
+  .network-heading-white {
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  .clients-marquee{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+  }
+
+  .clients-marquee::before,
+  .clients-marquee::after{
+    content:"";
+    position:absolute;
+    top:0;
+    width:180px;
+    height:100%;
+    z-index:3;
+    pointer-events:none;
+  }
+
+  .clients-marquee::before{
+    left:0;
+    background:linear-gradient(to right, #000, transparent);
+  }
+
+  .clients-marquee::after{
+    right:0;
+    background:linear-gradient(to left, #000, transparent);
+  }
+
+  .clients-track{
+    display:flex;
+    width:max-content;
+    animation:scroll 70s linear infinite;
+  }
+
+  .clients-marquee + .clients-marquee{
+    margin-top:88px;
+  }
+
+  .clients-track.clients-track--reverse{
+    animation:scroll-reverse 50s linear infinite;
+  }
+
+  .clients-row{
+    display:flex;
+    align-items:center;
+    gap:220px;
+    padding-right:220px;
+  }
+
+  .clients-row img{
+    height:84px;
+    width:auto;
+    flex-shrink:0;
+    display:block;
+    transform:scale(3.1);
+    transform-origin:center;
+    opacity:1;
+filter:none;
+transition:opacity .35s ease, transform .35s ease, filter .35s ease;
+  }
+
+  .clients-row img:hover{
+    opacity:1;
+    transform:scale(3.25) translateY(-2px);
+    filter:none;
+}
+
+  /* Individual optical adjustments */
+  img[src*="GoldenGoose"]{
+    transform:scale(2.8);
+  }
+
+  img[src*="moncler"]{
+    transform:scale(3.6);
+  }
+
+  img[src*="MrC"]{
+    transform:scale(3.4);
+  }
+
+  img[src*="Poliform"]{
+    transform:scale(3.0);
+  }
+
+  img[src*="Prada"]{
+    transform:scale(3.3);
+  }
+
+  img[src*="Zuma"]{
+    transform:scale(3.4);
+  }
+
+  img[src*="Armani"]{
+    transform:scale(2.7);
+  }
+
+  img[src*="DG"]{
+    transform:scale(2.5);
+  }
+
+  img[src*="FourSeasons"]{
+    transform:scale(3.2);
+  }
+
+  img[src*="GoldenGoose"]:hover{
+    transform:scale(2.95) translateY(-2px);
+  }
+
+  img[src*="moncler"]:hover{
+    transform:scale(3.75) translateY(-2px);
+  }
+
+  img[src*="MrC"]:hover{
+    transform:scale(3.55) translateY(-2px);
+  }
+
+  img[src*="Poliform"]:hover{
+    transform:scale(3.15) translateY(-2px);
+  }
+
+  img[src*="Prada"]:hover{
+    transform:scale(3.45) translateY(-2px);
+  }
+
+  img[src*="Zuma"]:hover{
+    transform:scale(3.55) translateY(-2px);
+  }
+
+  img[src*="Armani"]:hover{
+    transform:scale(2.85) translateY(-2px);
+  }
+
+  img[src*="DG"]:hover{
+    transform:scale(2.65) translateY(-2px);
+  }
+
+  img[src*="FourSeasons"]:hover{
+    transform:scale(3.35) translateY(-2px);
+  }
+
+  @keyframes scroll{
+    from{
+      transform:translateX(0);
+    }
+    to{
+      transform:translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-reverse{
+    from{
+      transform:translateX(-50%);
+    }
+    to{
+      transform:translateX(0);
+    }
+  }
+
+  @media (max-width: 768px){
+    #clients{
+      padding:56px 0 120px;
+    }
+
+    #clients::before{
+      background-size:800px;
+      opacity:.05;
+    }
+
+    .clients-header{
+      margin-bottom:72px;
+      padding:0 28px;
+    }
+
+    .network-eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.38em;
+    }
+
+    .network-divider-line {
+      width: 70px;
+    }
+
+    .network-heading {
+      font-size: clamp(22px, 4.6vw, 34px);
+    }
+
+    .clients-row{
+      gap:110px;
+      padding-right:110px;
+    }
+
+    .clients-row img{
+      height:50px;
+      transform:scale(2.1);
+    }
+
+    img[src*="GoldenGoose"]{ transform:scale(1.9); }
+    img[src*="moncler"]{ transform:scale(2.4); }
+    img[src*="MrC"]{ transform:scale(2.3); }
+    img[src*="Poliform"]{ transform:scale(2.0); }
+    img[src*="Prada"]{ transform:scale(2.2); }
+    img[src*="Zuma"]{ transform:scale(2.3); }
+    img[src*="Armani"]{ transform:scale(1.9); }
+    img[src*="DG"]{ transform:scale(1.8); }
+    img[src*="FourSeasons"]{ transform:scale(2.1); }
+
+    .clients-marquee::before,
+    .clients-marquee::after{
+      width:90px;
+    }
+
+    .clients-track{
+      animation:scroll 40s linear infinite;
+    }
+
+    .clients-track.clients-track--reverse{
+      animation:scroll-reverse 40s linear infinite;
+    }
+  }
+
+
+
+
+
+  @media (max-width: 520px){
+    .clients-header{
+      padding:0 22px;
+    }
+
+    .network-heading-gold{
+      margin-bottom:6px;
+    }
+  }
+
+/* ===== MOBILE CLIENTS STATIC IMAGE PATCH =====
+   Desktop keeps the original animated logo marquees.
+   Mobile replaces the animation with a single static image: images/clients-mobile.jpg */
+.clients-mobile-image{
+  display:none;
+}
+
+@media (max-width: 768px){
+  #clients{
+    content-visibility:visible !important;
+    contain:none !important;
+    contain-intrinsic-size:auto !important;
+    padding-top:72px !important;
+    padding-bottom:72px !important;
+    overflow:hidden !important;
+  }
+
+  #clients .clients-header{
+    margin-bottom:36px !important;
+  }
+
+  #clients .clients-marquee{
+    display:none !important;
+  }
+
+  #clients .clients-track,
+  #clients .clients-row{
+    animation:none !important;
+    transform:none !important;
+  }
+
+  #clients .clients-mobile-image{
+    display:block !important;
+    width:100% !important;
+    max-width:675px !important;
+    margin:0 auto !important;
+    padding:0 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  #clients .clients-mobile-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:675 / 1200 !important;
+    object-fit:contain !important;
+    border:0 !important;
+    outline:0 !important;
+    box-shadow:none !important;
+    filter:none !important;
+    transform:none !important;
+    opacity:1 !important;
+  }
+}
+
+@media (min-width: 769px){
+  #clients .clients-mobile-image{
+    display:none !important;
+  }
+}
+
+/* ===== CLIENT LOGO MARQUEE FINAL FIX =====
+   Fixes mobile logo rendering artifacts, oversized visibility, and intermittent blank rows. */
+#clients{
+  content-visibility:visible !important;
+  contain:none !important;
+}
+
+#clients .clients-marquee,
+#clients .clients-track,
+#clients .clients-row{
+  content-visibility:visible !important;
+  contain:none !important;
+}
+
+#clients .clients-track{
+  display:flex !important;
+  width:max-content !important;
+  min-width:max-content !important;
+  will-change:transform !important;
+  transform:translate3d(0,0,0);
+  backface-visibility:hidden;
+}
+
+#clients .clients-track--reverse{
+  transform:translate3d(-50%,0,0);
+}
+
+#clients .clients-row{
+  flex:0 0 auto !important;
+  align-items:center !important;
+}
+
+
+@keyframes clientScrollStable{
+  from{ transform:translate3d(0,0,0); }
+  to{ transform:translate3d(-50%,0,0); }
+}
+
+@keyframes clientScrollStableReverse{
+  from{ transform:translate3d(-50%,0,0); }
+  to{ transform:translate3d(0,0,0); }
+}
+
+#clients .clients-track{
+  animation:clientScrollStable 86s linear infinite !important;
+}
+
+#clients .clients-track.clients-track--reverse{
+  animation:clientScrollStableReverse 76s linear infinite !important;
+}
+
+@media (max-width: 768px){
+  #clients{
+    overflow:hidden !important;
+    padding-top:62px !important;
+    padding-bottom:130px !important;
+  }
+
+  #clients::before{
+    opacity:.045 !important;
+  }
+
+  #clients .clients-marquee{
+    overflow:hidden !important;
+    min-height:330px !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+
+  #clients .clients-marquee + .clients-marquee{
+    margin-top:18px !important;
+  }
+
+  #clients .clients-marquee::before,
+  #clients .clients-marquee::after{
+    width:42px !important;
+    z-index:4 !important;
+  }
+
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:330px !important;
+    padding-right:330px !important;
+    min-height:330px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img,
+  #clients img[src*="GoldenGoose"],
+  #clients img[src*="moncler"],
+  #clients img[src*="Prada"],
+  #clients img[src*="Zuma"],
+  #clients img[src*="FourSeasons"],
+  #clients img[src*="MrC"],
+  #clients img[src*="Poliform"],
+  #clients img[src*="Armani"],
+  #clients img[src*="DG"],
+  #clients .clients-track--reverse img[src*="Eden"],
+  #clients .clients-track--reverse img[src*="Luxury"],
+  #clients .clients-track--reverse img[src*="Shawood"],
+  #clients .clients-track--reverse img[src*="Louis"],
+  #clients .clients-track--reverse img[src*="Sagewood"],
+  #clients .clients-track--reverse img[src*="Kiton"],
+  #clients .clients-track--reverse img[src*="Anima"],
+  #clients .clients-track--reverse img[src*="Amex"],
+  #clients .clients-track--reverse img[src*="Laperla"]{
+    height:300px !important;
+    width:auto !important;
+    max-width:none !important;
+    transform:none !important;
+  }
+}
+
+@media (max-width: 420px){
+  #clients .clients-marquee{
+    min-height:285px !important;
+  }
+
+  #clients .clients-row,
+  #clients .clients-track--reverse .clients-row{
+    gap:285px !important;
+    padding-right:285px !important;
+    min-height:285px !important;
+  }
+
+  #clients .clients-row img,
+  #clients .clients-track--reverse .clients-row img{
+    height:265px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  #clients .clients-track,
+  #clients .clients-track.clients-track--reverse{
+    animation:none !important;
+    transform:translate3d(0,0,0) !important;
+  }
+}
+
+/* ===== FINAL MOBILE CLIENTS STATIC OVERRIDE =====
+   Keeps desktop marquee unchanged.
+   On mobile, hides every legacy logo marquee and shows only clients-mobile.jpg. */
+@media (max-width: 768px){
+  #clients{
+    content-visibility:visible !important;
+    contain:none !important;
+    contain-intrinsic-size:auto !important;
+    overflow:hidden !important;
+  }
+
+  #clients .clients-mobile-image{
+    display:block !important;
+    width:100% !important;
+    max-width:675px !important;
+    margin:0 auto !important;
+    padding:0 24px !important;
+    box-sizing:border-box !important;
+  }
+
+  #clients .clients-mobile-image img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:675 / 1200 !important;
+    object-fit:contain !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+
+  #clients .clients-marquee,
+  #clients .clients-track,
+  #clients .clients-row{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+    height:0 !important;
+    min-height:0 !important;
+    max-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    animation:none !important;
+    transform:none !important;
+    pointer-events:none !important;
+  }
+
+  #clients .clients-marquee *,
+  #clients .clients-track *,
+  #clients .clients-row *{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+  }
+}
+
+@media (min-width: 769px){
+  #clients .clients-mobile-image{
+    display:none !important;
+  }
+}
+</style>
 </head>
 <body>
   <nav class="sc-nav" aria-label="Primary navigation">
     <a class="sc-nav__brand" href="#hero">Scent Company</a>
     <div class="sc-nav__links">
       <a href="#spaces">Spaces</a>
-      <a href="#references">References</a>
+      <a href="#clients">References</a>
       <a href="#contact-section-wrap" class="sc-btn-primary">Request a Consultation</a>
     </div>
   </nav>
@@ -2128,7 +2756,98 @@
     }
     </style>
 
-    <!-- ===== OUR SERVICES SECTION ===== -->
+    <!-- ===== CLIENT LOGO MARQUEE SECTION ===== -->
+    <section id="clients">
+  <div class="clients-header">
+    <div class="network-content">
+      <p class="network-eyebrow">GLOBAL NETWORK</p>
+
+      <div class="network-divider" aria-hidden="true">
+        <span class="network-divider-line"></span>
+        <span class="network-divider-diamond"></span>
+        <span class="network-divider-line"></span>
+      </div>
+
+      <h2 class="network-heading">
+        <span class="network-heading-gold">A trusted partner to iconic brands</span>
+        <span class="network-heading-white">across retail, hospitality and wellness.</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="clients-mobile-image">
+    <img
+      src="images/clients-mobile.jpg"
+      alt="Scent Company trusted clients"
+      width="675"
+      height="1200"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <div class="clients-marquee">
+    <div class="clients-track">
+
+      <div class="clients-row">
+        <img src="logos/GoldenGoose.svg" alt="Golden Goose" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/moncler.svg" alt="Moncler" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/MrC.svg" alt="Mr C" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Poliform.svg" alt="Poliform" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Prada.svg" alt="Prada" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Zuma.svg" alt="Zuma" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Armani.svg" alt="Armani" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/DG.svg" alt="Dolce &amp; Gabbana" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/FourSeasons.svg" alt="Four Seasons" loading="eager" decoding="async" fetchpriority="high" />
+      </div>
+
+      <div class="clients-row" aria-hidden="true">
+        <img src="logos/GoldenGoose.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/moncler.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/MrC.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Poliform.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Prada.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Zuma.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Armani.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/DG.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/FourSeasons.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+      </div>
+
+    </div>
+  </div>
+
+  <div class="clients-marquee" aria-hidden="true">
+    <div class="clients-track clients-track--reverse">
+
+      <div class="clients-row">
+        <img src="logos/Eden.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Luxury.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Shawood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Louis.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Sagewood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Kiton.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Anima.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Amex.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Laperla.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+      </div>
+
+      <div class="clients-row">
+        <img src="logos/Eden.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Luxury.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Shawood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Louis.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Sagewood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Kiton.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Anima.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Amex.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="logos/Laperla.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
     <section class="services-section" id="services" aria-labelledby="services-title">
       <div class="services-container">
 
@@ -3291,73 +4010,6 @@
       </div>
     </section>
     
-    <section class="section alt" id="references">
-      <div class="section-container">
-        <header class="section-header">
-          <p class="eyebrow">Social Proof</p>
-          <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
-          <h2 class="section-title">Trusted by Iconic Global Luxury Brands.</h2>
-          <p class="section-subtitle">Scent Company has partnered with renowned hotels, resorts, lifestyle brands to create refined olfactory experiences across luxury environments.</p>
-        </header>
-
-        <div class="proof-showcase" aria-label="Selected hospitality and brand references">
-          <div class="proof-showcase__glow" aria-hidden="true"></div>
-
-          <div class="proof-mobile-card proof-mobile-card--left">
-            <div class="proof-category proof-category--left">
-              <div class="proof-icon" aria-hidden="true">
-                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18 62V30h11v32" />
-                  <path d="M31 62V18h18v44" />
-                  <path d="M51 62V34h11v28" />
-                  <path d="M13 62h54" />
-                  <path d="M24 37h2M24 45h2M24 53h2" />
-                  <path d="M38 27h3M38 36h3M38 45h3M38 54h3" />
-                  <path d="M56 41h2M56 49h2M56 57h2" />
-                </svg>
-              </div>
-              <h3>Luxury Hotels &amp;<br>Resorts</h3>
-            </div>
-
-            <div class="proof-list proof-list--left">
-              <div class="proof-list-item">Four Seasons Miami</div>
-              <div class="proof-list-item">Eden Rock St. Barth</div>
-              <div class="proof-list-item">The Ritz-Carlton Yacht</div>
-              <div class="proof-list-item">The Louis Hotel</div>
-            </div>
-          </div>
-
-          <div class="proof-center-divider" aria-hidden="true">
-            <span class="proof-center-line"></span>
-            <span class="proof-center-diamond"></span>
-            <span class="proof-center-line"></span>
-          </div>
-
-          <div class="proof-mobile-card proof-mobile-card--right">
-            <div class="proof-category proof-category--right">
-              <div class="proof-icon" aria-hidden="true">
-                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 58h40" />
-                  <path d="M16 64h48" />
-                  <path d="M23 55c1.5-15.5 8.5-25 17-25s15.5 9.5 17 25" />
-                  <path d="M40 30v-5" />
-                  <path d="M35 24c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5" />
-                </svg>
-              </div>
-              <h3>Luxury Retail</h3>
-            </div>
-
-            <div class="proof-list proof-list--right">
-              <div class="proof-list-item">Moncler</div>
-              <div class="proof-list-item">Golden Goose</div>
-              <div class="proof-list-item">Armani Residences</div>
-              <div class="proof-list-item">Dolce & Gabbana</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="contact-section-wrap">
       <section class="cs-contact-section" aria-labelledby="cs-contact-heading">
         <div class="cs-contact-top">
@@ -3728,8 +4380,9 @@
     { selector:'#benefits .section-header > *', type:'reveal-soft', stagger:90 },
     { selector:'#benefits .feature-card', type:'reveal-scale', stagger:90 },
     { selector:'#tryout-offer .offer-band__inner > *', type:'reveal-soft', stagger:110 },
-    { selector:'#references .section-header > *', type:'reveal-soft', stagger:90 },
-    { selector:'#references .proof-showcase', type:'reveal-scale' },
+    { selector:'#clients .clients-header > *', type:'reveal-soft', stagger:90 },
+    { selector:'#clients .clients-mobile-image', type:'reveal-scale' },
+    { selector:'#clients .clients-marquee', type:'reveal-scale', stagger:120 },
     { selector:'#contact-section-wrap .cs-heading-wrap > *', type:'reveal-left', stagger:85 },
     { selector:'#contact-section-wrap .cs-form', type:'reveal-right' },
     { selector:'#contact-section-wrap .cs-footer-grid > *', type:'reveal-soft', stagger:90 },
