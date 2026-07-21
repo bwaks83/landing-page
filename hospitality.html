@@ -3,21 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxury Hospitality Scenting & Hotel Olfactory Branding | Scent Company USA</title>
-  <meta name="description" content="Luxury scenting for hotels, resorts, spas and hospitality spaces. Create a memorable guest experience with Scent Company USA." />
-  <meta name="keywords" content="luxury hospitality scenting, hotel scenting, resort scenting, spa scenting, olfactory branding for hotels, scent marketing hospitality, hotel lobby fragrance, Miami scent company" />
-  <meta property="og:title" content="Luxury Hospitality Scenting & Hotel Olfactory Branding | Scent Company USA" />
-  <meta property="og:description" content="Elevate hotels, resorts, spas and guest spaces with discreet professional scent diffusion and a refined olfactory identity." />
+  <title>Hospitality Scenting Plans from $180/Month | Scent Company USA</title>
+  <meta name="description" content="All-inclusive professional scenting for hotels, resorts, spas and hospitality destinations. Diffuser plans start at $180 per month with fragrance, refills, maintenance and support." />
+  <meta name="keywords" content="hospitality scenting price, hotel scent diffuser price, luxury hotel fragrance, resort scent marketing, professional hospitality scenting system" />
+  <meta property="og:title" content="Hospitality Scenting Plans from $180/Month | Scent Company USA" />
+  <meta property="og:description" content="Professional scenting for luxury hospitality, with all-inclusive diffuser plans starting at $180 per month." />
   <meta property="og:type" content="website" />
 
   <link rel="preload" as="image" href="images/hotel-poster.jpg">
-
-  <!-- Hospitality Spaces hover background preloads -->
-  <link rel="preload" as="image" href="images/hospitality-lobby.webp" type="image/webp" media="(hover: hover)">
-  <link rel="preload" as="image" href="images/hospitality-suites-corridors.webp" type="image/webp" media="(hover: hover)">
-  <link rel="preload" as="image" href="images/hospitality-spa-wellness.webp" type="image/webp" media="(hover: hover)">
-  <link rel="preload" as="image" href="images/hospitality-restaurants-lounges.webp" type="image/webp" media="(hover: hover)">
-  <link rel="preload" as="image" href="images/hospitality-events-meetings.webp" type="image/webp" media="(hover: hover)">
 
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/favicon.png">
@@ -31,6 +24,32 @@
 
   <!-- Google Tag: Google Ads + GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-632769201"></script>
+  <style>
+    /* ===== HOSPITALITY SPACES HOVER BACKGROUND ===== */
+    #spaces{background:#000;isolation:isolate;}
+    #spaces .spaces-hover-bg{position:absolute;inset:0;z-index:1;opacity:0;background:center/cover no-repeat;transition:opacity .55s ease;pointer-events:none;}
+    #spaces .spaces-hover-bg::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.7);}
+    #spaces .section-container{z-index:2;}
+    #spaces .space-card{background:transparent !important;}
+    #spaces .space-card::before,#spaces .space-card::after{display:none !important;}
+    #spaces:has(.space-card:hover) .spaces-hover-bg{opacity:1;}
+    #spaces:has(.space-card:nth-child(1):hover) .spaces-hover-bg{background-image:url('images/hospitality-lobby.webp');}
+    #spaces:has(.space-card:nth-child(2):hover) .spaces-hover-bg{background-image:url('images/hospitality-suites-corridors.webp');}
+    #spaces:has(.space-card:nth-child(3):hover) .spaces-hover-bg{background-image:url('images/hospitality-spa-wellness.webp');}
+    #spaces:has(.space-card:nth-child(4):hover) .spaces-hover-bg{background-image:url('images/hospitality-restaurants-lounges.webp');}
+    #spaces:has(.space-card:nth-child(5):hover) .spaces-hover-bg{background-image:url('images/hospitality-events-meetings.webp');}
+    @media (min-width:769px){
+      .pricing-test .hero h1{
+        line-height:1.14 !important;
+        padding-bottom:.14em;
+        margin-bottom:-.14em;
+        overflow:visible;
+      }
+      #spaces .section-header{max-width:1100px;}
+      #spaces .section-title{font-size:clamp(32px,3.4vw,40px);}
+    }
+  </style>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -685,7 +704,7 @@
 
 <style>
 /* ===== OPPORTUNITY IMAGE PATCH =====
-   Places fourseasons.jpg inside the inner frame of the right-side visual card.
+   Places moncler.jpeg inside the inner frame of the right-side visual card.
    Image filter removed so the photo displays at its natural brightness. */
 #opportunity .architectural-frame{
   background:
@@ -743,7 +762,7 @@
 
 <style>
 /* ===== OPPORTUNITY IMAGE FALLBACK PATCH =====
-   Tries /images/fourseasons.jpg first and falls back to root-level filenames.
+   Tries /imagens/moncler.jpeg first and falls back to root-level filenames.
    Also hides the broken-image icon if the file path is still missing. */
 #opportunity .architectural-frame__image{
   opacity:0 !important;
@@ -1698,6 +1717,7 @@
 .hero .hero-subhead,
 .hero h1,
 .hero .hero-support,
+.hero .hero-price,
 .hero .hero-cta-row{
   opacity:0;
   transform:translate3d(0, 24px, 0);
@@ -1707,7 +1727,8 @@
 .hero .hero-subhead{animation-delay:.18s;}
 .hero h1{animation-delay:.34s;}
 .hero .hero-support{animation-delay:.52s;}
-.hero .hero-cta-row{animation-delay:.72s;}
+.hero .hero-price{animation-delay:.66s;}
+.hero .hero-cta-row{animation-delay:.80s;}
 
 @keyframes heroReveal{
   to{
@@ -1732,6 +1753,7 @@
   .hero .hero-subhead,
   .hero h1,
   .hero .hero-support,
+  .hero .hero-price,
   .hero .hero-cta-row{
     opacity:1 !important;
     transform:none !important;
@@ -1966,778 +1988,565 @@
 
 
 <style>
-/* ===== HOSPITALITY SPACES SECTION BACKGROUND HOVER PATCH =====
-   Adds a temporary full-section background image when hovering each Hospitality Spaces card.
-   Default state remains the current black background. */
-#spaces{
-  isolation:isolate !important;
-  background:
-    radial-gradient(900px 460px at 50% 0%, rgba(201,162,74,.07), transparent 62%),
-    linear-gradient(180deg, #000 0%, #07070a 100%) !important;
-}
-
-#spaces .spaces-hover-bg{
-  position:absolute;
-  inset:0;
-  z-index:0;
-  opacity:0;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  transform:scale(1.025);
-  transition:
-    opacity .42s ease,
-    transform 1.1s ease,
-    background-image .01s linear;
-  pointer-events:none;
-}
-
-#spaces .spaces-hover-bg::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(760px 360px at 50% 38%, rgba(201,162,74,.14), transparent 62%),
-    linear-gradient(180deg, rgba(0,0,0,.67), rgba(0,0,0,.88)),
-    rgba(0,0,0,.18);
-  pointer-events:none;
-}
-
-#spaces.has-space-bg .spaces-hover-bg{
-  opacity:1;
-  transform:scale(1);
-}
-
-#spaces .section-container{
-  position:relative;
-  z-index:2;
-}
-
-#spaces .space-card{
-  background:linear-gradient(180deg, rgba(16,16,22,.82), rgba(7,7,11,.94)) !important;
-  backdrop-filter:blur(2px);
-  -webkit-backdrop-filter:blur(2px);
-}
-
-#spaces.has-space-bg .space-card:not(:hover){
-  background:linear-gradient(180deg, rgba(10,10,14,.76), rgba(0,0,0,.88)) !important;
-  border-color:rgba(201,162,74,.18) !important;
-}
-
-#spaces.has-space-bg .space-card:hover{
-  background:linear-gradient(180deg, rgba(18,18,24,.88), rgba(3,3,5,.96)) !important;
-}
-
+/* ===== RETAIL SOCIAL PROOF MOBILE TITLE REFINEMENT ===== */
 @media (max-width:768px){
-  #spaces .spaces-hover-bg{
-    display:none;
-  }
-
-  #spaces.has-space-bg .space-card:not(:hover),
-  #spaces.has-space-bg .space-card:hover{
-    background:linear-gradient(180deg, rgba(16,16,22,.76), rgba(7,7,11,.9)) !important;
+  #references .section-title{
+    font-size:clamp(22px, 6.4vw, 30px) !important;
+    line-height:1.12 !important;
+    letter-spacing:.06em !important;
+    max-width:330px !important;
   }
 }
 </style>
-
 
 <style>
-/* ===== CLIENTS / SOCIAL PROOF SECTION COPIED FROM MAIN PAGE ===== */
-
-#clients{
-  position:relative;
-  padding:72px 0 110px;
-  background:#000;
-  overflow:hidden;
+/* ===== PRICING TEST VARIANT ===== */
+.pricing-test .hero-content{max-width:1280px;padding-top:64px;padding-bottom:18px;}
+.pricing-test{scroll-padding-top:92px;}
+.pricing-test .hero h1{
+  max-width:980px !important;
+  font-size:clamp(46px,5.2vw,70px) !important;
+  line-height:1 !important;
+  color:#f4f1e8;
+  background:linear-gradient(104deg,#d7ba70 0%,#e4d09a 36%,#f4f1e8 70%,#fffdf9 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
+.pricing-test .hero-price{
+  display:block;
+  width:auto;
+  margin:18px 0 0;
+  padding:0;
+  border:0;
+  color:#d8b866;
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(15px,1.45vw,20px);
+  font-weight:300;
+  line-height:1.62;
+  letter-spacing:.04em;
+}
+.pricing-test .hero-price span{
+  color:inherit;
+  font:inherit;
+  letter-spacing:inherit;
+  text-transform:none;
+}
+.pricing-test .hero-price strong{
+  color:inherit;
+  font:inherit;
+}
+.pricing-test .hero-price em{
+  color:inherit;
+  font:inherit;
+}
+.pricing-test .hero-support{
+  max-width:860px !important;
+  margin-top:26px;
+}
+.pricing-test .hero-price{margin-top:18px;}
+.pricing-test .hero-cta-row{margin-top:32px;}
 
-  #clients::before{
+.pricing-intro{
+  position:relative;
+  z-index:2;
+  scroll-margin-top:84px;
+  padding:clamp(58px,7vw,96px) 0;
+  background:
+    radial-gradient(ellipse 65% 100% at 50% 0%,rgba(157,119,41,.08),transparent 66%),
+    #09090a;
+}
+.pricing-intro__header{
+  position:relative;
+  z-index:2;
+  width:min(940px,calc(100% - 48px));
+  margin:0 auto clamp(42px,5vw,68px);
+  text-align:center;
+}
+.pricing-intro__title{
+  margin:0;
+  color:#f4f1e8;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(34px,4.4vw,44px);
+  font-weight:700;
+  line-height:1.08;
+  letter-spacing:.115em;
+  text-transform:uppercase;
+}
+.pricing-intro__inner{
+  position:relative;
+  z-index:2;
+  width:min(1320px,calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.pricing-intro__item{
+  position:relative;
+  isolation:isolate;
+  min-height:248px;
+  padding:clamp(32px,2.6vw,44px) clamp(24px,2.2vw,34px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+  border:1px solid rgba(218,184,102,.22);
+  background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.006));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s ease,box-shadow .45s ease,background .45s ease;
+}
+.pricing-intro__item::before{
   content:"";
   position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.92) 0%,
-      rgba(0,0,0,.82) 18%,
-      rgba(0,0,0,.78) 50%,
-      rgba(0,0,0,.84) 82%,
-      rgba(0,0,0,.92) 100%
-    ),
-    radial-gradient(
-      ellipse at center,
-      rgba(0,0,0,0) 0%,
-      rgba(0,0,0,.18) 55%,
-      rgba(0,0,0,.42) 100%
-    ),
-    url('images/gold-tile.jpg');
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size:900px auto;
-  opacity:.14;
-  pointer-events:none;
-  z-index:1;
-
-    -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0,0,0,1) 18%,
-    rgba(0,0,0,1) 82%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0,0,0,1) 18%,
-    rgba(0,0,0,1) 82%,
-    transparent 100%
-  );
+  z-index:-1;
+  inset:-60%;
+  opacity:0;
+  background:radial-gradient(circle at 50% 42%,rgba(218,184,102,.2),transparent 33%);
+  transform:translateY(12px) scale(.78);
+  transition:opacity .55s ease,transform .65s cubic-bezier(.2,.7,.2,1);
 }
-
-  #clients > *{
-    position:relative;
-    z-index:2;
+@media (hover:hover){
+  .pricing-intro__item:hover{
+    transform:translateY(-5px);
+    border-color:rgba(218,184,102,.55);
+    background:linear-gradient(145deg,rgba(218,184,102,.1),rgba(255,255,255,.018));
+    box-shadow:0 18px 42px rgba(0,0,0,.27),inset 0 1px 0 rgba(244,241,234,.08),0 0 26px rgba(218,184,102,.08);
   }
-
-.clients-header{
-  text-align:center;
-  margin-bottom:90px;
-  padding:0 48px;
+  .pricing-intro__item:hover::before{opacity:1;transform:translateY(0) scale(1);}
 }
+.pricing-intro__eyebrow{
+  margin:0 0 11px;
+  color:#caa657;
+  font:500 10px/1.3 'Montserrat',sans-serif;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.pricing-intro__item strong{
+  color:#f4f1e8;
+  font:400 clamp(19px,1.7vw,26px)/1.2 'Playfair Display',serif;
+}
+.pricing-intro__item p{
+  margin:8px 0 0;
+  color:rgba(244,241,232,.6);
+  font:300 clamp(13px,1vw,14px)/1.68 'Montserrat',sans-serif;
+}
+.pricing-mobile-cta{display:none;}
 
-  .network-content {
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .network-eyebrow {
-    font-family:'Montserrat', sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.42em;
-    color: #c9a24c;
-    text-transform: uppercase;
-    margin: 0 0 18px;
-    font-weight: 400;
-    padding-left: 0.42em;
-  }
-
-  .network-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin: 0 auto 44px;
-  }
-
-  .network-divider-line {
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #c9a24c, transparent);
-  }
-
-  .network-divider-diamond {
-    display: block;
-    width: 9px;
-    height: 9px;
-    background-color: #c9a24c;
-    transform: rotate(45deg);
-  }
-
-  .network-heading {
-    font-family: 'Playfair Display', 'Cormorant Garamond', 'Times New Roman', serif;
-    font-size: clamp(28px, 3.2vw, 48px);
-    font-weight: 500;
-    line-height: 1.2;
-    margin: 0;
-    letter-spacing: -0.005em;
-  }
-
-  .network-heading-gold,
-  .network-heading-white {
-    display: block;
-  }
-
-  .network-heading-gold {
-    color: #e9c879;
-    margin-bottom: 3px;
-  }
-
-  .network-heading-white {
-    color: #ffffff;
-    font-weight: 500;
-  }
-
-  .clients-marquee{
-    position:relative;
-    width:100%;
-    overflow:hidden;
-  }
-
-  .clients-marquee::before,
-  .clients-marquee::after{
-    content:"";
-    position:absolute;
-    top:0;
-    width:180px;
-    height:100%;
-    z-index:3;
-    pointer-events:none;
-  }
-
-  .clients-marquee::before{
-    left:0;
-    background:linear-gradient(to right, #000, transparent);
-  }
-
-  .clients-marquee::after{
-    right:0;
-    background:linear-gradient(to left, #000, transparent);
-  }
-
-  .clients-track{
+@media(max-width:900px){
+  .pricing-intro__inner{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .pricing-test .hero{min-height:820px;}
+  .pricing-test .hero-content{padding-top:84px;padding-bottom:42px;}
+  .pricing-test .hero h1{max-width:350px !important;font-size:clamp(39px,10.6vw,52px) !important;}
+  .pricing-test .hero-price{margin-top:16px;font-size:14.5px;line-height:1.65;}
+  .pricing-test .hero-support{max-width:335px !important;margin-top:20px;}
+  .pricing-intro__inner{width:100%;grid-template-columns:1fr;}
+  .pricing-intro{padding:42px 0;}
+  .pricing-intro__header{width:min(330px,calc(100% - 48px));margin-bottom:28px;}
+  .pricing-intro__title{font-size:clamp(22px,6.4vw,30px);line-height:1.12;letter-spacing:.06em;}
+  .pricing-intro__inner{gap:10px;}
+  .pricing-intro__item{min-height:148px;padding:28px 26px;}
+  .pricing-mobile-cta{
+    position:fixed;
+    left:18px;
+    right:18px;
+    bottom:16px;
+    z-index:1000;
     display:flex;
-    width:max-content;
-    animation:scroll 70s linear infinite;
-  }
-
-  .clients-marquee + .clients-marquee{
-    margin-top:88px;
-  }
-
-  .clients-track.clients-track--reverse{
-    animation:scroll-reverse 50s linear infinite;
-  }
-
-  .clients-row{
-    display:flex;
+    min-height:50px;
     align-items:center;
-    gap:220px;
-    padding-right:220px;
+    justify-content:center;
+    border:1px solid #d8b866;
+    background:#d8b866;
+    color:#09090a;
+    font:600 11px/1 'Montserrat',sans-serif;
+    letter-spacing:.14em;
+    text-decoration:none;
+    text-transform:uppercase;
+    box-shadow:0 12px 34px rgba(0,0,0,.36);
   }
-
-  .clients-row img{
-    height:84px;
-    width:auto;
-    flex-shrink:0;
-    display:block;
-    transform:scale(3.1);
-    transform-origin:center;
-    opacity:1;
-filter:none;
-transition:opacity .35s ease, transform .35s ease, filter .35s ease;
-  }
-
-  .clients-row img:hover{
-    opacity:1;
-    transform:scale(3.25) translateY(-2px);
-    filter:none;
-}
-
-  /* Individual optical adjustments */
-  img[src*="GoldenGoose"]{
-    transform:scale(2.8);
-  }
-
-  img[src*="moncler"]{
-    transform:scale(3.6);
-  }
-
-  img[src*="MrC"]{
-    transform:scale(3.4);
-  }
-
-  img[src*="Poliform"]{
-    transform:scale(3.0);
-  }
-
-  img[src*="Prada"]{
-    transform:scale(3.3);
-  }
-
-  img[src*="Zuma"]{
-    transform:scale(3.4);
-  }
-
-  img[src*="Armani"]{
-    transform:scale(2.7);
-  }
-
-  img[src*="DG"]{
-    transform:scale(2.5);
-  }
-
-  img[src*="FourSeasons"]{
-    transform:scale(3.2);
-  }
-
-  img[src*="GoldenGoose"]:hover{
-    transform:scale(2.95) translateY(-2px);
-  }
-
-  img[src*="moncler"]:hover{
-    transform:scale(3.75) translateY(-2px);
-  }
-
-  img[src*="MrC"]:hover{
-    transform:scale(3.55) translateY(-2px);
-  }
-
-  img[src*="Poliform"]:hover{
-    transform:scale(3.15) translateY(-2px);
-  }
-
-  img[src*="Prada"]:hover{
-    transform:scale(3.45) translateY(-2px);
-  }
-
-  img[src*="Zuma"]:hover{
-    transform:scale(3.55) translateY(-2px);
-  }
-
-  img[src*="Armani"]:hover{
-    transform:scale(2.85) translateY(-2px);
-  }
-
-  img[src*="DG"]:hover{
-    transform:scale(2.65) translateY(-2px);
-  }
-
-  img[src*="FourSeasons"]:hover{
-    transform:scale(3.35) translateY(-2px);
-  }
-
-  @keyframes scroll{
-    from{
-      transform:translateX(0);
-    }
-    to{
-      transform:translateX(-50%);
-    }
-  }
-
-  @keyframes scroll-reverse{
-    from{
-      transform:translateX(-50%);
-    }
-    to{
-      transform:translateX(0);
-    }
-  }
-
-  @media (max-width: 768px){
-    #clients{
-      padding:56px 0 120px;
-    }
-
-    #clients::before{
-      background-size:800px;
-      opacity:.05;
-    }
-
-    .clients-header{
-      margin-bottom:72px;
-      padding:0 28px;
-    }
-
-    .network-eyebrow {
-      font-size: 13px;
-      letter-spacing: 0.38em;
-    }
-
-    .network-divider-line {
-      width: 70px;
-    }
-
-    .network-heading {
-      font-size: clamp(22px, 4.6vw, 34px);
-    }
-
-    .clients-row{
-      gap:110px;
-      padding-right:110px;
-    }
-
-    .clients-row img{
-      height:50px;
-      transform:scale(2.1);
-    }
-
-    img[src*="GoldenGoose"]{ transform:scale(1.9); }
-    img[src*="moncler"]{ transform:scale(2.4); }
-    img[src*="MrC"]{ transform:scale(2.3); }
-    img[src*="Poliform"]{ transform:scale(2.0); }
-    img[src*="Prada"]{ transform:scale(2.2); }
-    img[src*="Zuma"]{ transform:scale(2.3); }
-    img[src*="Armani"]{ transform:scale(1.9); }
-    img[src*="DG"]{ transform:scale(1.8); }
-    img[src*="FourSeasons"]{ transform:scale(2.1); }
-
-    .clients-marquee::before,
-    .clients-marquee::after{
-      width:90px;
-    }
-
-    .clients-track{
-      animation:scroll 40s linear infinite;
-    }
-
-    .clients-track.clients-track--reverse{
-      animation:scroll-reverse 40s linear infinite;
-    }
-  }
-
-
-
-
-
-  @media (max-width: 520px){
-    .clients-header{
-      padding:0 22px;
-    }
-
-    .network-heading-gold{
-      margin-bottom:6px;
-    }
-  }
-
-/* ===== MOBILE CLIENTS STATIC IMAGE PATCH =====
-   Desktop keeps the original animated logo marquees.
-   Mobile replaces the animation with a single static image: images/clients-mobile.jpg */
-.clients-mobile-image{
-  display:none;
-}
-
-@media (max-width: 768px){
-  #clients{
-    content-visibility:visible !important;
-    contain:none !important;
-    contain-intrinsic-size:auto !important;
-    padding-top:72px !important;
-    padding-bottom:72px !important;
-    overflow:hidden !important;
-  }
-
-  #clients .clients-header{
-    margin-bottom:36px !important;
-  }
-
-  #clients .clients-marquee{
-    display:none !important;
-  }
-
-  #clients .clients-track,
-  #clients .clients-row{
-    animation:none !important;
-    transform:none !important;
-  }
-
-  #clients .clients-mobile-image{
-    display:block !important;
-    width:100% !important;
-    max-width:675px !important;
-    margin:0 auto !important;
-    padding:0 24px !important;
-    box-sizing:border-box !important;
-  }
-
-  #clients .clients-mobile-image img{
-    display:block !important;
-    width:100% !important;
-    height:auto !important;
-    aspect-ratio:675 / 1200 !important;
-    object-fit:contain !important;
-    border:0 !important;
-    outline:0 !important;
-    box-shadow:none !important;
-    filter:none !important;
-    transform:none !important;
-    opacity:1 !important;
-  }
-}
-
-@media (min-width: 769px){
-  #clients .clients-mobile-image{
-    display:none !important;
-  }
-}
-
-/* ===== CLIENT LOGO MARQUEE FINAL FIX =====
-   Fixes mobile logo rendering artifacts, oversized visibility, and intermittent blank rows. */
-#clients{
-  content-visibility:visible !important;
-  contain:none !important;
-}
-
-#clients .clients-marquee,
-#clients .clients-track,
-#clients .clients-row{
-  content-visibility:visible !important;
-  contain:none !important;
-}
-
-#clients .clients-track{
-  display:flex !important;
-  width:max-content !important;
-  min-width:max-content !important;
-  will-change:transform !important;
-  transform:translate3d(0,0,0);
-  backface-visibility:hidden;
-}
-
-#clients .clients-track--reverse{
-  transform:translate3d(-50%,0,0);
-}
-
-#clients .clients-row{
-  flex:0 0 auto !important;
-  align-items:center !important;
-}
-
-
-@keyframes clientScrollStable{
-  from{ transform:translate3d(0,0,0); }
-  to{ transform:translate3d(-50%,0,0); }
-}
-
-@keyframes clientScrollStableReverse{
-  from{ transform:translate3d(-50%,0,0); }
-  to{ transform:translate3d(0,0,0); }
-}
-
-#clients .clients-track{
-  animation:clientScrollStable 86s linear infinite !important;
-}
-
-#clients .clients-track.clients-track--reverse{
-  animation:clientScrollStableReverse 76s linear infinite !important;
-}
-
-@media (max-width: 768px){
-  #clients{
-    overflow:hidden !important;
-    padding-top:62px !important;
-    padding-bottom:130px !important;
-  }
-
-  #clients::before{
-    opacity:.045 !important;
-  }
-
-  #clients .clients-marquee{
-    overflow:hidden !important;
-    min-height:330px !important;
-    display:flex !important;
-    align-items:center !important;
-  }
-
-  #clients .clients-marquee + .clients-marquee{
-    margin-top:18px !important;
-  }
-
-  #clients .clients-marquee::before,
-  #clients .clients-marquee::after{
-    width:42px !important;
-    z-index:4 !important;
-  }
-
-  #clients .clients-row,
-  #clients .clients-track--reverse .clients-row{
-    gap:330px !important;
-    padding-right:330px !important;
-    min-height:330px !important;
-  }
-
-  #clients .clients-row img,
-  #clients .clients-track--reverse .clients-row img,
-  #clients img[src*="GoldenGoose"],
-  #clients img[src*="moncler"],
-  #clients img[src*="Prada"],
-  #clients img[src*="Zuma"],
-  #clients img[src*="FourSeasons"],
-  #clients img[src*="MrC"],
-  #clients img[src*="Poliform"],
-  #clients img[src*="Armani"],
-  #clients img[src*="DG"],
-  #clients .clients-track--reverse img[src*="Eden"],
-  #clients .clients-track--reverse img[src*="Luxury"],
-  #clients .clients-track--reverse img[src*="Shawood"],
-  #clients .clients-track--reverse img[src*="Louis"],
-  #clients .clients-track--reverse img[src*="Sagewood"],
-  #clients .clients-track--reverse img[src*="Kiton"],
-  #clients .clients-track--reverse img[src*="Anima"],
-  #clients .clients-track--reverse img[src*="Amex"],
-  #clients .clients-track--reverse img[src*="Laperla"]{
-    height:300px !important;
-    width:auto !important;
-    max-width:none !important;
-    transform:none !important;
-  }
-}
-
-@media (max-width: 420px){
-  #clients .clients-marquee{
-    min-height:285px !important;
-  }
-
-  #clients .clients-row,
-  #clients .clients-track--reverse .clients-row{
-    gap:285px !important;
-    padding-right:285px !important;
-    min-height:285px !important;
-  }
-
-  #clients .clients-row img,
-  #clients .clients-track--reverse .clients-row img{
-    height:265px !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce){
-  #clients .clients-track,
-  #clients .clients-track.clients-track--reverse{
-    animation:none !important;
-    transform:translate3d(0,0,0) !important;
-  }
-}
-
-/* ===== FINAL MOBILE CLIENTS STATIC OVERRIDE =====
-   Keeps desktop marquee unchanged.
-   On mobile, hides every legacy logo marquee and shows only clients-mobile.jpg. */
-@media (max-width: 768px){
-  #clients{
-    content-visibility:visible !important;
-    contain:none !important;
-    contain-intrinsic-size:auto !important;
-    overflow:hidden !important;
-  }
-
-  #clients .clients-mobile-image{
-    display:block !important;
-    width:100% !important;
-    max-width:675px !important;
-    margin:0 auto !important;
-    padding:0 24px !important;
-    box-sizing:border-box !important;
-  }
-
-  #clients .clients-mobile-image img{
-    display:block !important;
-    width:100% !important;
-    height:auto !important;
-    aspect-ratio:675 / 1200 !important;
-    object-fit:contain !important;
-    opacity:1 !important;
-    transform:none !important;
-    filter:none !important;
-  }
-
-  #clients .clients-marquee,
-  #clients .clients-track,
-  #clients .clients-row{
-    display:none !important;
-    visibility:hidden !important;
-    opacity:0 !important;
-    height:0 !important;
-    min-height:0 !important;
-    max-height:0 !important;
-    margin:0 !important;
-    padding:0 !important;
-    overflow:hidden !important;
-    animation:none !important;
-    transform:none !important;
-    pointer-events:none !important;
-  }
-
-  #clients .clients-marquee *,
-  #clients .clients-track *,
-  #clients .clients-row *{
-    display:none !important;
-    visibility:hidden !important;
-    opacity:0 !important;
-  }
-}
-
-@media (min-width: 769px){
-  #clients .clients-mobile-image{
-    display:none !important;
-  }
+  .pricing-test{padding-bottom:78px;}
 }
 </style>
+
+<style>
+/* ===== PROVIDER COMPARISON ===== */
+#provider-comparison{
+  padding:clamp(72px,8vw,112px) 24px;
+  background:
+    radial-gradient(900px 460px at 50% 0%, rgba(201,162,74,.1), transparent 62%),
+    linear-gradient(180deg, #050507 0%, #000 54%, #060609 100%);
+}
+#provider-comparison .section-container{max-width:1180px;}
+#provider-comparison .comparison-intro{
+  max-width:1120px;
+  margin:0 auto 38px;
+  text-align:center;
+}
+#provider-comparison .comparison-intro h2{
+  margin:0;
+  color:#f4f1e8;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4vw,44px);
+  font-weight:700;
+  line-height:1.06;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+#provider-comparison .comparison-intro h2 span{display:block;}
+#provider-comparison .comparison-intro p{
+  margin:22px 0 0;
+  color:rgba(244,241,234,.72);
+  font:300 18px/1.85 'Montserrat',sans-serif;
+}
+#provider-comparison .opportunity-comparison-card{
+  position:relative;
+  min-height:0;
+  padding:36px 30px 34px;
+  overflow:hidden;
+  isolation:isolate;
+  border:1px solid rgba(201,162,74,.38);
+  border-radius:22px;
+  background:
+    radial-gradient(520px 260px at 50% 0%, rgba(201,162,74,.13), transparent 68%),
+    linear-gradient(180deg, rgba(18,18,24,.88), rgba(5,5,8,.96));
+  box-shadow:0 24px 68px rgba(0,0,0,.36),inset 0 1px 0 rgba(255,255,255,.035),0 0 0 1px rgba(201,162,74,.06);
+}
+#provider-comparison .opportunity-comparison-card::before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  z-index:0;
+  border:1px solid rgba(201,162,74,.18);
+  border-radius:16px;
+  pointer-events:none;
+}
+#provider-comparison .opportunity-comparison-card::after{
+  content:"";
+  position:absolute;
+  top:-1px;
+  left:50%;
+  width:62%;
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg, transparent, rgba(241,217,138,.86), transparent);
+}
+#provider-comparison .opportunity-comparison__topline{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 18px;
+  padding:8px 13px;
+  border:1px solid rgba(201,162,74,.28);
+  border-radius:999px;
+  background:rgba(0,0,0,.24);
+  color:#f1d98a;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+#provider-comparison .opportunity-comparison__topline::before{
+  content:"";
+  width:7px;
+  height:7px;
+  transform:rotate(45deg);
+  background:linear-gradient(135deg, #f1d98a, #c9a24a);
+  box-shadow:0 0 12px rgba(201,162,74,.55);
+}
+#provider-comparison .opportunity-comparison__scroll{position:relative;z-index:1;overflow-x:auto;padding-bottom:4px;}
+#provider-comparison .opportunity-comparison-table{
+  width:100%;
+  table-layout:fixed;
+  overflow:hidden;
+  border:1px solid rgba(201,162,74,.22);
+  border-radius:16px;
+  border-collapse:separate;
+  border-spacing:0;
+  background:rgba(0,0,0,.22);
+}
+#provider-comparison .opportunity-comparison-table th,
+#provider-comparison .opportunity-comparison-table td{
+  padding:34px 18px;
+  vertical-align:middle;
+  border-right:1px solid rgba(201,162,74,.16);
+  border-bottom:1px solid rgba(201,162,74,.16);
+}
+#provider-comparison .opportunity-comparison-table th:last-child,
+#provider-comparison .opportunity-comparison-table td:last-child{border-right:0;}
+#provider-comparison .opportunity-comparison-table tbody tr:last-child th,
+#provider-comparison .opportunity-comparison-table tbody tr:last-child td{border-bottom:0;}
+#provider-comparison .opportunity-comparison-table thead th{
+  padding:25px 18px 24px;
+  color:rgba(241,217,138,.94);
+  background:linear-gradient(180deg, rgba(201,162,74,.15), rgba(201,162,74,.055)),rgba(0,0,0,.28);
+  font-size:11px;
+  font-weight:600;
+  line-height:1.35;
+  letter-spacing:.2em;
+  text-align:center;
+  text-transform:uppercase;
+}
+#provider-comparison .opportunity-comparison-table thead th:first-child{width:18%;}
+#provider-comparison .opportunity-comparison-table tbody tr{height:158px;}
+#provider-comparison .opportunity-comparison-table tbody th{
+  padding:34px 20px;
+  text-align:center;
+  background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+}
+#provider-comparison .provider-name{display:block;color:#fff;font:400 22px/1.06 'Playfair Display',serif;letter-spacing:.03em;}
+#provider-comparison .provider-tag{display:block;margin-top:10px;color:rgba(244,241,234,.52);font-size:9.5px;line-height:1.38;letter-spacing:.2em;text-transform:uppercase;}
+#provider-comparison .opportunity-comparison-table td strong{display:block;margin-bottom:10px;color:#fff;font:500 19px/1.18 'Playfair Display',serif;}
+#provider-comparison .opportunity-comparison-table td span{display:block;color:rgba(244,241,234,.68);font:300 13px/1.72 'Montserrat',sans-serif;}
+#provider-comparison .is-scent-company td{background:radial-gradient(160px 90px at 50% 0%, rgba(201,162,74,.12), transparent 74%),rgba(201,162,74,.035);}
+#provider-comparison .is-scent-company th{background:radial-gradient(160px 90px at 50% 0%, rgba(201,162,74,.18), transparent 74%),rgba(201,162,74,.055);}
+#provider-comparison .is-scent-company td strong{color:#f1d98a;}
+#provider-comparison .is-scentair td strong{color:rgba(244,241,234,.82);}
+#provider-comparison .opportunity-comparison__note{position:relative;z-index:1;max-width:960px;margin:18px auto 0;color:rgba(244,241,234,.54);font:300 11.5px/1.7 'Montserrat',sans-serif;text-align:center;}
+@media(max-width:1020px){
+  #provider-comparison .opportunity-comparison-card{padding:28px 20px;}
+  #provider-comparison .opportunity-comparison-table thead th{padding:22px 14px;font-size:9.6px;letter-spacing:.16em;}
+  #provider-comparison .opportunity-comparison-table tbody tr{height:150px;}
+  #provider-comparison .opportunity-comparison-table tbody th,#provider-comparison .opportunity-comparison-table tbody td{padding:30px 14px;}
+  #provider-comparison .provider-name{font-size:20px;}
+  #provider-comparison .opportunity-comparison-table td strong{font-size:17px;}
+  #provider-comparison .opportunity-comparison-table td span{font-size:12px;line-height:1.66;}
+}
+@media(max-width:820px){
+  #provider-comparison{padding:64px 18px;}
+  #provider-comparison .comparison-intro{text-align:left;margin-bottom:30px;}
+  #provider-comparison .comparison-intro h2{font-size:clamp(22px,6.4vw,30px);line-height:1.12;letter-spacing:.06em;}
+  #provider-comparison .comparison-intro p{font-size:16.2px;line-height:1.72;}
+  #provider-comparison .opportunity-comparison-card{padding:22px 18px;border-radius:16px;}
+  #provider-comparison .opportunity-comparison-card::before{inset:14px;border-radius:12px;}
+  #provider-comparison .opportunity-comparison-table,#provider-comparison .opportunity-comparison-table thead,#provider-comparison .opportunity-comparison-table tbody,#provider-comparison .opportunity-comparison-table tr,#provider-comparison .opportunity-comparison-table th,#provider-comparison .opportunity-comparison-table td{display:block;width:100%;}
+  #provider-comparison .opportunity-comparison-table{border:0;background:transparent;}
+  #provider-comparison .opportunity-comparison-table thead{display:none;}
+  #provider-comparison .opportunity-comparison-table tbody tr{height:auto;overflow:hidden;margin-bottom:18px;border:1px solid rgba(201,162,74,.24);border-radius:14px;background:rgba(0,0,0,.22);}
+  #provider-comparison .opportunity-comparison-table tbody tr:last-child{margin-bottom:0;}
+  #provider-comparison .opportunity-comparison-table tbody th{padding:24px 20px;border-right:0;border-bottom:1px solid rgba(201,162,74,.18);text-align:left;}
+  #provider-comparison .opportunity-comparison-table td{position:relative;padding:20px;border-right:0;border-bottom:1px solid rgba(201,162,74,.14);}
+  #provider-comparison .opportunity-comparison-table tbody tr td:last-child{border-bottom:0;}
+  #provider-comparison .opportunity-comparison-table td::before{content:attr(data-label);display:block;margin-bottom:8px;color:rgba(241,217,138,.82);font-size:9px;font-weight:600;line-height:1.35;letter-spacing:.18em;text-transform:uppercase;}
+  #provider-comparison .provider-name{font-size:21px;}
+  #provider-comparison .opportunity-comparison-table td strong{font-size:18px;}
+  #provider-comparison .opportunity-comparison-table td span{font-size:13px;line-height:1.7;}
+  #provider-comparison .opportunity-comparison__note{text-align:left;}
+}
+</style>
+
 </head>
-<body>
+<body class="pricing-test">
   <nav class="sc-nav" aria-label="Primary navigation">
     <a class="sc-nav__brand" href="#hero">Scent Company</a>
     <div class="sc-nav__links">
-      <a href="#spaces">Spaces</a>
-      <a href="#clients">References</a>
-      <a href="#contact-section-wrap" class="sc-btn-primary">Request a Consultation</a>
+      <a href="#references">References</a>
+      <a href="#contact-section-wrap" class="sc-btn-primary">Get Pricing</a>
     </div>
   </nav>
 
   <main>
     <section class="hero" id="hero">
-      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/hospitality-poster.jpg" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/hotel-poster.jpg" aria-hidden="true">
         <source src="hotel.mp4" type="video/mp4">
       </video>
 
       <div class="hero-content">
         <p class="hero-subhead">Luxury Hospitality Scenting</p>
-        <h1>Professional Scenting for Luxury Hotels</h1>
-        <p class="hero-support">Create a memorable first impression and a consistent sensory atmosphere across lobbies, suites, spas and shared spaces with a refined olfactory identity designed for luxury hospitality.</p>
+        <h1>Professional Scenting<br class="desktop-only-break"> for Luxury Hotels</h1>
+        <p class="hero-support">An all-inclusive professional scenting service tailored to hotels,<br class="desktop-only-break"> resorts, spas and hospitality destinations.</p>
+        <p class="hero-price">Plans from $180 / month per diffuser</p>
         <div class="hero-cta-row">
           <a href="#contact-section-wrap" class="sc-btn-primary">Request a Hospitality Consultation</a>
-          <a href="#services" class="sc-btn-secondary">Explore Our Services</a>
+          <a href="#pricing-details" class="sc-btn-secondary">What the Plan Includes</a>
         </div>
       </div>
       <p class="hero-origin"></p>
     </section>
 
-    <section class="section" id="opportunity">
-      <div class="hero-particles opportunity-particles" aria-hidden="true">
-        <span class="particle" style="left:4%;--dur:13s;--delay:-2s;--drift:18px"></span>
-      <span class="particle" style="left:8%;--dur:16s;--delay:-7s;--drift:28px"></span>
-      <span class="particle" style="left:11%;--dur:18s;--delay:-4s;--drift:-14px"></span>
-      <span class="particle" style="left:15%;--dur:14s;--delay:-10s;--drift:22px"></span>
-      <span class="particle" style="left:19%;--dur:20s;--delay:-6s;--drift:-24px"></span>
-      <span class="particle" style="left:23%;--dur:15s;--delay:-12s;--drift:16px"></span>
-      <span class="particle" style="left:27%;--dur:17s;--delay:-3s;--drift:30px"></span>
-      <span class="particle" style="left:31%;--dur:19s;--delay:-14s;--drift:-18px"></span>
-      <span class="particle" style="left:35%;--dur:14s;--delay:-5s;--drift:20px"></span>
-      <span class="particle" style="left:39%;--dur:21s;--delay:-11s;--drift:-30px"></span>
-      <span class="particle" style="left:43%;--dur:16s;--delay:-8s;--drift:14px"></span>
-      <span class="particle" style="left:47%;--dur:18s;--delay:-1s;--drift:26px"></span>
-      <span class="particle" style="left:50%;--dur:13s;--delay:-9s;--drift:-12px"></span>
-      <span class="particle" style="left:54%;--dur:17s;--delay:-13s;--drift:-22px"></span>
-      <span class="particle" style="left:58%;--dur:15s;--delay:-4s;--drift:24px"></span>
-      <span class="particle" style="left:61%;--dur:22s;--delay:-15s;--drift:-16px"></span>
-      <span class="particle" style="left:65%;--dur:14s;--delay:-6s;--drift:18px"></span>
-      <span class="particle" style="left:69%;--dur:19s;--delay:-2s;--drift:-28px"></span>
-      <span class="particle" style="left:72%;--dur:16s;--delay:-10s;--drift:21px"></span>
-      <span class="particle" style="left:75%;--dur:20s;--delay:-7s;--drift:-20px"></span>
-      <span class="particle" style="left:79%;--dur:13s;--delay:-11s;--drift:12px"></span>
-      <span class="particle" style="left:82%;--dur:18s;--delay:-5s;--drift:30px"></span>
-      <span class="particle" style="left:85%;--dur:15s;--delay:-14s;--drift:-15px"></span>
-      <span class="particle" style="left:88%;--dur:17s;--delay:-3s;--drift:19px"></span>
-      <span class="particle" style="left:91%;--dur:21s;--delay:-12s;--drift:-25px"></span>
-      <span class="particle" style="left:94%;--dur:14s;--delay:-8s;--drift:17px"></span>
-      <span class="particle" style="left:97%;--dur:18s;--delay:-16s;--drift:-10px"></span>
-      <span class="particle" style="left:99%;--dur:16s;--delay:-9s;--drift:14px"></span>
+    <section class="pricing-intro" id="pricing-details" aria-label="Hospitality scenting plan details">
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle" style="left:5%;--dur:15s;--delay:-4s;--drift:18px"></span>
+        <span class="particle" style="left:12%;--dur:19s;--delay:-11s;--drift:-22px"></span>
+        <span class="particle" style="left:19%;--dur:14s;--delay:-7s;--drift:26px"></span>
+        <span class="particle" style="left:27%;--dur:21s;--delay:-2s;--drift:-16px"></span>
+        <span class="particle" style="left:35%;--dur:17s;--delay:-13s;--drift:24px"></span>
+        <span class="particle" style="left:43%;--dur:20s;--delay:-6s;--drift:-28px"></span>
+        <span class="particle" style="left:51%;--dur:15s;--delay:-10s;--drift:14px"></span>
+        <span class="particle" style="left:59%;--dur:22s;--delay:-3s;--drift:-20px"></span>
+        <span class="particle" style="left:67%;--dur:16s;--delay:-12s;--drift:27px"></span>
+        <span class="particle" style="left:74%;--dur:19s;--delay:-8s;--drift:-18px"></span>
+        <span class="particle" style="left:82%;--dur:14s;--delay:-5s;--drift:22px"></span>
+        <span class="particle" style="left:89%;--dur:21s;--delay:-14s;--drift:-25px"></span>
+        <span class="particle" style="left:96%;--dur:17s;--delay:-9s;--drift:16px"></span>
       </div>
+      <header class="pricing-intro__header">
+        <h2 class="pricing-intro__title">A premium scent experience, managed<br class="mobile-only-break">end-to-end.</h2>
+      </header>
+      <div class="pricing-intro__inner">
+        <article class="pricing-intro__item">
+          <p class="pricing-intro__eyebrow">All-inclusive service</p>
+          <strong>Fragrance, refills &amp; support</strong>
+          <p>We manage refills, maintenance, adjustments and ongoing system support for your property.</p>
+        </article>
+        <article class="pricing-intro__item">
+          <p class="pricing-intro__eyebrow">Fits your space</p>
+          <strong>Standalone or HVAC options</strong>
+          <p>We recommend the right diffusion method and coverage for each hospitality environment.</p>
+        </article>
+        <article class="pricing-intro__item">
+          <p class="pricing-intro__eyebrow">No-cost first step</p>
+          <strong>Personalized recommendation</strong>
+          <p>Tell us about your property and receive a practical system and pricing recommendation.</p>
+        </article>
+        <article class="pricing-intro__item">
+          <p class="pricing-intro__eyebrow">Simple starting point</p>
+          <strong>From $180/month per diffuser</strong>
+          <p>Your exact plan is based on property size, layout and the guest areas you want to scent.</p>
+        </article>
+      </div>
+    </section>
 
-      <div class="section-container split-grid">
-        <div class="copy-card">
-          <p class="eyebrow">Hospitality Experience</p>
-          <h3>The First Impression Guests Remember</h3>
-          <p>In luxury hospitality, the guest experience begins before a word is spoken. The atmosphere of the lobby, the calm of the spa, the warmth of a suite and the elegance of shared spaces all shape how a property is remembered.</p>
-          <p>Scent adds an invisible layer of identity that makes each arrival feel intentional, refined and emotionally distinct. Discreetly installed, remotely managed and calibrated for hospitality operations, the system supports a signature guest experience with the ease expected from a luxury property.</p>
+    <section class="section alt" id="references">
+      <div class="portfolio-globe" aria-hidden="true">
+        <img src="images/global-globe.png" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="section-container">
+        <header class="section-header">
+          <p class="eyebrow">CLIENT'S PORTFOLIO</p>
+          <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+          <h2 class="section-title">Global expertise,<br class="desktop-only-break"> tailored to your property.</h2>
+          <p class="section-subtitle">The same professional scenting expertise trusted by iconic brands, adapted to hotels, resorts, spas and hospitality destinations.</p>
+        </header>
+
+        <div class="proof-showcase" aria-label="Selected luxury retail and hospitality references">
+          <div class="proof-showcase__glow" aria-hidden="true"></div>
+          <div class="proof-mobile-card proof-mobile-card--left">
+            <div class="proof-category proof-category--left">
+              <div class="proof-icon" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 62V30h11v32" />
+                  <path d="M31 62V18h18v44" />
+                  <path d="M51 62V34h11v28" />
+                  <path d="M13 62h54" />
+                  <path d="M24 37h2M24 45h2M24 53h2" />
+                  <path d="M38 27h3M38 36h3M38 45h3M38 54h3" />
+                  <path d="M56 41h2M56 49h2M56 57h2" />
+                </svg>
+              </div>
+              <h3>Luxury Fashion<br>Houses</h3>
+            </div>
+            <div class="proof-list proof-list--left">
+              <div class="proof-list-item">Moncler</div>
+              <div class="proof-list-item">Golden Goose</div>
+              <div class="proof-list-item">Giorgio Armani</div>
+              <div class="proof-list-item">Dolce &amp; Gabbana</div>
+            </div>
+          </div>
+
+          <div class="proof-center-divider" aria-hidden="true">
+            <span class="proof-center-line"></span>
+            <span class="proof-center-diamond"></span>
+            <span class="proof-center-line"></span>
+          </div>
+
+          <div class="proof-mobile-card proof-mobile-card--right">
+            <div class="proof-category proof-category--right">
+              <div class="proof-icon" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 58h40" />
+                  <path d="M16 64h48" />
+                  <path d="M23 55c1.5-15.5 8.5-25 17-25s15.5 9.5 17 25" />
+                  <path d="M40 30v-5" />
+                  <path d="M35 24c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5" />
+                </svg>
+              </div>
+              <h3>Luxury<br>Hospitality</h3>
+            </div>
+            <div class="proof-list proof-list--right">
+              <div class="proof-list-item">Four Seasons Miami</div>
+              <div class="proof-list-item">The Louis Hotel</div>
+              <div class="proof-list-item">Shawood</div>
+              <div class="proof-list-item">Ritz-Carlton Yacht</div>
+            </div>
+          </div>
         </div>
-        <div class="architectural-frame" aria-hidden="true">
-          <img class="architectural-frame__image" src="images/fourseasons.webp" data-fallback-srcs="fourseasons.jpg,./fourseasons.jpg,images/fourseasons.jpg,./images/fourseasons.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="provider-comparison" aria-label="Scent Company and ScentAir comparison">
+      <div class="section-container">
+        <div class="comparison-intro">
+          <h2><span>Compare scenting systems,</span><span>service flexibility,</span><span>diffuser control</span></h2>
+          <p>before choosing your provider</p>
+        </div>
+
+        <div class="opportunity-comparison-card opportunity-comparison-wide" aria-label="Scent Company and ScentAir comparison">
+          <div class="opportunity-comparison__topline">Provider Comparison</div>
+          <div class="opportunity-comparison__scroll" role="region" aria-label="Compare Scent Company with ScentAir">
+            <table class="opportunity-comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col">Scenting<br>Provider</th>
+                  <th scope="col">Long-Term<br>Contract</th>
+                  <th scope="col">Remote-Controlled<br>Diffusers</th>
+                  <th scope="col">Exclusive<br>Fragrances</th>
+                  <th scope="col">Premium Customer<br>Service</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="is-scent-company">
+                  <th scope="row">
+                    <span class="provider-name">Scent Company</span>
+                    <span class="provider-tag">Luxury olfactory branding</span>
+                  </th>
+                  <td data-label="Long-Term Contract">
+                    <strong>No</strong>
+                    <span>No long-term lock-in and no cancellation fees.</span>
+                  </td>
+                  <td data-label="Remote-Controlled Diffusers">
+                    <strong>Yes</strong>
+                    <span>Instant remote adjustments to intensity, schedule and diffusion settings.</span>
+                  </td>
+                  <td data-label="Exclusive Fragrances">
+                    <strong>Yes</strong>
+                    <span>150+ exclusive fragrances for iconic hospitality brands and destinations.</span>
+                  </td>
+                  <td data-label="Premium Customer Service">
+                    <strong>Premium support</strong>
+                    <span>Dedicated assistance, typically within 1 hour.</span>
+                  </td>
+                </tr>
+                <tr class="is-scentair">
+                  <th scope="row">
+                    <span class="provider-name">ScentAir</span>
+                    <span class="provider-tag">Traditional scent marketing</span>
+                  </th>
+                  <td data-label="Long-Term Contract">
+                    <strong>Typically 2–3 years</strong>
+                    <span>Longer commitments may reduce flexibility.</span>
+                  </td>
+                  <td data-label="Remote-Controlled Diffusers">
+                    <strong>Limited</strong>
+                    <span>Changes may require technical visits, adding time and cost.</span>
+                  </td>
+                  <td data-label="Exclusive Fragrances">
+                    <strong>Standard portfolio</strong>
+                    <span>Generic scent options used across different clients.</span>
+                  </td>
+                  <td data-label="Premium Customer Service">
+                    <strong>Mixed feedback online</strong>
+                    <span>Many public reviews mention difficulty reaching support.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="opportunity-comparison__note">Use this comparison as a starting point when evaluating scenting systems, contract flexibility, fragrance quality and service model.</p>
         </div>
       </div>
     </section>
@@ -2756,98 +2565,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
     }
     </style>
 
-    <!-- ===== CLIENT LOGO MARQUEE SECTION ===== -->
-    <section id="clients">
-  <div class="clients-header">
-    <div class="network-content">
-      <p class="network-eyebrow">GLOBAL NETWORK</p>
-
-      <div class="network-divider" aria-hidden="true">
-        <span class="network-divider-line"></span>
-        <span class="network-divider-diamond"></span>
-        <span class="network-divider-line"></span>
-      </div>
-
-      <h2 class="network-heading">
-        <span class="network-heading-gold">A trusted partner to iconic brands</span>
-        <span class="network-heading-white">across retail, hospitality and wellness.</span>
-      </h2>
-    </div>
-  </div>
-
-  <div class="clients-mobile-image">
-    <img
-      src="images/clients-mobile.jpg"
-      alt="Scent Company trusted clients"
-      width="675"
-      height="1200"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
-
-  <div class="clients-marquee">
-    <div class="clients-track">
-
-      <div class="clients-row">
-        <img src="logos/GoldenGoose.svg" alt="Golden Goose" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/moncler.svg" alt="Moncler" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/MrC.svg" alt="Mr C" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Poliform.svg" alt="Poliform" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Prada.svg" alt="Prada" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Zuma.svg" alt="Zuma" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Armani.svg" alt="Armani" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/DG.svg" alt="Dolce &amp; Gabbana" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/FourSeasons.svg" alt="Four Seasons" loading="eager" decoding="async" fetchpriority="high" />
-      </div>
-
-      <div class="clients-row" aria-hidden="true">
-        <img src="logos/GoldenGoose.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/moncler.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/MrC.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Poliform.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Prada.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Zuma.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Armani.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/DG.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/FourSeasons.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-      </div>
-
-    </div>
-  </div>
-
-  <div class="clients-marquee" aria-hidden="true">
-    <div class="clients-track clients-track--reverse">
-
-      <div class="clients-row">
-        <img src="logos/Eden.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Luxury.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Shawood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Louis.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Sagewood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Kiton.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Anima.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Amex.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Laperla.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-      </div>
-
-      <div class="clients-row">
-        <img src="logos/Eden.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Luxury.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Shawood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Louis.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Sagewood.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Kiton.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Anima.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Amex.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-        <img src="logos/Laperla.svg" alt="" loading="eager" decoding="async" fetchpriority="high" />
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
+    <!-- ===== OUR SERVICES SECTION ===== -->
     <section class="services-section" id="services" aria-labelledby="services-title">
       <div class="services-container">
 
@@ -2858,10 +2576,10 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
             <span class="services-divider-diamond"></span>
             <span class="services-divider-line"></span>
           </div>
-          <h2 class="services-title standard-title" id="services-title">Hospitality Scenting Solutions</h2>
+          <h2 class="services-title standard-title" id="services-title">Hospitality<br class="desktop-only-break"> Scenting Solutions</h2>
           <p class="services-subtitle">
           <span>We combine Italian craftsmanship with discreet diffusion technology</span>
-          <span>to create consistent, emotionally memorable experiences for hotels, resorts and hospitality destinations.</span>
+          <span>to create consistent, emotionally memorable guest experiences.</span>
           </p>
         </header>
 
@@ -2877,12 +2595,12 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
                 <span class="service-number-line"></span>
               </div>
 
-              <h3 class="service-title-card">Signature Guest Experience</h3>
+              <h3 class="service-title-card">Your property's olfactory signature</h3>
 
               <span class="service-diamond" aria-hidden="true"></span>
 
               <p class="service-description">
-                A curated fragrance direction designed to express the mood, service style and emotional signature of your hospitality property.
+                A curated fragrance direction designed to express your property's identity, atmosphere and emotional signature.
               </p>
 
               <svg class="service-botanical" viewBox="0 0 170 150" aria-hidden="true">
@@ -2906,12 +2624,12 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
                   <span class="service-number-line"></span>
                 </div>
 
-                <h3 class="service-title-card">Discreet Diffusion Systems</h3>
+              <h3 class="service-title-card">Discreet diffuser installation</h3>
 
                 <span class="service-diamond" aria-hidden="true"></span>
 
                 <p class="service-description">
-                  Professional diffusion through remote-controlled systems, calibrated for lobbies, suites, spas, corridors and social spaces.
+                Professional diffusion through remote-controlled systems, including HVAC-integrated or mobile solutions for lobbies, suites and shared spaces.
                 </p>
               </div>
 
@@ -2927,12 +2645,12 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
                   <span class="service-number-line"></span>
                 </div>
 
-                <h3 class="service-title-card">Full-Service Management</h3>
+              <h3 class="service-title-card">Full-service subscription</h3>
 
                 <span class="service-diamond" aria-hidden="true"></span>
 
                 <p class="service-description">
-                  Refills, maintenance, fragrance adjustments and support managed through one seamless monthly service.
+                Refills, ongoing maintenance and scent adjustments handled through one seamless monthly service.
                 </p>
               </div>
 
@@ -3978,33 +3696,48 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
         <header class="section-header">
           <p class="eyebrow">Hospitality Spaces</p>
           <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
-          <h2 class="section-title">Designed for the guest touchpoints that define the stay.</h2>
-          <p class="section-subtitle">From arrival to relaxation, scent helps create a consistent emotional atmosphere across the most important hospitality environments.</p>
+          <h2 class="section-title">Designed for the guest touchpoints<br class="desktop-only-break"> that define the stay.</h2>
+          <p class="section-subtitle">From arrival to relaxation, scent creates a consistent emotional atmosphere across the most important hospitality environments.</p>
         </header>
         <div class="spaces-grid">
-          <article class="space-card" data-space-bg="images/hospitality-lobby.webp"><div class="space-icon">01</div><h3>Hotel Lobby</h3><p>Create a refined first impression that sets the tone for the entire stay.</p></article>
-          <article class="space-card" data-space-bg="images/hospitality-suites-corridors.webp"><div class="space-icon">02</div><h3>Suites &amp; Corridors</h3><p>Extend the property’s identity into quieter, more private guest moments.</p></article>
-          <article class="space-card" data-space-bg="images/hospitality-spa-wellness.webp"><div class="space-icon">03</div><h3>Spa &amp; Wellness Areas</h3><p>Support relaxation, calm and emotional reset through a carefully balanced fragrance experience.</p></article>
-          <article class="space-card" data-space-bg="images/hospitality-restaurants-lounges.webp"><div class="space-icon">04</div><h3>Restaurants &amp; Lounges</h3><p>Add atmosphere without overpowering food, beverage or social interaction.</p></article>
-          <article class="space-card" data-space-bg="images/hospitality-events-meetings.webp"><div class="space-icon">05</div><h3>Event &amp; Meeting Spaces</h3><p>Make private events, weddings and corporate gatherings feel more elevated and memorable.</p></article>
+          <article class="space-card"><div class="space-icon">01</div><h3>Hotel Lobby</h3><p>Create a refined first impression that sets the tone for the entire stay.</p></article>
+          <article class="space-card"><div class="space-icon">02</div><h3>Suites &amp; Corridors</h3><p>Extend the property's identity into quieter, more private guest moments.</p></article>
+          <article class="space-card"><div class="space-icon">03</div><h3>Spa &amp; Wellness Areas</h3><p>Support relaxation, calm and emotional reset through a balanced fragrance experience.</p></article>
+          <article class="space-card"><div class="space-icon">04</div><h3>Restaurants &amp; Lounges</h3><p>Add atmosphere without overpowering food, beverage or social interaction.</p></article>
+          <article class="space-card"><div class="space-icon">05</div><h3>Event &amp; Meeting Spaces</h3><p>Make private events, weddings and corporate gatherings feel more elevated and memorable.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section alt" id="benefits">
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle" style="left:5%;--dur:15s;--delay:-4s;--drift:18px"></span>
+        <span class="particle" style="left:12%;--dur:19s;--delay:-11s;--drift:-22px"></span>
+        <span class="particle" style="left:19%;--dur:14s;--delay:-7s;--drift:26px"></span>
+        <span class="particle" style="left:27%;--dur:21s;--delay:-2s;--drift:-16px"></span>
+        <span class="particle" style="left:35%;--dur:17s;--delay:-13s;--drift:24px"></span>
+        <span class="particle" style="left:43%;--dur:20s;--delay:-6s;--drift:-28px"></span>
+        <span class="particle" style="left:51%;--dur:15s;--delay:-10s;--drift:14px"></span>
+        <span class="particle" style="left:59%;--dur:22s;--delay:-3s;--drift:-20px"></span>
+        <span class="particle" style="left:67%;--dur:16s;--delay:-12s;--drift:27px"></span>
+        <span class="particle" style="left:74%;--dur:19s;--delay:-8s;--drift:-18px"></span>
+        <span class="particle" style="left:82%;--dur:14s;--delay:-5s;--drift:22px"></span>
+        <span class="particle" style="left:89%;--dur:21s;--delay:-14s;--drift:-25px"></span>
+        <span class="particle" style="left:96%;--dur:17s;--delay:-9s;--drift:16px"></span>
+      </div>
       <div class="section-container">
         <header class="section-header">
           <p class="eyebrow">Guest Experience</p>
           <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
           <h2 class="section-title">Creating a Hospitality Experience Guests Remember.</h2>
-          <p class="section-subtitle">Professional scenting helps your hotel feel more distinctive, consistent and emotionally memorable from arrival to checkout.</p>
+          <p class="section-subtitle">Professional scenting helps your hotel feel more distinctive, consistent and<br class="desktop-only-break"> emotionally memorable from arrival to checkout.</p>
         </header>
         <div class="card-grid">
-          <article class="feature-card"><span class="feature-number">01</span><h3>Creates a Memorable Arrival</h3><p>A refined fragrance helps guests associate your property with a distinct emotional memory from the moment they enter the lobby.</p></article>
-          <article class="feature-card"><span class="feature-number">02</span><h3>Expresses Sense of Place</h3><p>A signature scent can reflect the architecture, location, service style and personality of the hotel or resort.</p></article>
-          <article class="feature-card"><span class="feature-number">03</span><h3>Elevates Perceived Service</h3><p>When the atmosphere feels curated and intentional, the entire guest experience feels more refined, complete and premium.</p></article>
-          <article class="feature-card"><span class="feature-number">04</span><h3>Connects Key Guest Areas</h3><p>Scent adds continuity across lobbies, corridors, wellness areas, lounges and other important guest touchpoints.</p></article>
-          <article class="feature-card"><span class="feature-number">05</span><h3>Supports Freshness Perception</h3><p>Professional scenting helps maintain a clean, balanced impression in selected high-traffic hospitality environments.</p></article>
+          <article class="feature-card"><span class="feature-number">01</span><h3>Creates a Memorable Arrival</h3><p>A refined fragrance helps guests associate your property with a distinct emotional memory from the moment they enter.</p></article>
+          <article class="feature-card"><span class="feature-number">02</span><h3>Expresses Sense of Place</h3><p>A signature scent can reflect the architecture, location, service style and personality of the property.</p></article>
+          <article class="feature-card"><span class="feature-number">03</span><h3>Elevates Perceived Service</h3><p>When the atmosphere feels curated and intentional, the guest experience feels more refined, complete and premium.</p></article>
+          <article class="feature-card"><span class="feature-number">04</span><h3>Connects Key Guest Areas</h3><p>Scent adds continuity across lobbies, corridors, wellness areas, lounges and other guest touchpoints.</p></article>
+          <article class="feature-card"><span class="feature-number">05</span><h3>Supports Freshness Perception</h3><p>Professional scenting helps maintain a clean, balanced impression in high-traffic hospitality environments.</p></article>
           <article class="feature-card"><span class="feature-number">06</span><h3>Requires Minimal Operational Effort</h3><p>Our team manages equipment, refills, maintenance, adjustments and support, so your hospitality team can stay focused on service.</p></article>
         </div>
       </div>
@@ -4025,23 +3758,23 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
           </svg>
 
           <div class="cs-heading-wrap">
-            <p class="cs-kicker">Start you project with a</p>
-            <h2 class="cs-title" id="cs-contact-heading"><span>Hospitality Scent Consultation</h2>
-            <p class="cs-tryout-support">Tell us about your property, key guest areas and the atmosphere you want to create. A Scent Company specialist will review your request and recommend the best next step.</p>
+            <p class="cs-kicker">Tell us about your property</p>
+            <h2 class="cs-title" id="cs-contact-heading"><span>Get Your Recommendation</span><em>&amp; Pricing</em></h2>
+            <p class="cs-tryout-support">Share your property details and we will recommend the right system, coverage and monthly plan — at no cost.</p>
             <div class="cs-title-divider" aria-hidden="true"><span class="cs-line"></span><span class="cs-diamond"></span><span class="cs-line" style="background:linear-gradient(to left, rgba(201,163,74,.7), rgba(201,163,74,0));"></span></div>
           </div>
 
           <form class="cs-form" id="cs-contactForm" action="https://formspree.io/f/mgorrnov" method="POST">
             <input type="hidden" name="_next" value="https://scentcompanyusa.com/thank-you.html">
             <input type="text" class="cs-honeypot" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <p class="cs-form-note">Tell us about your hotel, resort, spa or hospitality space — including location, key areas and the experience you want guests to remember.</p>
+            <p class="cs-form-note">A specialist will review your request and reply with the best next step within one business day.</p>
             <div class="cs-field" data-field="firstName"><label for="cs-firstName">First Name *</label><input id="cs-firstName" name="firstName" type="text" autocomplete="given-name" required><span class="cs-error-msg">Required</span></div>
-            <div class="cs-field" data-field="company"><label for="cs-company">Company / Property *</label><input id="cs-company" name="company" type="text" autocomplete="organization" required><span class="cs-error-msg">Required</span></div>
-            <div class="cs-field cs-full" data-field="email"><label for="cs-email">Business Email *</label><input id="cs-email" name="email" type="email" autocomplete="email" required><span class="cs-error-msg">Please enter a valid email</span></div>
-            <div class="cs-field cs-full" data-field="segment"><label for="cs-segment">Business Type *</label><select id="cs-segment" name="segment" required><option value="">Select one</option><option value="Hotel / Hospitality" selected>Hotel / Hospitality</option><option value="Luxury Retail">Luxury Retail</option><option value="High-Rise Residential">High-Rise Residential</option><option value="Restaurant / Lounge">Restaurant / Lounge</option><option value="Spa / Wellness">Spa / Wellness</option><option value="Interior Design / Architecture">Interior Design / Architecture</option><option value="Other">Other</option></select><span class="cs-error-msg">Please select a business type</span></div>
-            <div class="cs-field cs-full" data-field="message"><label for="cs-message">Message / Project Details</label><textarea id="cs-message" name="message" rows="5" placeholder="Tell us about your building, location, amenity spaces, or the experience you want to create."></textarea><span class="cs-error-msg">Optional</span></div>
-            <input type="hidden" name="_subject" value="New High-Rise Scenting Lead">
-            <div class="cs-send-row"><button type="submit" class="cs-btn-send" id="cs-sendBtn" disabled><span>Request Consultation</span><svg class="cs-arrow" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 5h15m0 0L12 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            <div class="cs-field" data-field="company"><label for="cs-company">Company / Brand *</label><input id="cs-company" name="company" type="text" autocomplete="organization" required><span class="cs-error-msg">Required</span></div>
+            <div class="cs-field cs-full" data-field="email"><label for="cs-email">Email *</label><input id="cs-email" name="email" type="email" autocomplete="email" required><span class="cs-error-msg">Please enter a valid email</span></div>
+            <div class="cs-field cs-full" data-field="segment"><label for="cs-segment">Property Type *</label><select id="cs-segment" name="segment" required><option value="">Select one</option><option value="Hotel" selected>Hotel</option><option value="Resort">Resort</option><option value="Spa & Wellness">Spa &amp; Wellness</option><option value="Restaurant & Lounge">Restaurant &amp; Lounge</option><option value="Other Hospitality">Other Hospitality Property</option></select><span class="cs-error-msg">Please select a property type</span></div>
+            <div class="cs-field cs-full" data-field="message"><label for="cs-message">Property Size / Project Details</label><textarea id="cs-message" name="message" rows="5" placeholder="Approximate square footage, number of rooms, guest areas and any spaces you want to scent."></textarea><span class="cs-error-msg">Optional</span></div>
+            <input type="hidden" name="_subject" value="New Hospitality Pricing & Recommendation Lead">
+            <div class="cs-send-row"><button type="submit" class="cs-btn-send" id="cs-sendBtn" disabled><span>Get My Recommendation &amp; Pricing</span><svg class="cs-arrow" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 5h15m0 0L12 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
           </form>
         </div>
 
@@ -4066,23 +3799,23 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
     <section class="section faq-section" id="faq">
       <div class="section-container">
         <header class="section-header">
-          <p class="eyebrow">FAQ — Hospitality Scenting</p>
+          <p class="eyebrow">FAQ — Hospitality Scenting &amp; Pricing</p>
           <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
           <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Key information about professional scenting, installation, maintenance, fragrance adjustments and diffusion for hospitality environments.</p>
+          <p class="section-subtitle">Clear information about pricing, coverage, installation, maintenance and professional scenting for hospitality properties.</p>
         </header>
         <div class="faq-list">
-          <details class="faq-item"><summary class="faq-question">Does scent work in large hotel lobbies?</summary><div class="faq-answer"><p>Yes. Professional diffusion systems can be calibrated according to lobby size, airflow, traffic and operating hours to maintain a balanced fragrance experience.</p></div></details>
-          <details class="faq-item"><summary class="faq-question">Can different areas have different scent levels?</summary><div class="faq-answer"><p>Yes. Intensity and frequency can be adjusted by area, allowing the lobby, spa, corridors and social spaces to maintain different levels of presence.</p></div></details>
-          <details class="faq-item"><summary class="faq-question">Will the scent interfere with restaurants or food service?</summary><div class="faq-answer"><p>No. Hospitality scenting should be carefully calibrated so it enhances atmosphere without overpowering food, beverage or social interaction.</p></div></details>
-          <details class="faq-item"><summary class="faq-question">Is installation disruptive to hotel operations?</summary><div class="faq-answer"><p>The systems are designed for professional, non-invasive integration and can be planned around operational routines.</p></div></details>
-          <details class="faq-item"><summary class="faq-question">Is maintenance included?</summary><div class="faq-answer"><p>Yes. The service is all-inclusive, with refills, maintenance, system support and adjustments managed by Scent Company.</p></div></details>
-          <details class="faq-item"><summary class="faq-question">Can we change the fragrance later?</summary><div class="faq-answer"><p>Yes. If the selected fragrance is not the right fit, or if you want to create a different atmosphere for a season, event or brand refresh, we can recommend alternative scent directions.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">How much does professional hospitality scenting cost?</summary><div class="faq-answer"><p>Plans start at $180 per month per diffuser. Your final recommendation depends on property size, layout, desired coverage and whether the best solution is standalone or HVAC-connected.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">Can scenting work around food and beverage service?</summary><div class="faq-answer"><p>Yes. The system is calibrated for each setting, creating a refined ambient effect without overpowering food, beverage or guest interaction.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">Can the scent be adjusted for different guest areas?</summary><div class="faq-answer"><p>Yes. Diffusion intensity, frequency and operating hours can be adjusted for lobbies, corridors, wellness areas and other spaces. Many adjustments can be made remotely.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">Do you provide refills and maintenance?</summary><div class="faq-answer"><p>Yes. Our service is all-inclusive. Refills, maintenance, system support and adjustments are handled by Scent Company.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">Can one scent be used across multiple properties?</summary><div class="faq-answer"><p>Yes. A signature fragrance can be implemented consistently across hotels, resorts or hospitality destinations.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">What happens if HVAC connection is not possible?</summary><div class="faq-answer"><p>If HVAC connection is not technically possible in an area, we may recommend a discreet standalone diffuser as an alternative.</p></div></details>
+          <details class="faq-item"><summary class="faq-question">Is there a minimum contract period?</summary><div class="faq-answer"><p>There is no minimum contract period. The service can be canceled at any time, at no additional cost.</p></div></details>
         </div>
       </div>
     </section>
   </main>
-
 
   <style>
     /* ===== FINAL MOBILE-ONLY ADJUSTMENTS ===== */
@@ -4252,6 +3985,131 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
     }
   </style>
 
+  <style>
+    /* ===== MOBILE LAYOUT REFINEMENTS ===== */
+    #references{isolation:isolate;}
+    #references .portfolio-globe{
+      position:absolute;
+      top:50%;
+      left:50%;
+      z-index:1;
+      width:min(760px,68vw);
+      aspect-ratio:1;
+      pointer-events:none;
+      opacity:.29;
+      mix-blend-mode:screen;
+      transform:translate(-50%,-50%);
+    }
+    #references .portfolio-globe img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+    #references .section-container{z-index:2;}
+    #benefits .feature-card:nth-child(1) h3{color:#e7c5c8;}
+    #benefits .feature-card:nth-child(2) h3{color:#c4d9c4;}
+    #benefits .feature-card:nth-child(3) h3{color:#c6d5e8;}
+    #benefits .feature-card:nth-child(4) h3{color:#d8c8e8;}
+    #benefits .feature-card:nth-child(5) h3{color:#e6cfbf;}
+    #benefits .feature-card:nth-child(6) h3{color:#bcdcdc;}
+    .desktop-only-break{display:block;}
+    .mobile-only-break{display:none;}
+    @media (max-width:768px){
+      .desktop-only-break{display:none;}
+      .mobile-only-break{display:block;}
+      #references .portfolio-globe{top:38%;width:min(480px,118vw);opacity:.18;}
+      .pricing-test .hero h1{
+        padding-bottom:.14em;
+        margin-bottom:-.14em;
+        overflow:visible;
+      }
+      #spaces .section-title{font-size:24px !important;}
+      #spaces .spaces-hover-bg{display:none;}
+      #spaces{background:#000 !important;}
+      #benefits .section-title{
+        max-width:370px !important;
+        font-size:20.5px !important;
+      }
+      .pricing-test{padding-bottom:0 !important;}
+
+      .pricing-intro__header{
+        width:min(370px,calc(100% - 28px)) !important;
+      }
+      .pricing-intro__title{
+        font-size:clamp(20px,5.7vw,23px) !important;
+        line-height:1.14 !important;
+      }
+      .pricing-intro__inner{
+        width:min(330px,calc(100% - 40px)) !important;
+        gap:14px !important;
+      }
+      .pricing-intro__item{
+        min-height:0 !important;
+        padding:25px 23px !important;
+      }
+      .pricing-intro__item:active,
+      .pricing-intro__item:focus-within{
+        transform:translateY(-3px);
+        border-color:rgba(218,184,102,.55);
+        background:linear-gradient(145deg,rgba(218,184,102,.1),rgba(255,255,255,.018));
+        box-shadow:0 14px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(244,241,234,.08),0 0 20px rgba(218,184,102,.08);
+      }
+      .pricing-intro__item:active::before,
+      .pricing-intro__item:focus-within::before{opacity:1;transform:translateY(0) scale(1);}
+
+      #provider-comparison .comparison-intro{
+        text-align:center !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+      }
+      #provider-comparison .comparison-intro h2 span{display:block !important;}
+      #provider-comparison .comparison-intro h2{
+        font-size:clamp(19px,5.3vw,22px) !important;
+        line-height:1.14 !important;
+      }
+      #provider-comparison .comparison-intro p{text-align:center !important;}
+
+      #provider-comparison .opportunity-comparison-table tbody tr.is-scentair{
+        background:#d9d1c0 !important;
+        border-color:#d0af61 !important;
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.14) !important;
+      }
+      #provider-comparison .is-scentair th,
+      #provider-comparison .is-scentair td{
+        background:transparent !important;
+        border-color:rgba(54,42,20,.58) !important;
+      }
+      #provider-comparison .opportunity-comparison-table tbody tr.is-scentair td{
+        border-bottom:1px solid rgba(54,42,20,.58) !important;
+      }
+      #provider-comparison .opportunity-comparison-table tbody tr.is-scentair td:last-child{
+        border-bottom:0 !important;
+      }
+      #provider-comparison .is-scentair .provider-name,
+      #provider-comparison .is-scentair td strong{color:#1c170f !important;}
+      #provider-comparison .is-scentair .provider-tag,
+      #provider-comparison .is-scentair td span{color:rgba(28,23,15,.76) !important;}
+      #provider-comparison .is-scentair td::before{color:#4d3d20 !important;}
+
+      #services .services-eyebrow{
+        font-family:'Montserrat',sans-serif !important;
+        font-size:11px !important;
+        font-weight:400 !important;
+        letter-spacing:.38em !important;
+        color:var(--sc-gold) !important;
+        padding-left:.38em !important;
+        margin:0 0 18px !important;
+      }
+      #services .services-layout{
+        width:min(340px,calc(100vw - 40px)) !important;
+        max-width:none !important;
+        gap:18px !important;
+      }
+      #services .services-stack{gap:18px !important;}
+    }
+  </style>
+
   <script>
     (function(){
       const form = document.getElementById('cs-contactForm');
@@ -4306,10 +4164,10 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
   if (!heroVideo) return;
   heroVideo.muted = true;
   heroVideo.playsInline = true;
-  heroVideo.playbackRate = 0.7;
+  heroVideo.playbackRate = 0.4;
 
   const keepVideoSlower = () => {
-    heroVideo.playbackRate = 0.7;
+    heroVideo.playbackRate = 0.4;
   };
 
   heroVideo.addEventListener('loadedmetadata', keepVideoSlower);
@@ -4371,6 +4229,10 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
 (function(){
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealGroups = [
+    { selector:'#pricing-details .pricing-intro__header > *', type:'reveal-soft', stagger:90 },
+    { selector:'#pricing-details .pricing-intro__item', type:'reveal-scale', stagger:105 },
+    { selector:'#provider-comparison .comparison-intro > *', type:'reveal-soft', stagger:100 },
+    { selector:'#provider-comparison .opportunity-comparison-card', type:'reveal-scale' },
     { selector:'#opportunity .copy-card', type:'reveal-left' },
     { selector:'#opportunity .architectural-frame', type:'reveal-right' },
     { selector:'.services-header > *', type:'reveal-soft', stagger:90 },
@@ -4380,9 +4242,8 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
     { selector:'#benefits .section-header > *', type:'reveal-soft', stagger:90 },
     { selector:'#benefits .feature-card', type:'reveal-scale', stagger:90 },
     { selector:'#tryout-offer .offer-band__inner > *', type:'reveal-soft', stagger:110 },
-    { selector:'#clients .clients-header > *', type:'reveal-soft', stagger:90 },
-    { selector:'#clients .clients-mobile-image', type:'reveal-scale' },
-    { selector:'#clients .clients-marquee', type:'reveal-scale', stagger:120 },
+    { selector:'#references .section-header > *', type:'reveal-soft', stagger:90 },
+    { selector:'#references .proof-showcase', type:'reveal-scale' },
     { selector:'#contact-section-wrap .cs-heading-wrap > *', type:'reveal-left', stagger:85 },
     { selector:'#contact-section-wrap .cs-form', type:'reveal-right' },
     { selector:'#contact-section-wrap .cs-footer-grid > *', type:'reveal-soft', stagger:90 },
@@ -4444,7 +4305,7 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
       border-radius:0 !important;
       box-shadow:none !important;
       overflow:hidden !important;
-      background:url("images/fourseasons.webp") center center / contain no-repeat transparent !important;
+      background:url("images/moncler.webp") center center / contain no-repeat transparent !important;
     }
 
     #opportunity .architectural-frame::before,
@@ -4473,32 +4334,6 @@ transition:opacity .35s ease, transform .35s ease, filter .35s ease;
     }
   }
 </style>
-
-
-<script>
-  (function(){
-    const spacesSection = document.getElementById('spaces');
-    if(!spacesSection) return;
-
-    const bgLayer = spacesSection.querySelector('.spaces-hover-bg');
-    const cards = spacesSection.querySelectorAll('.space-card[data-space-bg]');
-    if(!bgLayer || !cards.length) return;
-
-    cards.forEach(function(card){
-      card.addEventListener('mouseenter', function(){
-        const imagePath = card.getAttribute('data-space-bg');
-        if(!imagePath) return;
-
-        bgLayer.style.backgroundImage = 'url("' + imagePath + '")';
-        spacesSection.classList.add('has-space-bg');
-      });
-
-      card.addEventListener('mouseleave', function(){
-        spacesSection.classList.remove('has-space-bg');
-      });
-    });
-  })();
-</script>
 
 </body>
 </html>
