@@ -427,7 +427,7 @@
     }
     .cs-contact-section{position:relative;background:var(--cs-bg);overflow:hidden;color:var(--cs-text);}
     .cs-contact-top{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:110px 8vw 100px;align-items:center;min-height:560px;}
-    .cs-deco-lines{position:absolute;left:-40px;bottom:-40px;width:560px;height:520px;pointer-events:none;opacity:.9;}
+    .cs-deco-lines{position:absolute;left:-40px;bottom:-40px;width:560px;height:520px;pointer-events:none;opacity:.18;}
     .cs-heading-wrap{position:relative;z-index:2;padding-left:20px;}
     .cs-kicker{font-family:'Playfair Display',serif;font-weight:300;letter-spacing:.22em;color:var(--cs-gold);font-size:22px;text-transform:uppercase;margin:0 0 10px;}
     .cs-title{font-family:'Playfair Display',serif;font-weight:400;font-size:64px;line-height:1.04;letter-spacing:.04em;color:#f3ecd8;text-transform:uppercase;margin:0;}
@@ -439,6 +439,11 @@
     .cs-title-divider .cs-diamond::after{content:"";position:absolute;inset:2px;background:var(--cs-gold);}
     .cs-form{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:560px;position:relative;z-index:2;}
     .cs-form-note{grid-column:1 / -1;color:rgba(244,241,234,.66);font-size:13px;line-height:1.6;margin:-6px 0 6px;}
+    .cs-contact-options{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;padding-top:2px;color:rgba(244,241,234,.68);font-size:12px;line-height:1.6;}
+    .cs-contact-options strong{color:var(--cs-text);font-weight:500;}
+    .cs-contact-options a{color:var(--cs-gold-2);text-decoration:none;border-bottom:1px solid rgba(231,197,119,.35);}
+    .cs-contact-options a:hover{border-bottom-color:var(--cs-gold-2);}
+    .cs-privacy-note{grid-column:1 / -1;color:rgba(244,241,234,.48);font-size:11px;line-height:1.55;margin:-8px 0 0;}
     .cs-field{display:flex;flex-direction:column;}
     .cs-field.cs-full{grid-column:1 / -1;}
     .cs-field label{font-size:11px;font-weight:500;letter-spacing:.22em;color:var(--cs-gold);text-transform:uppercase;margin-bottom:10px;}
@@ -2049,7 +2054,7 @@
     <div class="sc-nav__links">
       <a href="#spaces">Spaces</a>
       <a href="#references">References</a>
-      <a href="#contact-section-wrap" class="sc-btn-primary">Request a Tryout</a>
+      <a href="#contact-section-wrap" class="sc-btn-primary">Request an Assessment</a>
     </div>
   </nav>
 
@@ -2064,7 +2069,7 @@
         <h1>Signature Scenting for Luxury Residential Buildings</h1>
         <p class="hero-support">Create a unique, memorable atmosphere with a discreet HVAC-based scenting system designed for luxury high-rise properties.</p>
         <div class="hero-cta-row">
-          <a href="#contact-section-wrap" class="sc-btn-primary">Request a Complimentary Tryout</a>
+          <a href="#contact-section-wrap" class="sc-btn-primary">Request a Property Scent Assessment</a>
           <a href="#services" class="sc-btn-secondary">Explore Our Services</a>
         </div>
       </div>
@@ -3375,23 +3380,25 @@
           </svg>
 
           <div class="cs-heading-wrap">
-            <p class="cs-kicker">Start your project with a</p>
-            <h2 class="cs-title" id="cs-contact-heading"><span>Complimentary</span><em>Tryout</em></h2>
-            <p class="cs-tryout-support">Consultation + olfactory sample + technical recommendation for your high-rise property — at no cost.</p>
+            <p class="cs-kicker">Created for your property</p>
+            <h2 class="cs-title" id="cs-contact-heading"><span>Complimentary Property</span><em>Scent Assessment</em></h2>
+            <p class="cs-tryout-support">Receive a tailored fragrance direction, scent sample and technical coverage recommendation for your high-rise — at no cost and with no obligation.</p>
             <div class="cs-title-divider" aria-hidden="true"><span class="cs-line"></span><span class="cs-diamond"></span><span class="cs-line" style="background:linear-gradient(to left, rgba(201,163,74,.7), rgba(201,163,74,0));"></span></div>
           </div>
 
-          <form class="cs-form" id="cs-contactForm" action="https://formspree.io/f/mgorrnov" method="POST">
+          <form class="cs-form" id="cs-contactForm" action="https://formspree.io/f/mgorrnov" method="POST" novalidate>
             <input type="hidden" name="_next" value="https://scentcompanyusa.com/thank-you.html">
             <input type="text" class="cs-honeypot" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <p class="cs-form-note">Tell us about your high-rise scenting project. A specialist will review your request and contact you with the best next step.</p>
+            <input type="hidden" name="segment" value="High-Rise Residential">
+            <input type="hidden" name="sourcePage" value="High-Rise">
+            <p class="cs-form-note">Share three details below. A scent specialist will review your property and reply within one business day.</p>
             <div class="cs-field" data-field="firstName"><label for="cs-firstName">First Name *</label><input id="cs-firstName" name="firstName" type="text" autocomplete="given-name" required><span class="cs-error-msg">Required</span></div>
             <div class="cs-field" data-field="company"><label for="cs-company">Company / Property *</label><input id="cs-company" name="company" type="text" autocomplete="organization" required><span class="cs-error-msg">Required</span></div>
             <div class="cs-field cs-full" data-field="email"><label for="cs-email">Business Email *</label><input id="cs-email" name="email" type="email" autocomplete="email" required><span class="cs-error-msg">Please enter a valid email</span></div>
-            <div class="cs-field cs-full" data-field="segment"><label for="cs-segment">Business Type *</label><select id="cs-segment" name="segment" required><option value="">Select one</option><option value="Hotel / Hospitality">Hotel / Hospitality</option><option value="Luxury Retail">Luxury Retail</option><option value="High-Rise Residential" selected>High-Rise Residential</option><option value="Restaurant / Lounge">Restaurant / Lounge</option><option value="Spa / Wellness">Spa / Wellness</option><option value="Interior Design / Architecture">Interior Design / Architecture</option><option value="Other">Other</option></select><span class="cs-error-msg">Please select a business type</span></div>
-            <div class="cs-field cs-full" data-field="message"><label for="cs-message">Message / Project Details</label><textarea id="cs-message" name="message" rows="5" placeholder="Tell us about your building, location, amenity spaces, or the experience you want to create."></textarea><span class="cs-error-msg">Optional</span></div>
             <input type="hidden" name="_subject" value="New High-Rise Scenting Lead">
-            <div class="cs-send-row"><button type="submit" class="cs-btn-send" id="cs-sendBtn" disabled><span>Request My Tryout</span><svg class="cs-arrow" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 5h15m0 0L12 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            <div class="cs-send-row"><button type="submit" class="cs-btn-send" id="cs-sendBtn"><span>Request My Assessment</span><svg class="cs-arrow" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 5h15m0 0L12 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            <p class="cs-privacy-note">Your information will only be used to review and respond to your commercial scenting project.</p>
+            <div class="cs-contact-options"><strong>Prefer to speak directly?</strong><a href="tel:+17864480395">Call 786 448-0395</a><a href="mailto:b.alves@scentcompanyusa.com?subject=High-Rise%20Scent%20Assessment">Email a scent specialist</a></div>
           </form>
         </div>
 
@@ -3608,45 +3615,47 @@
       const firstName = document.getElementById('cs-firstName');
       const company = document.getElementById('cs-company');
       const email = document.getElementById('cs-email');
-      const segment = document.getElementById('cs-segment');
       const sendBtn = document.getElementById('cs-sendBtn');
       const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      function validateField(input, test){
+      function validateField(input, test, showEmpty){
         if(!input) return true;
         const wrap = input.closest('.cs-field');
         const value = input.value.trim();
         const ok = test(value);
-        if(!ok && value.length > 0){ wrap.classList.add('invalid'); }
+        if(!ok && (showEmpty || value.length > 0)){ wrap.classList.add('invalid'); }
         else{ wrap.classList.remove('invalid'); }
         return ok;
       }
       function isFormValid(){
         return firstName.value.trim().length > 0 &&
                company.value.trim().length > 0 &&
-               emailRe.test(email.value.trim()) &&
-               segment.value.trim().length > 0;
+               emailRe.test(email.value.trim());
       }
-      function refreshButton(){ sendBtn.disabled = !isFormValid(); }
-      [firstName, company, email, segment].forEach((el) => {
+      [firstName, company, email].forEach((el) => {
         el.addEventListener('input', () => {
           if(el === email) validateField(el, (v) => emailRe.test(v));
           else validateField(el, (v) => v.length > 0);
-          refreshButton();
         });
-        el.addEventListener('change', refreshButton);
         el.addEventListener('blur', () => {
           const wrap = el.closest('.cs-field');
           if(el.value.trim().length === 0) wrap.classList.remove('invalid');
         });
       });
-      form.addEventListener('submit', () => {
-        if(!isFormValid()) return;
+      form.addEventListener('submit', (event) => {
+        const firstNameOk = validateField(firstName, (v) => v.length > 0, true);
+        const companyOk = validateField(company, (v) => v.length > 0, true);
+        const emailOk = validateField(email, (v) => emailRe.test(v), true);
+        if(!firstNameOk || !companyOk || !emailOk){
+          event.preventDefault();
+          const firstInvalid = form.querySelector('.cs-field.invalid input');
+          if(firstInvalid) firstInvalid.focus();
+          return;
+        }
         sendBtn.disabled = true;
         const label = sendBtn.querySelector('span');
         if(label) label.textContent = 'Sending…';
       });
-      refreshButton();
     })();
   </script>
 
