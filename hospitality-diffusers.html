@@ -1723,7 +1723,8 @@
 .hero h1,
 .hero .hero-support,
 .hero .hero-price,
-.hero .hero-cta-row{
+.hero .hero-cta-row,
+.hero .diffuser-proof-strip span{
   opacity:0;
   transform:translate3d(0, 24px, 0);
   animation:heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
@@ -1734,6 +1735,9 @@
 .hero .hero-support{animation-delay:.52s;}
 .hero .hero-price{animation-delay:.66s;}
 .hero .hero-cta-row{animation-delay:.80s;}
+.hero .diffuser-proof-strip span:nth-child(1){animation-delay:1.02s;}
+.hero .diffuser-proof-strip span:nth-child(2){animation-delay:1.16s;}
+.hero .diffuser-proof-strip span:nth-child(3){animation-delay:1.30s;}
 
 @keyframes heroReveal{
   to{
@@ -1759,7 +1763,8 @@
   .hero h1,
   .hero .hero-support,
   .hero .hero-price,
-  .hero .hero-cta-row{
+  .hero .hero-cta-row,
+  .hero .diffuser-proof-strip span{
     opacity:1 !important;
     transform:none !important;
     animation:none !important;
@@ -2128,7 +2133,7 @@
   text-transform:uppercase;
 }
 .pricing-intro__item strong{
-  color:#f4f1e8;
+  color:#e8d9ae;
   font:400 clamp(19px,1.7vw,26px)/1.2 'Playfair Display',serif;
 }
 .pricing-intro__item p{
@@ -2369,8 +2374,186 @@
       transform:rotate(45deg);
       box-shadow:0 0 8px rgba(201,162,74,.5);
     }
+    .hotel-diffusers{
+      position:relative;
+      padding:110px 24px 118px;
+      overflow:hidden;
+      background:
+        radial-gradient(720px 400px at 50% 8%,rgba(201,162,74,.11),transparent 66%),
+        linear-gradient(180deg,#050507 0%,#000 52%,#07070a 100%);
+      border-top:1px solid rgba(201,162,74,.14);
+      border-bottom:1px solid rgba(201,162,74,.14);
+    }
+    .hotel-diffusers__inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;}
+    .hotel-diffusers__header{max-width:900px;margin:0 auto 54px;text-align:center;}
+    .hotel-diffusers__eyebrow{
+      margin:0 0 18px;
+      padding-left:.38em;
+      color:var(--sc-gold);
+      font-size:11px;
+      letter-spacing:.38em;
+      text-transform:uppercase;
+    }
+    .hotel-diffusers__title{
+      margin:0 0 22px;
+      color:var(--sc-cream);
+      font:500 clamp(34px,4.5vw,58px)/1.06 'Playfair Display',serif;
+      letter-spacing:.055em;
+      text-transform:uppercase;
+    }
+    .hotel-diffusers__intro{
+      max-width:790px;
+      margin:0 auto;
+      color:var(--sc-muted);
+      font-size:15px;
+      font-weight:300;
+      line-height:1.85;
+    }
+    .hotel-diffusers__grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+    .diffuser-system{
+      position:relative;
+      min-height:390px;
+      padding:38px;
+      overflow:hidden;
+      border:1px solid rgba(201,162,74,.25);
+      border-radius:16px;
+      background:linear-gradient(150deg,rgba(21,21,28,.88),rgba(5,5,8,.96));
+      box-shadow:0 22px 54px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.03);
+    }
+    .diffuser-system::after{
+      content:"";
+      position:absolute;
+      right:-70px;
+      bottom:-100px;
+      width:260px;
+      height:260px;
+      border:1px solid rgba(201,162,74,.12);
+      border-radius:50%;
+      box-shadow:0 0 80px rgba(201,162,74,.055);
+    }
+    .diffuser-system__icon{
+      width:74px;
+      height:74px;
+      margin-bottom:28px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(201,162,74,.46);
+      border-radius:50%;
+      color:#e8d9ae;
+      background:rgba(201,162,74,.045);
+    }
+    .diffuser-system__icon svg{width:42px;height:42px;stroke:currentColor;stroke-width:1.35;fill:none;}
+    .diffuser-system__label{
+      display:block;
+      margin-bottom:12px;
+      color:var(--sc-gold);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+    .diffuser-system h3{
+      margin:0 0 16px;
+      color:#e8d9ae;
+      font:400 clamp(27px,2.7vw,38px)/1.12 'Playfair Display',serif;
+    }
+    .diffuser-system p{
+      max-width:47ch;
+      margin:0;
+      color:var(--sc-muted);
+      font-size:14px;
+      font-weight:300;
+      line-height:1.8;
+    }
+    .diffuser-system__specs{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:25px;
+    }
+    .diffuser-system__spec{
+      padding:13px 14px;
+      border:1px solid rgba(201,162,74,.17);
+      border-radius:8px;
+      background:rgba(255,255,255,.02);
+    }
+    .diffuser-system__spec strong{
+      display:block;
+      margin-bottom:4px;
+      color:#e8d9ae;
+      font:500 14px/1.25 'Montserrat',sans-serif;
+    }
+    .diffuser-system__spec span{
+      display:block;
+      color:rgba(244,241,234,.55);
+      font-size:9px;
+      line-height:1.45;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .diffuser-system__features{display:grid;gap:12px;margin-top:25px;}
+    .diffuser-system__feature{
+      display:flex;
+      align-items:flex-start;
+      gap:11px;
+      color:rgba(244,241,234,.75);
+      font-size:12.5px;
+      font-weight:300;
+      line-height:1.6;
+    }
+    .diffuser-system__feature::before{
+      content:"";
+      width:6px;height:6px;
+      flex:0 0 6px;
+      margin-top:7px;
+      background:var(--sc-gold);
+      transform:rotate(45deg);
+    }
+    .hotel-diffusers__benefits{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      margin:28px 0 38px;
+      border:1px solid rgba(201,162,74,.2);
+      border-radius:13px;
+      background:rgba(255,255,255,.018);
+    }
+    .hotel-diffusers__benefit{
+      min-height:94px;
+      display:flex;
+      align-items:center;
+      gap:13px;
+      padding:22px 25px;
+      color:rgba(244,241,234,.82);
+      font-size:11px;
+      font-weight:500;
+      line-height:1.55;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      border-right:1px solid rgba(201,162,74,.16);
+    }
+    .hotel-diffusers__benefit:last-child{border-right:0;}
+    .hotel-diffusers__benefit::before{
+      content:"";
+      width:7px;height:7px;
+      flex:0 0 7px;
+      background:var(--sc-gold);
+      transform:rotate(45deg);
+      box-shadow:0 0 9px rgba(201,162,74,.5);
+    }
+    .hotel-diffusers__cta{text-align:center;}
     @media (max-width:768px){
       .diffuser-proof-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;font-size:9px;line-height:1.45;}
+      .hotel-diffusers{padding:76px 18px 84px;}
+      .hotel-diffusers__header{margin-bottom:36px;}
+      .hotel-diffusers__title{font-size:clamp(28px,8.5vw,40px);}
+      .hotel-diffusers__intro{font-size:14px;line-height:1.75;}
+      .hotel-diffusers__grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;}
+      .diffuser-system{min-height:0;padding:30px 26px 34px;}
+      .diffuser-system__specs{grid-template-columns:1fr 1fr;}
+      .hotel-diffusers__benefits{grid-template-columns:1fr;max-width:440px;margin:22px auto 32px;}
+      .hotel-diffusers__benefit{min-height:0;border-right:0;border-bottom:1px solid rgba(201,162,74,.16);}
+      .hotel-diffusers__benefit:last-child{border-bottom:0;}
+      .hotel-diffusers__cta .sc-btn-primary{width:100%;max-width:360px;}
     }
     @media (max-width:420px){
       .diffuser-proof-strip{grid-template-columns:1fr;}
@@ -2395,8 +2578,8 @@
 
       <div class="hero-content">
         <p class="hero-subhead">Hotel Scent Diffuser Systems</p>
-        <h1>Professional Scent Diffusers<br class="desktop-only-break"> for Hotels</h1>
-        <p class="hero-support">HVAC-connected and standalone scent diffusers, professionally installed and fully managed for hotel lobbies, corridors, spas and shared spaces.</p>
+        <h1>Professional Scent<br class="desktop-only-break"> Diffusers for Hotels</h1>
+        <p class="hero-support">Give your hotel a distinctive signature scent with the right diffuser system, professionally managed by specialists in luxury olfactory branding.</p>
         <p class="hero-price">All-inclusive plans from $180 / month per diffuser</p>
         <div class="hero-cta-row">
           <a href="#contact-section-wrap" class="sc-btn-primary">Get My Diffuser Recommendation &amp; Pricing</a>
@@ -2404,7 +2587,6 @@
         </div>
         <div class="diffuser-proof-strip" aria-label="Hotel diffuser service highlights">
           <span>HVAC &amp; standalone systems</span>
-          <span>Professional installation</span>
           <span>Refills &amp; maintenance included</span>
           <span>Remote intensity control</span>
         </div>
@@ -2518,6 +2700,68 @@
               <div class="proof-list-item">Ritz-Carlton Yacht</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hotel-diffusers" id="diffuser-systems" aria-labelledby="diffuser-systems-title">
+      <div class="hotel-diffusers__inner">
+        <header class="hotel-diffusers__header">
+          <p class="hotel-diffusers__eyebrow">Professional Hotel Diffusers</p>
+          <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+          <h2 class="hotel-diffusers__title" id="diffuser-systems-title">Engineered for Large<br>Hotel Environments</h2>
+          <p class="hotel-diffusers__intro">The Enjoy Remote Plus integrates with your hotel’s HVAC or air-handling system to distribute fragrance consistently across large public areas and multiple ducted zones.</p>
+        </header>
+
+        <div class="hotel-diffusers__grid">
+          <article class="diffuser-system">
+            <div class="diffuser-system__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M8 13h32v22H8z"/>
+                <path d="M13 18h22M13 24h22M13 30h22"/>
+                <path d="M18 9v4M30 9v4M18 35v4M30 35v4"/>
+              </svg>
+            </div>
+            <span class="diffuser-system__label">Italian HVAC technology</span>
+            <h3>Enjoy Remote Plus</h3>
+            <p>A professional steel diffuser using nebulization technology and four external Venturi systems for direct integration with HVAC or air-handling infrastructure.</p>
+            <div class="diffuser-system__specs" aria-label="Enjoy Remote Plus specifications">
+              <div class="diffuser-system__spec"><strong>Up to 1,800 m³</strong><span>Declared internal diffusion capacity</span></div>
+              <div class="diffuser-system__spec"><strong>4 Venturi systems</strong><span>External injection points</span></div>
+              <div class="diffuser-system__spec"><strong>21 × 34 × 12 cm</strong><span>Height × width × depth</span></div>
+              <div class="diffuser-system__spec"><strong>Italian-made steel</strong><span>4 kg professional unit</span></div>
+            </div>
+          </article>
+
+          <article class="diffuser-system">
+            <div class="diffuser-system__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <rect x="8" y="9" width="32" height="23" rx="2"/>
+                <path d="M15 38h18M24 32v6"/>
+                <path d="M16 22l5-5 4 4 7-7"/>
+                <circle cx="33" cy="14" r="1"/>
+              </svg>
+            </div>
+            <span class="diffuser-system__label">Connected operations</span>
+            <h3>Remote Management</h3>
+            <p>An integrated GPRS modem connects the system to the Scent Company management portal, allowing our team to monitor and optimize diffusion without disrupting hotel operations.</p>
+            <div class="diffuser-system__features">
+              <div class="diffuser-system__feature">Adjust schedules and fragrance intensity in real time</div>
+              <div class="diffuser-system__feature">Verify system operation from computer, phone or tablet</div>
+              <div class="diffuser-system__feature">Monitor fragrance levels, refill alerts and consumption reports</div>
+              <div class="diffuser-system__feature">Manage multiple ducted areas without placing a diffuser in every space</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="hotel-diffusers__benefits" aria-label="Professional diffuser benefits">
+          <div class="hotel-diffusers__benefit">11 L/min declared airflow at 1 bar</div>
+          <div class="hotel-diffusers__benefit">100–230 VAC · 50/60 Hz</div>
+          <div class="hotel-diffusers__benefit">Professional nebulization technology</div>
+        </div>
+
+        <div class="hotel-diffusers__cta">
+          <a href="#contact-section-wrap" class="sc-btn-primary">Get My Diffuser Recommendation</a>
         </div>
       </div>
     </section>
@@ -3602,6 +3846,7 @@
         font-size:clamp(18px, 5vw, 20px) !important;
       }
     }
+    }
     </style>
 
 
@@ -3803,7 +4048,7 @@
 
           <div class="cs-heading-wrap">
             <p class="cs-kicker">Designed for your hotel</p>
-            <h2 class="cs-title" id="cs-contact-heading"><span>Get Your Hotel Diffuser</span><em>Recommendation &amp; Pricing</em></h2>
+            <h2 class="cs-title" id="cs-contact-heading"><span>Get Your</span><em>Recommendation &amp; Pricing</em></h2>
             <p class="cs-tryout-support">Receive a diffuser recommendation, coverage plan and preliminary monthly pricing tailored to your hotel — at no cost and with no obligation.</p>
             <div class="cs-title-divider" aria-hidden="true"><span class="cs-line"></span><span class="cs-diamond"></span><span class="cs-line" style="background:linear-gradient(to left, rgba(201,163,74,.7), rgba(201,163,74,0));"></span></div>
           </div>
@@ -4291,6 +4536,10 @@
     { selector:'#tryout-offer .offer-band__inner > *', type:'reveal-soft', stagger:110 },
     { selector:'#references .section-header > *', type:'reveal-soft', stagger:90 },
     { selector:'#references .proof-showcase', type:'reveal-scale' },
+    { selector:'#diffuser-systems .hotel-diffusers__header > *', type:'reveal-soft', stagger:90 },
+    { selector:'#diffuser-systems .diffuser-system', type:'reveal-scale', stagger:130 },
+    { selector:'#diffuser-systems .hotel-diffusers__benefit', type:'reveal-soft', stagger:90 },
+    { selector:'#diffuser-systems .hotel-diffusers__cta', type:'reveal-soft' },
     { selector:'#contact-section-wrap .cs-heading-wrap > *', type:'reveal-left', stagger:85 },
     { selector:'#contact-section-wrap .cs-form', type:'reveal-right' },
     { selector:'#contact-section-wrap .cs-footer-grid > *', type:'reveal-soft', stagger:90 },
