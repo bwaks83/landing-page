@@ -1724,6 +1724,7 @@
 .hero .hero-support,
 .hero .hero-price,
 .hero .hero-cta-row,
+.hero .diffuser-proof-label,
 .hero .diffuser-proof-strip span{
   opacity:0;
   transform:translate3d(0, 24px, 0);
@@ -1735,9 +1736,10 @@
 .hero .hero-support{animation-delay:.52s;}
 .hero .hero-price{animation-delay:.66s;}
 .hero .hero-cta-row{animation-delay:.80s;}
-.hero .diffuser-proof-strip span:nth-child(1){animation-delay:1.02s;}
-.hero .diffuser-proof-strip span:nth-child(2){animation-delay:1.16s;}
-.hero .diffuser-proof-strip span:nth-child(3){animation-delay:1.30s;}
+.hero .diffuser-proof-label{animation-delay:1.00s;}
+.hero .diffuser-proof-strip span:nth-of-type(1){animation-delay:1.12s;}
+.hero .diffuser-proof-strip span:nth-of-type(2){animation-delay:1.24s;}
+.hero .diffuser-proof-strip span:nth-of-type(3){animation-delay:1.36s;}
 
 @keyframes heroReveal{
   to{
@@ -1764,6 +1766,7 @@
   .hero .hero-support,
   .hero .hero-price,
   .hero .hero-cta-row,
+  .hero .diffuser-proof-label,
   .hero .diffuser-proof-strip span{
     opacity:1 !important;
     transform:none !important;
@@ -2352,6 +2355,7 @@
 
   <style>
     /* ===== HOTEL DIFFUSERS A/B VARIANT ===== */
+    .mobile-copy{display:none;}
     .diffuser-proof-strip{
       display:flex;
       align-items:center;
@@ -2365,6 +2369,7 @@
       letter-spacing:.1em;
       text-transform:uppercase;
     }
+    .diffuser-proof-label{display:none;}
     .diffuser-proof-strip span{display:inline-flex;align-items:center;gap:9px;}
     .diffuser-proof-strip span::before{
       content:"";
@@ -2542,10 +2547,89 @@
     }
     .hotel-diffusers__cta{text-align:center;}
     @media (max-width:768px){
-      .diffuser-proof-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;font-size:9px;line-height:1.45;}
+      html,
+      body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+      }
+      main,
+      main > section{
+        width:100%;
+        max-width:100%;
+        overflow-x:clip;
+      }
+      .hero-content,
+      .section-container,
+      .pricing-intro__header,
+      .pricing-intro__inner,
+      .hotel-diffusers__inner,
+      #provider-comparison .section-container,
+      .services-container,
+      .services-layout,
+      .cs-contact-top,
+      .cs-footer-grid,
+      .faq-list{
+        min-width:0;
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      h1,h2,h3,h4,p,a,span,strong,summary,label{
+        max-width:100%;
+        overflow-wrap:break-word;
+        word-break:normal;
+      }
+      .hero-support,
+      .section-subtitle,
+      .pricing-intro__item p,
+      .hotel-diffusers__intro,
+      .diffuser-system p,
+      .diffuser-system__feature,
+      .comparison-intro p,
+      .service-description,
+      .space-card p,
+      .cs-tryout-support,
+      .cs-form-note,
+      .faq-answer{
+        text-wrap:pretty;
+      }
+      .desktop-copy{display:none !important;}
+      .mobile-copy{display:inline !important;}
+      .pricing-test .hero-content{
+        padding-top:118px !important;
+        padding-bottom:72px !important;
+      }
+      .diffuser-proof-strip{
+        display:none !important;
+      }
+      .diffuser-proof-label{
+        display:block;
+        margin:0 0 10px;
+        padding:0 0 10px;
+        color:#e8d9ae;
+        border-bottom:1px solid rgba(201,162,74,.16);
+        font-size:9px;
+        font-weight:600;
+        line-height:1.4;
+        letter-spacing:.2em;
+        text-align:left;
+        text-transform:uppercase;
+      }
+      .diffuser-proof-strip span{
+        width:100%;
+        justify-content:flex-start;
+        padding:6px 0;
+        text-align:left;
+      }
       .hotel-diffusers{padding:76px 18px 84px;}
       .hotel-diffusers__header{margin-bottom:36px;}
-      .hotel-diffusers__title{font-size:clamp(28px,8.5vw,40px);}
+      .hotel-diffusers__title{
+        font-size:clamp(25px,7.4vw,32px);
+        line-height:1.08;
+        letter-spacing:.04em;
+      }
+      .hotel-diffusers__title .mobile-copy{display:block !important;}
       .hotel-diffusers__intro{font-size:14px;line-height:1.75;}
       .hotel-diffusers__grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;}
       .diffuser-system{min-height:0;padding:30px 26px 34px;}
@@ -2554,9 +2638,8 @@
       .hotel-diffusers__benefit{min-height:0;border-right:0;border-bottom:1px solid rgba(201,162,74,.16);}
       .hotel-diffusers__benefit:last-child{border-bottom:0;}
       .hotel-diffusers__cta .sc-btn-primary{width:100%;max-width:360px;}
-    }
-    @media (max-width:420px){
-      .diffuser-proof-strip{grid-template-columns:1fr;}
+      #provider-comparison .comparison-intro p{display:none !important;}
+      #benefits{display:none !important;}
     }
   </style>
 
@@ -2580,12 +2663,13 @@
         <p class="hero-subhead">Hotel Scent Diffuser Systems</p>
         <h1>Professional Scent<br class="desktop-only-break"> Diffusers for Hotels</h1>
         <p class="hero-support">Give your hotel a distinctive signature scent with the right diffuser system, professionally managed by specialists in luxury olfactory branding.</p>
-        <p class="hero-price">All-inclusive plans from $180 / month per diffuser</p>
+        <p class="hero-price"><span class="desktop-copy">All-inclusive plans from $180 / month per diffuser</span><span class="mobile-copy">All-inclusive plans from $180 month.</span></p>
         <div class="hero-cta-row">
-          <a href="#contact-section-wrap" class="sc-btn-primary">Get My Diffuser Recommendation &amp; Pricing</a>
+          <a href="#contact-section-wrap" class="sc-btn-primary"><span class="desktop-copy">Get My Diffuser Recommendation &amp; Pricing</span><span class="mobile-copy">Get My Recommendation.</span></a>
           <a href="#services" class="sc-btn-secondary">See How the System Works</a>
         </div>
         <div class="diffuser-proof-strip" aria-label="Hotel diffuser service highlights">
+          <p class="diffuser-proof-label">Included with every plan</p>
           <span>HVAC &amp; standalone systems</span>
           <span>Refills &amp; maintenance included</span>
           <span>Remote intensity control</span>
@@ -2709,7 +2793,7 @@
         <header class="hotel-diffusers__header">
           <p class="hotel-diffusers__eyebrow">Professional Hotel Diffusers</p>
           <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
-          <h2 class="hotel-diffusers__title" id="diffuser-systems-title">Engineered for Large<br>Hotel Environments</h2>
+          <h2 class="hotel-diffusers__title" id="diffuser-systems-title"><span class="desktop-copy">Engineered for Large<br>Hotel Environments</span><span class="mobile-copy">Engineered for<br>Large Hotel<br>Environments</span></h2>
           <p class="hotel-diffusers__intro">The Enjoy Remote Plus integrates with your hotel’s HVAC or air-handling system to distribute fragrance consistently across large public areas and multiple ducted zones.</p>
         </header>
 
