@@ -2897,8 +2897,32 @@ img{
   letter-spacing:.38em;
   text-transform:uppercase;
   color:#c9a24a;
-  margin:0 0 18px;
+  margin:0;
   padding-left:.38em;
+}
+
+.impact-metrics-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  width:min(220px, 52vw);
+  margin:18px auto 30px;
+}
+
+.impact-metrics-divider-line{
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(201,162,74,.46), transparent);
+}
+
+.impact-metrics-divider-diamond{
+  width:7px;
+  height:7px;
+  flex:0 0 7px;
+  background:#c9a24a;
+  transform:rotate(45deg);
+  box-shadow:0 0 10px rgba(201,162,74,.52);
 }
 
 .impact-metrics-title{
@@ -3099,7 +3123,12 @@ img{
   .impact-metrics-eyebrow{
     font-size:10px;
     letter-spacing:.34em;
-    margin-bottom:14px;
+    margin-bottom:0;
+  }
+
+  .impact-metrics-divider{
+    width:min(190px, 58vw);
+    margin:14px auto 24px;
   }
 
   .impact-metrics-title{
@@ -3578,11 +3607,11 @@ img{
       <p class="hero-subhead">Scent Company USA</p>
 
       <h1 class="hero-title" aria-label="Signature Scent Solutions, Fully Managed">
-        <span class="hero-title-main hero-title-main--desktop">Signature Scent Solutions,</span>
-        <span class="hero-title-main hero-title-main--desktop">Fully Managed</span>
-        <span class="hero-title-main hero-title-main--mobile">Signature Scent Solutions,</span>
+        <span class="hero-title-main hero-title-main--desktop">Luxury Scenting,</span>
+        <span class="hero-title-main hero-title-main--desktop">Fully Managed.</span>
+        <span class="hero-title-main hero-title-main--mobile">Luxury Scenting,</span>
         <span class="hero-title-main hero-title-main--mobile">Fully Managed.</span>
-        <span class="hero-title-support">Professional diffusion and scent management for luxury hotels,<br class="hero-desktop-break"> retail stores and premium properties.</span>
+        <span class="hero-title-support">Premium fragrances, professional diffusion and complete scent<br class="hero-desktop-break"> management for luxury hospitality, retail and residential spaces.</span>
       </h1>
 
       <div class="hero-cta-row" aria-label="Primary actions">
@@ -3863,6 +3892,11 @@ img{
   <div class="impact-metrics-wrap">
     <header class="impact-metrics-header">
       <p class="impact-metrics-eyebrow">Business Impact</p>
+      <div class="impact-metrics-divider" aria-hidden="true">
+        <span class="impact-metrics-divider-line"></span>
+        <span class="impact-metrics-divider-diamond"></span>
+        <span class="impact-metrics-divider-line"></span>
+      </div>
       <h2 class="impact-metrics-title" id="impact-title">When scent elevates experience, business follows.</h2>
       <p class="impact-metrics-subtitle">A carefully designed ambient scent does more than enrich atmosphere. It can encourage longer engagement, strengthen perceived value and make the brand experience more memorable.</p>
     </header>
@@ -7600,7 +7634,7 @@ body > section:not(#hero),
     display:block !important;
     width:100% !important;
     max-width:100% !important;
-    font-size: 28px !important;
+    font-size: 36px !important;
     line-height:1.12 !important;
     white-space:nowrap !important;
     text-align:left !important;
@@ -7660,6 +7694,83 @@ body > section:not(#hero),
     line-height:inherit !important;
     text-align:center !important;
   }
+}
+
+/* ===== DESKTOP HERO HEIGHT REBALANCE =====
+   Reduces only the section height; the internal 50% alignment and spacing remain unchanged. */
+@media(min-width:1025px){
+  #hero{
+    height:clamp(650px, calc(100svh - 170px), 720px) !important;
+  }
+
+  #hero .hero-content{
+    top:calc(50% + 30px) !important;
+    text-align:center !important;
+  }
+
+  #hero .hero-subhead,
+  #hero .hero-title,
+  #hero .hero-title-support{
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+  }
+
+  #hero .hero-title-support{
+    margin-top:42px !important;
+    font-size:clamp(15px,1.25vw,17px) !important;
+    font-weight:300 !important;
+    line-height:1.55 !important;
+    letter-spacing:.055em !important;
+    color:rgba(244,241,234,.70) !important;
+  }
+
+  #hero .hero-title-main--desktop{
+    margin-left:auto !important;
+    margin-right:auto !important;
+    font-size:clamp(65.25px,5.625vw,81px) !important;
+  }
+
+  #hero .hero-cta-row{
+    justify-content:center !important;
+    margin-top:62px !important;
+  }
+
+  #clients .network-heading{
+    font-size:clamp(30px,2.8vw,40px) !important;
+    font-weight:400 !important;
+    line-height:1.18 !important;
+    letter-spacing:.005em !important;
+  }
+
+  #clients .network-heading-gold,
+  #clients .network-heading-white{
+    font-weight:400 !important;
+  }
+
+  #clients .network-heading-gold{
+    color:#dfc17d !important;
+  }
+
+  #clients .network-heading-white{
+    color:rgba(244,241,234,.88) !important;
+  }
+
+  #industries .setores__header .divider{
+    margin-bottom:30px !important;
+  }
+}
+
+/* Keep every section eyebrow on one consistent typographic scale. */
+#hero .hero-subhead,
+#clients .network-eyebrow,
+#industries .eyebrow,
+#why-scent-company .conversion-eyebrow,
+#business-impact .impact-metrics-eyebrow,
+#services .services-eyebrow,
+#global-network-wrap .gn-eyebrow,
+#faq .sc-faq-eyebrow{
+  font-size:11px !important;
 }
 </style>
 
